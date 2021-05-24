@@ -67,6 +67,28 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/js\/scripts-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/scripts-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/scripts.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/scripts-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/composer.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -5003,6 +5025,64 @@
       "oAP" : "\/media\/index.html",
       "oF" : 0
     },
+    "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/.jobs\/ottolinger-0019-38x38.jpg.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/.jobs\/ottolinger-0019-38x38.jpg-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/.jobs\/ottolinger-0019-76x76.jpg.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/.jobs\/ottolinger-0019-76x76.jpg-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/.jobs\/ottolinger-0019-352x.jpg.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/.jobs\/ottolinger-0019-352x.jpg-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/.jobs\/ottolinger-0019-864x.jpg.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/.jobs\/ottolinger-0019-864x.jpg-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/ottolinger_0019.jpg" : {
+      "ft" : 16384,
+      "iS" : 116699,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/ottolinger_0019.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/ottolinger-0019-1408x.jpg" : {
+      "ft" : 16384,
+      "iS" : 130443,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/ottolinger-0019-1408x.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/.jobs\/ottolinger-0019-38x38.jpg.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -5332,6 +5412,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/site\/sessions\/index.html",
+      "oF" : 0
+    },
+    "\/site\/snippets\/footer.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/snippets\/footer.php",
       "oF" : 0
     },
     "\/site\/snippets\/header.php" : {
