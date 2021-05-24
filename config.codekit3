@@ -33,6 +33,40 @@
       "oAP" : "\/.htaccess",
       "oF" : 0
     },
+    "\/.nova\/Configuration.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.nova\/Configuration-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/assets\/css\/style.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/style-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/css\/style.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/style.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/composer.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -41,20 +75,57 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/content\/1_home\/home.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/content\/1_home\/home.txt",
+      "oF" : 0
+    },
+    "\/content\/2_artists\/1_test-artist\/artist.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/content\/2_artists\/1_test-artist\/artist.txt",
+      "oF" : 0
+    },
+    "\/content\/2_artists\/1_test-artist\/ottolinger_0019.jpg" : {
+      "ft" : 16384,
+      "iS" : 116699,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/content\/2_artists\/1_test-artist\/ottolinger_0019.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/content\/2_artists\/1_test-artist\/ottolinger_0019.jpg.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/content\/2_artists\/1_test-artist\/ottolinger_0019.jpg.txt",
+      "oF" : 0
+    },
+    "\/content\/2_artists\/artists.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/content\/2_artists\/artists.txt",
+      "oF" : 0
+    },
     "\/content\/error\/error.txt" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/content\/error\/error.txt",
-      "oF" : 0
-    },
-    "\/content\/home\/home.txt" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/content\/home\/home.txt",
       "oF" : 0
     },
     "\/content\/site.txt" : {
@@ -4932,6 +5003,69 @@
       "oAP" : "\/media\/index.html",
       "oF" : 0
     },
+    "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/.jobs\/ottolinger-0019-38x38.jpg.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/.jobs\/ottolinger-0019-38x38.jpg-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/.jobs\/ottolinger-0019-76x76.jpg.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/.jobs\/ottolinger-0019-76x76.jpg-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/.jobs\/ottolinger-0019-352x.jpg.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/.jobs\/ottolinger-0019-352x.jpg-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/ottolinger_0019.jpg" : {
+      "ft" : 16384,
+      "iS" : 116699,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/ottolinger_0019.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/ottolinger-0019-864x.jpg" : {
+      "ft" : 16384,
+      "iS" : 116699,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/ottolinger-0019-864x.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/ottolinger-0019-1408x.jpg" : {
+      "ft" : 16384,
+      "iS" : 116699,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/90023a109d-1620984411\/ottolinger-0019-1408x.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/media\/panel\/e87f0cefd7af496385034f7c7a96884d\/apple-touch-icon.png" : {
       "ft" : 32768,
       "iS" : 4115,
@@ -5042,6 +5176,14 @@
       "rFN" : 0,
       "uCM" : 0
     },
+    "\/site\/accounts\/.logins" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/accounts\/.logins",
+      "oF" : 0
+    },
     "\/site\/accounts\/index.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5074,12 +5216,52 @@
       "oAP" : "\/site\/accounts\/jGLVbY7d\/user.txt",
       "oF" : 0
     },
+    "\/site\/blueprints\/pages\/artist.yml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/blueprints\/pages\/artist.yml",
+      "oF" : 0
+    },
+    "\/site\/blueprints\/pages\/artists.yml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/blueprints\/pages\/artists.yml",
+      "oF" : 0
+    },
     "\/site\/blueprints\/pages\/default.yml" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/site\/blueprints\/pages\/default.yml",
+      "oF" : 0
+    },
+    "\/site\/blueprints\/pages\/error.yml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/blueprints\/pages\/error.yml",
+      "oF" : 0
+    },
+    "\/site\/blueprints\/pages\/home.yml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/blueprints\/pages\/home.yml",
+      "oF" : 0
+    },
+    "\/site\/blueprints\/sections\/artists.yml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/blueprints\/sections\/artists.yml",
       "oF" : 0
     },
     "\/site\/blueprints\/site.yml" : {
@@ -5104,20 +5286,44 @@
       "oAP" : "\/site\/config\/config.php",
       "oF" : 0
     },
-    "\/site\/sessions\/1620809209.19326da157aea75bb645.sess" : {
+    "\/site\/controllers\/artist.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/site\/sessions\/1620809209.19326da157aea75bb645.sess",
+      "oAP" : "\/site\/controllers\/artist.php",
       "oF" : 0
     },
-    "\/site\/sessions\/1620809209.b50c5e15f3df8cfa9df4.sess" : {
+    "\/site\/sessions\/1620991192.dcfe5ea5ec4265a3be49.sess" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/site\/sessions\/1620809209.b50c5e15f3df8cfa9df4.sess",
+      "oAP" : "\/site\/sessions\/1620991192.dcfe5ea5ec4265a3be49.sess",
+      "oF" : 0
+    },
+    "\/site\/sessions\/1622193614.3454d359b2e008a268fc.sess" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/sessions\/1622193614.3454d359b2e008a268fc.sess",
+      "oF" : 0
+    },
+    "\/site\/sessions\/1622193614.abefa1652a048c9266f2.sess" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/sessions\/1622193614.abefa1652a048c9266f2.sess",
+      "oF" : 0
+    },
+    "\/site\/sessions\/1623062745.4dbc49e14cb8d4c6119d.sess" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/sessions\/1623062745.4dbc49e14cb8d4c6119d.sess",
       "oF" : 0
     },
     "\/site\/sessions\/index.html" : {
@@ -5128,12 +5334,28 @@
       "oAP" : "\/site\/sessions\/index.html",
       "oF" : 0
     },
-    "\/site\/snippets\/index.html" : {
+    "\/site\/snippets\/header.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/site\/snippets\/index.html",
+      "oAP" : "\/site\/snippets\/header.php",
+      "oF" : 0
+    },
+    "\/site\/templates\/artist.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/templates\/artist.php",
+      "oF" : 0
+    },
+    "\/site\/templates\/artists.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/templates\/artists.php",
       "oF" : 0
     },
     "\/site\/templates\/default.php" : {
@@ -5142,6 +5364,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/site\/templates\/default.php",
+      "oF" : 0
+    },
+    "\/site\/templates\/home.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/templates\/home.php",
       "oF" : 0
     }
   },

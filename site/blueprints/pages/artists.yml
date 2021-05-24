@@ -1,0 +1,12 @@
+title: Artists
+preset: pages
+icon: 🖼
+
+drafts:
+  extends: sections/artists
+  headline: Artist Drafts
+
+listed:
+  extends: sections/artists
+  headline: Published Artists
+  layout: cards

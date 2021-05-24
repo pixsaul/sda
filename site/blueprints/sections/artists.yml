@@ -1,0 +1,10 @@
+type: pages
+headline: Artists
+parent: kirby.page('artists')
+layout: cards
+template: artist
+image:
+  query: page.images.template("cover").first
+  ratio: 3/2
+  cover: true
+info: "{{ page.year }}"
