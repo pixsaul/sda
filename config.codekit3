@@ -7,7 +7,7 @@
       "uuidString" : "D597B504-8CF4-4414-9B22-6DBE9679FA88"
     }
   ],
-  "creatorBuild" : "34081",
+  "creatorBuild" : "34127",
   "files" : {
     "\/.editorconfig" : {
       "cB" : 0,
@@ -67,6 +67,164 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/fonts\/metaballs\/Metaballs-Bold.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/metaballs\/Metaballs-Bold.woff",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/metaballs\/Metaballs-Light.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/metaballs\/Metaballs-Light.woff",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/metaballs\/Metaballs-Medium.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/metaballs\/Metaballs-Medium.woff",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/metaballs\/Metaballs-Regular.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/metaballs\/Metaballs-Regular.woff",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/metaballs\/Metaballs-Thin.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/metaballs\/Metaballs-Thin.woff",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/Selecta\/Selecta-Medium.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/Selecta\/Selecta-Medium.woff",
+      "oF" : 0
+    },
+    "\/assets\/js\/dat.gui.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/dat.gui.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/ExtendMaterial.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/ExtendMaterial-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/FBXLoader.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/FBXLoader-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/FresnelMaterial.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/FresnelMaterial-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/GLTFLoader.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/GLTFLoader-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/ImageMesh.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/ImageMesh-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/inflate.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/inflate.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/ObjectControls-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/ObjectControls-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/ObjectControls.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/ObjectControls-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/OBJLoader.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/OBJLoader-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/js\/scripts-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -88,6 +246,277 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/assets\/js\/SDARoom-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/SDARoom-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/SDARoom.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/SDARoom-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/Sketch.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/Sketch-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/three.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/three.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/Tween.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/Tween-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scenes\/scene-1\/blobsOnly2.fbx" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scenes\/scene-1\/blobsOnly2.fbx",
+      "oF" : 0
+    },
+    "\/assets\/scenes\/scene-1\/sceneImg1.jpg" : {
+      "ft" : 16384,
+      "iS" : 86151,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scenes\/scene-1\/sceneImg1.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/scenes\/scene-1\/sceneImg2.jpg" : {
+      "ft" : 16384,
+      "iS" : 130886,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scenes\/scene-1\/sceneImg2.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/scenes\/scene-1\/sceneImg3.jpg" : {
+      "ft" : 16384,
+      "iS" : 109487,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scenes\/scene-1\/sceneImg3.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/scenes\/scene-1\/sceneImg4.jpg" : {
+      "ft" : 16384,
+      "iS" : 132826,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scenes\/scene-1\/sceneImg4.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/scenes\/scene-1\/sceneImg5.jpg" : {
+      "ft" : 16384,
+      "iS" : 136534,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scenes\/scene-1\/sceneImg5.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/scenes\/scene-1\/tiles.png" : {
+      "ft" : 32768,
+      "iS" : 623,
+      "oA" : 0,
+      "oAP" : "\/assets\/scenes\/scene-1\/tiles.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/seqs\/seq-1\/Ottolinger_0010.jpg" : {
+      "ft" : 16384,
+      "iS" : 103327,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/seqs\/seq-1\/Ottolinger_0010.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/seqs\/seq-1\/Ottolinger_0011.jpg" : {
+      "ft" : 16384,
+      "iS" : 101018,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/seqs\/seq-1\/Ottolinger_0011.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/seqs\/seq-1\/Ottolinger_0012.jpg" : {
+      "ft" : 16384,
+      "iS" : 57712,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/seqs\/seq-1\/Ottolinger_0012.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/seqs\/seq-1\/Ottolinger_0013.jpg" : {
+      "ft" : 16384,
+      "iS" : 61114,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/seqs\/seq-1\/Ottolinger_0013.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/seqs\/seq-1\/Ottolinger_0014.jpg" : {
+      "ft" : 16384,
+      "iS" : 66586,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/seqs\/seq-1\/Ottolinger_0014.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/seqs\/seq-1\/Ottolinger_0015.jpg" : {
+      "ft" : 16384,
+      "iS" : 69456,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/seqs\/seq-1\/Ottolinger_0015.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/seqs\/seq-1\/Ottolinger_0016.jpg" : {
+      "ft" : 16384,
+      "iS" : 70104,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/seqs\/seq-1\/Ottolinger_0016.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/seqs\/seq-1\/Ottolinger_0017.jpg" : {
+      "ft" : 16384,
+      "iS" : 68560,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/seqs\/seq-1\/Ottolinger_0017.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/seqs\/seq-1\/Ottolinger_0018.jpg" : {
+      "ft" : 16384,
+      "iS" : 67217,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/seqs\/seq-1\/Ottolinger_0018.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/seqs\/seq-1\/Ottolinger_0019.jpg" : {
+      "ft" : 16384,
+      "iS" : 116699,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/seqs\/seq-1\/Ottolinger_0019.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/composer.json" : {
       "ft" : 524288,
@@ -140,6 +569,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/content\/2_artists\/artists.txt",
+      "oF" : 0
+    },
+    "\/content\/3_info\/info.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/content\/3_info\/info.txt",
       "oF" : 0
     },
     "\/content\/error\/error.txt" : {
@@ -5049,20 +5486,25 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/.jobs\/ottolinger-0019-864x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/.jobs\/ottolinger-0019-864x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
     "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/ottolinger_0019.jpg" : {
       "ft" : 16384,
       "iS" : 116699,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/ottolinger_0019.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/ottolinger-0019-864x.jpg" : {
+      "ft" : 16384,
+      "iS" : 116699,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/media\/pages\/artists\/test-artist\/30a07a5adf-1620984411\/ottolinger-0019-864x.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -5312,14 +5754,6 @@
       "oAP" : "\/site\/blueprints\/pages\/artists.yml",
       "oF" : 0
     },
-    "\/site\/blueprints\/pages\/default.yml" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/site\/blueprints\/pages\/default.yml",
-      "oF" : 0
-    },
     "\/site\/blueprints\/pages\/error.yml" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5334,6 +5768,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/site\/blueprints\/pages\/home.yml",
+      "oF" : 0
+    },
+    "\/site\/blueprints\/pages\/info.yml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/blueprints\/pages\/info.yml",
       "oF" : 0
     },
     "\/site\/blueprints\/sections\/artists.yml" : {
@@ -5374,13 +5816,135 @@
       "oAP" : "\/site\/controllers\/artist.php",
       "oF" : 0
     },
-    "\/site\/sessions\/1620991192.dcfe5ea5ec4265a3be49.sess" : {
+    "\/site\/plugins\/static-site-generator\/class.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/site\/sessions\/1620991192.dcfe5ea5ec4265a3be49.sess",
+      "oAP" : "\/site\/plugins\/static-site-generator\/class.php",
       "oF" : 0
+    },
+    "\/site\/plugins\/static-site-generator\/composer.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/site\/plugins\/static-site-generator\/composer-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/site\/plugins\/static-site-generator\/example.gif" : {
+      "ft" : 4194304,
+      "iS" : 408920,
+      "oA" : 0,
+      "oAP" : "\/site\/plugins\/static-site-generator\/example.gif",
+      "oF" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
+    "\/site\/plugins\/static-site-generator\/index.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/plugins\/static-site-generator\/index-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/site\/plugins\/static-site-generator\/index.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/site\/plugins\/static-site-generator\/index-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/site\/plugins\/static-site-generator\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/plugins\/static-site-generator\/index.php",
+      "oF" : 0
+    },
+    "\/site\/plugins\/static-site-generator\/ISSUE_TEMPLATE.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/plugins\/static-site-generator\/ISSUE_TEMPLATE.html",
+      "oF" : 0,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
+    },
+    "\/site\/plugins\/static-site-generator\/LICENSE.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/plugins\/static-site-generator\/LICENSE.txt",
+      "oF" : 0
+    },
+    "\/site\/plugins\/static-site-generator\/media.class.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/plugins\/static-site-generator\/media.class.php",
+      "oF" : 0
+    },
+    "\/site\/plugins\/static-site-generator\/PULL_REQUEST_TEMPLATE.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/plugins\/static-site-generator\/PULL_REQUEST_TEMPLATE.html",
+      "oF" : 0,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
+    },
+    "\/site\/plugins\/static-site-generator\/README.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/plugins\/static-site-generator\/README.html",
+      "oF" : 0,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
     },
     "\/site\/sessions\/1622193614.3454d359b2e008a268fc.sess" : {
       "cB" : 0,
@@ -5446,20 +6010,20 @@
       "oAP" : "\/site\/templates\/artists.php",
       "oF" : 0
     },
-    "\/site\/templates\/default.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/site\/templates\/default.php",
-      "oF" : 0
-    },
     "\/site\/templates\/home.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/site\/templates\/home.php",
+      "oF" : 0
+    },
+    "\/site\/templates\/info.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/templates\/info.php",
       "oF" : 0
     }
   },
@@ -7527,6 +8091,9 @@
       "removeVariables" : 0,
       "safelistEntries" : [
 
+      ],
+      "skippedEntries" : [
+        "node_modules\/**"
       ]
     },
     "rollupContext" : "",
@@ -7561,6 +8128,7 @@
     "tsNoImplicitThis" : 0,
     "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
+    "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
     "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,

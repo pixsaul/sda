@@ -1,26 +1,111 @@
 <?php snippet('header') ?>
-<h1><?= $page->title() ?></h1>
-<p><?= $page->text() ?></p>
 
 <?php if ($artistPage = page('artists')): ?>
-  <ul class="home-grid">
+  <div class="home-grid">
 	<?php foreach ($artistPage->children()->listed() as $artist): ?>
-	<li>
-	  <a href="<?= $artist->url() ?>">
-		<figure>
-		  <?php if ($cover = $artist->cover()): ?>
-		  <?= $cover->resize(1024, 1024) ?>
-		  <?php endif ?>
-		  <figcaption>
-			<span>
-			  <span class="example-name"><?= $artist->title()->html() ?></span>
-			</span>
-		  </figcaption>
-		</figure>
+	  <a class="grid-item" href="<?= $artist->url() ?>">
+			<div class="seq">
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0011.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0012.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0013.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0014.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0015.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0016.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0017.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0018.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0019.jpg" />
+			</div>
+			<img class="spacer" src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+			<span><?= $artist->title()->html() ?></span>
 	  </a>
-	</li>
+		
+		<a class="grid-item" href="<?= $artist->url() ?>">
+			<div class="seq">
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0011.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0012.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0013.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0014.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0015.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0016.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0017.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0018.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0019.jpg" />
+			</div>
+			<img class="spacer" src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+			<span><?= $artist->title()->html() ?></span>
+		</a>
+		
+		<a class="grid-item" href="<?= $artist->url() ?>">
+			<div class="seq">
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0011.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0012.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0013.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0014.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0015.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0016.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0017.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0018.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0019.jpg" />
+			</div>
+			<img class="spacer" src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+			<span><?= $artist->title()->html() ?></span>
+		</a>
+		
+		<a class="grid-item" href="<?= $artist->url() ?>">
+			<div class="seq">
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0011.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0012.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0013.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0014.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0015.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0016.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0017.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0018.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0019.jpg" />
+			</div>
+			<img class="spacer" src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+			<span><?= $artist->title()->html() ?></span>
+		</a>
+		
+		<a class="grid-item" href="<?= $artist->url() ?>">
+			<div class="seq">
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0011.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0012.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0013.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0014.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0015.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0016.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0017.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0018.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0019.jpg" />
+			</div>
+			<img class="spacer" src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+			<span><?= $artist->title()->html() ?></span>
+		</a>
+		
+		<a class="grid-item" href="<?= $artist->url() ?>">
+			<div class="seq">
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0011.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0012.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0013.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0014.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0015.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0016.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0017.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0018.jpg" />
+				<img src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0019.jpg" />
+			</div>
+			<img class="spacer" src="<?= $site->url() ?>/assets/seqs/seq-1/Ottolinger_0010.jpg" />
+			<span><?= $artist->title()->html() ?></span>
+		</a>
 	<?php endforeach ?>
-  </ul>
-  <?php endif ?>
+  </div>
+<?php endif ?>
   
-  <?php snippet('footer') ?>
+<?php snippet('footer') ?>

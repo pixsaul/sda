@@ -1,45 +1,40 @@
 <?php snippet('header') ?>
 
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/three.min.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/Tween.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/ObjectControls.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/ExtendMaterial.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/ImageMesh.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/FresnelMaterial.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/OBJLoader.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/GLTFLoader.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/inflate.min.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/dat.gui.min.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/FBXLoader.js"></script>
+
 <main class="project">
   <article>
+		
+		<div id="loader">
+			<div id="loaderImg"></div>
+			<div id="loaderText">loading</div>
+		</div>
+		<div id="canvasBg">
+		</div>
+		<canvas id="threeCanvas">
+		</canvas>
 
-	<header>
-	  <?php if ($cover = $page->images()->findBy("template", "cover")): ?>
-	  <figure class="project-cover">
-		<?= $cover ?>
-		<figcaption>
-		  <div>
-			<h1><?= $page->headline()->or($page->title()) ?></h1>
-			<?php if($page->intro()->isNotEmpty()): ?>
-			<div class="text">
-			  <?= $page->intro()->kt() ?>
-			</div>
-			<?php endif ?>
-		  </div>
-		</figcaption>
-	  </figure>
-	  <?php endif ?>
-	</header>
+		<div class="project-text text">
+			
+			<h1><?= $page->title() ?></h1>
+			
+			<?= $page->text()->kirbytext() ?>
+	  
+		</div>
 
-	<div class="project-text text">
-	  <time class="project-year"><?= $page->year() ?></time>
-	  <?= $page->text()->kt() ?>
-
-	  <?php if ($page->tags()->isNotEmpty()): ?>
-	  <p class="project-tags"># <?= $page->tags() ?></p>
-	  <?php endif ?>
-	</div>
-
-	<ul class="project-gallery"<?= attr(['data-even' => $gallery->isEven(), 'data-count' => $gallery->count()], ' ') ?>>
-	  <?php foreach ($gallery as $image): ?>
-	  <li>
-		<figure>
-		  <?= $image->crop(800, 1000) ?>
-		</figure>
-	  </li>
-	  <?php endforeach ?>
-	</ul>
   </article>
 </main>
+
+<script src="<?= $site->url() ?>/assets/js/SDARoom.js"></script>
 
 <?php snippet('footer') ?>
