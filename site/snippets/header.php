@@ -34,11 +34,11 @@
       <option selected="true" disabled="disabled" value="">Filter</option>
       <option value="fashionandtextile">Fashion + Textile Design</option>
       <option value="product">Product Design</option>
-      <option value="graphicdesign">Graphic Design</option>
+      <option value="graphic">Graphic Design</option>
       <option value="mediation">Mediation</option>
       <option value="photography">Photography</option>
       <option value="scenography">Scenography</option>
-      <option value="awared">Awarded</option>
+      <!--<option value="awared">Awarded</option>-->
     </select>
     <?php endif; ?>
     

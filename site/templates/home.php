@@ -1,8 +1,15 @@
 <?php snippet('header') ?>
 
-<?php if ($artistPage = page('participants')): ?>
+<?php if ($artistPage = page('participants')):
+
+$artistPage = $artistPage->children()->listed() ?>
+
+<?php if($tag = param('filter')) {
+	$artistPage = $artistPage->filterBy('categories', $tag, ',');
+} ?>
+
   <div class="home-grid">
-	<?php foreach ($artistPage->children()->listed() as $artist): ?>
+	<?php foreach ($artistPage as $artist): ?>
 	  <a class="grid-item" href="<?= $artist->url() ?>">
 			<div class="seq">
 				<?php

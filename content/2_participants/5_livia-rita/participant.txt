@@ -53,6 +53,98 @@ Video: https://player.vimeo.com/external/558090725.hd.mp4?s=53d68fce62b5285c52d2
 
 ----
 
+Room:
+
+// Add all the images
+function initImages(){
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_01.jpg', function(mesh){
+		mesh.scale.set(2.3,2.3,2.3);
+		mesh.position.set(-1.7, -0.3, -1.7)
+		mesh.position0.copy(mesh.position);
+		mesh.rotateY(Math.PI/4);
+		mesh.rotation0.copy(mesh.rotation);
+		mesh.quaternion0.copy(mesh.quaternion)
+		mesh.scale0.copy(mesh.scale);
+		group.add(mesh);
+		objects.push(mesh);
+		clickables.push(mesh);
+	});
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_02.jpg', function(mesh){
+		mesh.scale.set(2.3,2.3,2.3);
+		mesh.position.set(1.7, -0.3, -1.7);
+
+		mesh.position0.copy(mesh.position);
+		mesh.rotateY(-Math.PI/4);
+		mesh.rotation0.copy(mesh.rotation);
+		mesh.quaternion0.copy(mesh.quaternion)
+		mesh.scale0.copy(mesh.scale);
+		group.add(mesh);
+		objects.push(mesh);
+		clickables.push(mesh);
+	});
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_03.jpg', function(mesh){
+		mesh.scale.set(2.3,2.3,2.3);
+
+		mesh.position.set(-1.8, -0.3, 1.8);
+		mesh.position0.copy(mesh.position);
+
+		mesh.rotateY(-Math.PI/4);
+		mesh.rotation0.copy(mesh.rotation);
+		mesh.quaternion0.copy(mesh.quaternion)
+		mesh.scale0.copy(mesh.scale);
+		group.add(mesh);
+		objects.push(mesh);
+		clickables.push(mesh);
+	});
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_04.jpg', function(mesh){
+		mesh.scale.set(2.3,2.3,2.3);
+		mesh.position.set(1.5, -0.3, 1.5);
+		mesh.position0.copy(mesh.position);
+
+		mesh.rotateY(Math.PI/4);
+		mesh.rotation0.copy(mesh.rotation);
+		mesh.quaternion0.copy(mesh.quaternion)
+		mesh.scale0.copy(mesh.scale);
+		group.add(mesh);
+		objects.push(mesh);
+		clickables.push(mesh);
+	});
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_05.jpg', function(mesh){
+		mesh.scale.set(2.7,2.7,2.7);
+		mesh.position.set(0, 0, 0);
+		mesh.position0.copy(mesh.position);
+		mesh.rotation0.copy(mesh.rotation);
+		mesh.quaternion0.copy(mesh.quaternion)
+		mesh.scale0.copy(mesh.scale);
+		mesh.rotateY(Math.PI/4);
+		group.add(mesh);
+		objects.push(mesh);
+		clickables.push(mesh);
+	});
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_06.jpg', function(mesh){
+		mesh.scale.set(2.7,2.7,2.7);
+		mesh.position.set(-3, 0, 0);
+		mesh.position0.copy(mesh.position);
+		mesh.rotation0.copy(mesh.rotation);
+		mesh.quaternion0.copy(mesh.quaternion)
+		mesh.scale0.copy(mesh.scale);
+		mesh.rotateY(Math.PI/4);
+		group.add(mesh);
+		objects.push(mesh);
+		clickables.push(mesh);
+	});
+	addFbx('/sda/assets/scenes/afterwork/metaballs.fbx', function(mesh){
+		mesh.material = blobMaterial;
+		mesh.scale.set(0.25,0.25,0.25);
+		mesh.position.y -= 2;
+		group.add(mesh);
+		objects.push(mesh);
+		blobs.push(mesh);
+	});
+}
+
+----
+
 Cover:
 
 - home-livia-rita_1.jpg

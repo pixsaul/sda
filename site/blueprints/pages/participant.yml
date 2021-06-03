@@ -42,6 +42,10 @@ columns:
           video:
             label: Video URL
             type: url
+          room:
+            type: textarea
+            buttons: false
+            size: large
   misc:
     width: 1/3
     sticky: true

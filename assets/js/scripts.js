@@ -69,3 +69,19 @@ $( ".language-select" ).on( "click", "button", function() {
   $(".conf.lang--"+lang+"").show();
 
 });
+
+//Filter select
+$('select#filter').change(function(){
+  filter = $(this).val();
+  url = window.location.href;
+
+  if (url.indexOf("filter:") > -1) {
+    url = url.substr(0, url.lastIndexOf("filter:"));
+    url = url +"filter:"+ filter;
+  } else {
+    url = url +"filter:"+ filter;
+  }
+
+  window.location = url;
+  //console.log($(this).val());
+});

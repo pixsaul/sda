@@ -330,7 +330,7 @@
     },
     "\/assets\/scenes\/afterwork\/3d_After-Work_01.jpg" : {
       "ft" : 16384,
-      "iS" : 3322867,
+      "iS" : 329286,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_01.jpg",
@@ -343,7 +343,7 @@
     },
     "\/assets\/scenes\/afterwork\/3d_After-Work_02.jpg" : {
       "ft" : 16384,
-      "iS" : 3398703,
+      "iS" : 363616,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_02.jpg",
@@ -356,7 +356,7 @@
     },
     "\/assets\/scenes\/afterwork\/3d_After-Work_03.jpg" : {
       "ft" : 16384,
-      "iS" : 1628305,
+      "iS" : 161558,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_03.jpg",
@@ -369,7 +369,7 @@
     },
     "\/assets\/scenes\/afterwork\/3d_After-Work_04.jpg" : {
       "ft" : 16384,
-      "iS" : 1596467,
+      "iS" : 342863,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_04.jpg",
@@ -382,7 +382,7 @@
     },
     "\/assets\/scenes\/afterwork\/3d_After-Work_05.jpg" : {
       "ft" : 16384,
-      "iS" : 1444325,
+      "iS" : 286688,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_05.jpg",
@@ -395,7 +395,7 @@
     },
     "\/assets\/scenes\/afterwork\/3d_After-Work_06.jpg" : {
       "ft" : 16384,
-      "iS" : 1151609,
+      "iS" : 189371,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_06.jpg",
@@ -22070,14 +22070,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/site\/plugins\/cachebuster\/index.php",
-      "oF" : 0
-    },
-    "\/site\/plugins\/cdn\/index.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/site\/plugins\/cdn\/index.php",
       "oF" : 0
     },
     "\/site\/plugins\/cdn\/index.php.bck" : {

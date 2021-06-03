@@ -1,5 +1,9 @@
 <?php snippet('header') ?>
 
+<script>
+<?= $page->room() ?>
+</script>
+
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/three.min.js"></script>
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/Tween.js"></script>
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/ObjectControls.js"></script>
