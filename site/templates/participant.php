@@ -48,6 +48,7 @@
 				$images = $page->gallery()->toFiles();
 				foreach($images as $image): ?>
 					<img data-flickity-lazyload="<?= $image->url() ?>" alt="">
+					
 				<?php endforeach ?>
 				
 			</div>

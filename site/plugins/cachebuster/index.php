@@ -1,33 +1,32 @@
 <?php
 
-defined('DS') or define('DS', '/');
+namespace Kirby\Cdn;
 
-Kirby::plugin('schnti/cachebuster', [
-	'options'    => [
-		'active' => true
-	],
-	'components' => [
-		'css' => function ($kirby, $url) {
+use Kirby\Cms\App;
+use Kirby\Toolkit\F;
 
-			if ($kirby->option('schnti.cachebuster.active')) {
+class Cachebuster
+{
+	protected static function version(string $root, string $path): string
+	{
+		return dechex(filemtime($root));
+	}
 
-				$file = $kirby->roots()->index() . DS . $url;
-				return dirname($url) . '/' . F::name($url) . '.' . F::modified($file) . '.css';
-
-			} else {
-				return $url;
-			}
-		},
-		'js'  => function ($kirby, $url) {
-
-			if ($kirby->option('schnti.cachebuster.active')) {
-
-				$file = $kirby->roots()->index() . DS . $url;
-				return dirname($url) . '/' . F::name($url) . '.' . F::modified($file) . '.js';
-
-			} else {
-				return $url;
-			}
+	public static function path(string $path): string
+	{
+		if (strpos($path, url()) === 0) {
+			$path = ltrim(substr($path, strlen(url())), '/');
 		}
-	]
-]);
+
+		$kirby = App::instance();
+		$root  = $kirby->root('index') . '/' . $path;
+
+		if (file_exists($root)) {
+			$version = static::version($root, $path);
+			$path = $path . '?v=' . $version;
+		}
+
+		return $path;
+	}
+
+}
