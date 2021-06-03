@@ -1,0 +1,14 @@
+title: Participants
+preset: pages
+icon: 🖼
+options:
+  changeStatus: false
+
+drafts:
+  extends: sections/participants
+  headline: Participant Drafts
+
+listed:
+  extends: sections/participants
+  headline: Published Participants
+  layout: cards

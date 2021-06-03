@@ -13,9 +13,13 @@
 	'assets/css/style.css',
 	'@auto'
   ]) ?>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 
   <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
 </head>
+
   <?php if ($page->template() == "artist"): ?>
     <body class="artist">
     <?php else: ?>
@@ -23,17 +27,28 @@
   <?php endif; ?>
 
   <header class="header">
-    <?php if ($page->is("info")): ?>
-    <a href="<?= $site->url() ?>/">Home</a>
+    <?php if ( ($page->is("info")) || ($page->isChildOf("artists")) ) : ?>
+      <a href="<?= $site->url() ?>/">Home</a>
     <?php else: ?>
-    <div class="filter">Filter</div>
+    <select class="filter" name="filter" id="filter">
+      <option selected="true" disabled="disabled" value="">Filter</option>
+      <option value="fashionandtextile">Fashion + Textile Design</option>
+      <option value="product">Product Design</option>
+      <option value="graphicdesign">Graphic Design</option>
+      <option value="mediation">Mediation</option>
+      <option value="photography">Photography</option>
+      <option value="scenography">Scenography</option>
+      <option value="awared">Awarded</option>
+    </select>
     <?php endif; ?>
+    
     <a class="home" href="<?= $site->url() ?>/">
       <h1 class="header__mobile">SDA</h1>
       <h1 class="header__desktop">SWISS DESIGN AWARDS</h1>
     </a>
+    
     <?php if ($page->is("info")): ?>
-    <a href="javascript:history.go(-1)">Close</a>
+      <a href="javascript:history.go(-1)">Close</a>
     <?php else: ?>
       <a href="<?= $site->url() ?>/info/">Info</a>
     <?php endif; ?>

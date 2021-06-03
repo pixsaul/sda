@@ -1,0 +1,58 @@
+title: Artist
+
+status:
+  draft: Draft
+  listed: Published
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      content:
+        type: fields
+        fields:
+          subtitle:
+            type: text
+          categories:
+            label: Categories
+            type: checkboxes
+            options:
+              fashionandtextile: Fashion + Textile Design
+              product: Product Design
+              graphic: Graphic Design
+              mediaton: Mediation
+              photography: Photography
+              scenography: Scenography
+              awarded: *Awarded*
+          awarded:
+              type: select
+              options:
+                silver: Silver
+                gold: Gold
+          text:
+            type: textarea
+            size: large
+          gallery:
+            type: files
+            headline: Gallery
+            template: image
+          credits:
+            type: textarea
+            size: medium
+          video:
+            label: Video URL
+            type: url
+  misc:
+    width: 1/3
+    sticky: true
+    sections:
+      images:
+        type: fields
+        fields:
+          cover:
+            type: files
+            headline: Cover Images
+            layout: list
+            info: "{{ file.dimensions }}"
+            min: 1
+            max: 10

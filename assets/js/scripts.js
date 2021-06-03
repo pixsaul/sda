@@ -58,3 +58,14 @@ function animate(thisObj,direction) {
     }, 20);
   }
 }
+
+//Language select
+$( ".language-select" ).on( "click", "button", function() {
+  var lang = $(this).data("lang");
+  $(".project-text--info").hide();
+  $(".project-text--info.lang--"+lang+"").show();
+
+  $(".conf").hide();
+  $(".conf.lang--"+lang+"").show();
+
+});

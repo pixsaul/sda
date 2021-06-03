@@ -9,4 +9,6 @@
  */
 return [
 	'debug' => true,
+    'cdn'        => true,
+    'cdn.domain' => 'https://media-196c5.kxcdn.com'
 ];

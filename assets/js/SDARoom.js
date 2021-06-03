@@ -137,7 +137,7 @@ function initLights(){
 
 // Init the floor tilig
 function initFloor(){
-	const texture = textureLoader.load('/sda/assets/scenes/scene-1/tiles.png')
+	const texture = textureLoader.load('/sda/assets/scenes/global/tiles.png')
 	texture.anisotrophy = 8;
 	texture.minFilter = THREE.LinearFilter;
 	texture.wrapS = THREE.RepeatWrapping
@@ -543,7 +543,7 @@ function initGUI(){
 
 // Add all the images
 function initImages(){
-	addImage('/sda/assets/scenes/scene-1/sceneImg1.jpg', function(mesh){
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_01.jpg', function(mesh){
 		mesh.scale.set(2.3,2.3,2.3);
 		mesh.position.set(-1.7, -0.3, -1.7)
 		mesh.position0.copy(mesh.position);
@@ -555,7 +555,7 @@ function initImages(){
 		objects.push(mesh);
 		clickables.push(mesh);
 	});
-	addImage('/sda/assets/scenes/scene-1/sceneImg3.jpg', function(mesh){
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_02.jpg', function(mesh){
 		mesh.scale.set(2.3,2.3,2.3);
 		mesh.position.set(1.7, -0.3, -1.7);
 
@@ -568,10 +568,10 @@ function initImages(){
 		objects.push(mesh);
 		clickables.push(mesh);
 	});
-	addImage('/sda/assets/scenes/scene-1/sceneImg4.jpg', function(mesh){
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_03.jpg', function(mesh){
 		mesh.scale.set(2.3,2.3,2.3);
 
-		mesh.position.set(-1.7, -0.3, 1.7);
+		mesh.position.set(-1.8, -0.3, 1.8);
 		mesh.position0.copy(mesh.position);
 
 		mesh.rotateY(-Math.PI/4);
@@ -582,9 +582,9 @@ function initImages(){
 		objects.push(mesh);
 		clickables.push(mesh);
 	});
-	addImage('/sda/assets/scenes/scene-1/sceneImg5.jpg', function(mesh){
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_04.jpg', function(mesh){
 		mesh.scale.set(2.3,2.3,2.3);
-		mesh.position.set(1.7, -0.3, 1.7);
+		mesh.position.set(1.5, -0.3, 1.5);
 		mesh.position0.copy(mesh.position);
 
 		mesh.rotateY(Math.PI/4);
@@ -595,7 +595,7 @@ function initImages(){
 		objects.push(mesh);
 		clickables.push(mesh);
 	});
-	addImage('/sda/assets/scenes/scene-1/sceneImg2.jpg', function(mesh){
+	addImage('/sda/assets/scenes/afterwork/3d_After-Work_05.jpg', function(mesh){
 		mesh.scale.set(2.7,2.7,2.7);
 		mesh.position.set(0, 0, 0);
 		mesh.position0.copy(mesh.position);
@@ -607,7 +607,19 @@ function initImages(){
 		objects.push(mesh);
 		clickables.push(mesh);
 	});
-	addFbx('/sda/assets/scenes/scene-1/blobsOnly2.fbx', function(mesh){
+  addImage('/sda/assets/scenes/afterwork/3d_After-Work_06.jpg', function(mesh){
+    mesh.scale.set(2.7,2.7,2.7);
+    mesh.position.set(-3, 0, 0);
+    mesh.position0.copy(mesh.position);
+    mesh.rotation0.copy(mesh.rotation);
+    mesh.quaternion0.copy(mesh.quaternion)
+    mesh.scale0.copy(mesh.scale);
+    mesh.rotateY(Math.PI/4);
+    group.add(mesh);
+    objects.push(mesh);
+    clickables.push(mesh);
+  });
+	addFbx('/sda/assets/scenes/afterwork/metaballs.fbx', function(mesh){
 		mesh.material = blobMaterial;
 		mesh.scale.set(0.25,0.25,0.25);
 		mesh.position.y -= 2;

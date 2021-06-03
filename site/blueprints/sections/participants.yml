@@ -1,0 +1,9 @@
+type: pages
+headline: Participants
+parent: kirby.page('participants')
+layout: cards
+template: participant
+image:
+  query: page.images.template("mapImage").first
+  ratio: 3/2
+  cover: true

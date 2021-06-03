@@ -1,3 +1,21 @@
 title: Site
-preset: pages
-unlisted: true
+
+sections:
+
+  drafts:
+    headline: Drafts
+    type: pages
+    status: draft
+    image: icon
+
+  unlisted:
+    headline: Unlisted
+    type: pages
+    status: unlisted
+    image: icon
+
+  published:
+    headline: Published Pages
+    type: pages
+    status: listed
+    image: icon
