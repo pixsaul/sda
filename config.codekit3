@@ -350,12 +350,12 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/scenes\/afterwork\/3d_After-Work_01.jpg" : {
+    "\/assets\/scenes\/after-work-studio\/3d_After-Work_01.jpg" : {
       "ft" : 16384,
       "iS" : 329286,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_01.jpg",
+      "oAP" : "\/assets\/scenes\/after-work-studio\/3d_After-Work_01.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -363,12 +363,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/afterwork\/3d_After-Work_02.jpg" : {
+    "\/assets\/scenes\/after-work-studio\/3d_After-Work_02.jpg" : {
       "ft" : 16384,
       "iS" : 363616,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_02.jpg",
+      "oAP" : "\/assets\/scenes\/after-work-studio\/3d_After-Work_02.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -376,12 +376,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/afterwork\/3d_After-Work_03.jpg" : {
+    "\/assets\/scenes\/after-work-studio\/3d_After-Work_03.jpg" : {
       "ft" : 16384,
       "iS" : 161558,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_03.jpg",
+      "oAP" : "\/assets\/scenes\/after-work-studio\/3d_After-Work_03.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -389,12 +389,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/afterwork\/3d_After-Work_04.jpg" : {
+    "\/assets\/scenes\/after-work-studio\/3d_After-Work_04.jpg" : {
       "ft" : 16384,
       "iS" : 342863,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_04.jpg",
+      "oAP" : "\/assets\/scenes\/after-work-studio\/3d_After-Work_04.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -402,12 +402,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/afterwork\/3d_After-Work_05.jpg" : {
+    "\/assets\/scenes\/after-work-studio\/3d_After-Work_05.jpg" : {
       "ft" : 16384,
       "iS" : 286688,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_05.jpg",
+      "oAP" : "\/assets\/scenes\/after-work-studio\/3d_After-Work_05.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -415,12 +415,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/afterwork\/3d_After-Work_06.jpg" : {
+    "\/assets\/scenes\/after-work-studio\/3d_After-Work_06.jpg" : {
       "ft" : 16384,
       "iS" : 189371,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/scenes\/afterwork\/3d_After-Work_06.jpg",
+      "oAP" : "\/assets\/scenes\/after-work-studio\/3d_After-Work_06.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -428,23 +428,34 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/afterwork\/config.js" : {
+    "\/assets\/scenes\/after-work-studio\/config-min.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/scenes\/afterwork\/config-min.js",
+      "oAP" : "\/assets\/scenes\/after-work-studio\/config-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/scenes\/afterwork\/metaballs.fbx" : {
+    "\/assets\/scenes\/after-work-studio\/config.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scenes\/after-work-studio\/config-min.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/assets\/scenes\/after-work-studio\/metaballs.fbx" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/scenes\/afterwork\/metaballs.fbx",
+      "oAP" : "\/assets\/scenes\/after-work-studio\/metaballs.fbx",
       "oF" : 0
     },
     "\/assets\/scenes\/global\/frame.png" : {

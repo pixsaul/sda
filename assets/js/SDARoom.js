@@ -3,7 +3,7 @@
 const config = {
   simulateMobileTap: false,
   mobileTapRotateAmount: 1,
-  blobFresnelColour: 0xff3326,
+  blobFresnelColour: 0xFF3C1E,
   blobFresnelAmount1: 0.82,
   blobFresnelAmount2: 1.84,
   blobFresnelAmount3: 0.69,

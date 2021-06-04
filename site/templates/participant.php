@@ -14,7 +14,7 @@
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/FBXLoader.js"></script>
 
 <!-- room config -->
-<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/scenes/afterwork/config.js"></script>
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/scenes/<?= $page->slug() ?>/config.js"></script>
 
 <main class="project">
   <article>

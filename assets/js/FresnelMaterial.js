@@ -1,5 +1,5 @@
 const fresnelMaterial = function(
-  fresnelColour=0xff3326,
+  fresnelColour=0xFF3C1E,
   fresnelAmount1 = 0.27,
   fresnelAmount2 = 0.47,
   fresnelAmount3 = 1.07,
