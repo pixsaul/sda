@@ -339,13 +339,19 @@ body.artist header {
   position: absolute;
   width: 100%;
 
-  h1, a, .filter {
+  h1, a, .filter,  {
     color: $primary;
     text-shadow:
      -1px -1px 0 #000,
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
+  }
+  .filter option {
+      font-family: sans-serif;
+      font-size: 14px;
+      text-shadow: none;
+      color: black;
   }
 }
 
@@ -578,6 +584,8 @@ button, a.btn {
   }
 }
 
+
+//Project slider
 .projectGallery {
   margin: 50px 0;
   @include for-desktop-up {

@@ -1,9 +1,6 @@
 <?php snippet('header') ?>
 
-<script>
-<?= $page->room() ?>
-</script>
-
+<!-- room scripts -->
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/three.min.js"></script>
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/Tween.js"></script>
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/ObjectControls.js"></script>
@@ -16,6 +13,9 @@
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/dat.gui.min.js"></script>
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/FBXLoader.js"></script>
 
+<!-- room config -->
+<script crossorigin="anonymous" src="<?= $site->url() ?>/assets/scenes/afterwork/config.js"></script>
+
 <main class="project">
   <article>
 		
@@ -27,6 +27,8 @@
 		</div>
 		<canvas id="threeCanvas">
 		</canvas>
+		
+		<script src="<?= $site->url() ?>/assets/js/SDARoom.js"></script>
 
 		<div class="project-text text">
 			
@@ -52,9 +54,7 @@
 				$images = $page->gallery()->toFiles();
 				foreach($images as $image): ?>
 					<img data-flickity-lazyload="<?= $image->url() ?>" alt="">
-					
 				<?php endforeach ?>
-				
 			</div>
 			
 			<div class="projectCredits">
@@ -74,14 +74,10 @@
 						</div>
 					</div>
 				</div>
-			
-	  
 		</div>
 
   </article>
 </main>
-
-<script src="<?= $site->url() ?>/assets/js/SDARoom.js"></script>
 
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

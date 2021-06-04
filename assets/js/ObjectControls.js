@@ -9,274 +9,274 @@ description: module for ThreeJS that allows you to rotate an Object(mesh) indepe
 ----------------------------------------------------------*/
 
 
-THREE.ObjectControls = function(objectToMove, domElement, hasHover) {
+THREE.ObjectControls = function(objectToMove, domElement, hasHover, restrictMobile) {
 
-	/**
-	* setObjectToMove
-	* @description changes the object to control
-	* @param newMesh
-	**/
-	this.setObjectToMove = function (newMesh) {
-		mesh = newMesh;
-	};
-
-
-
-	this.autoSpeed = 0.1;
-	this.rotationSpeed = 0.07;
-	// Set to true when mouse hovering over something else
-	this.mouseBusy = false;
-
-	/**
-	* setRotationSpeed
-	* @param {number} newRotationSpeed - (1 == fast)  (0.01 == slow)
-	**/
-	this.setRotationSpeed = function (newRotationSpeed) {
-		this.rotationSpeed = newRotationSpeed;
-	};
-
-	/**
-	* setRotationSpeedTouchDevices
-	* @param {number} newRotationSpeed - (1 == fast)  (0.01 == slow)
-	**/
-	this.setRotationSpeedTouchDevices = function (newRotationSpeed) {
-		rotationSpeedTouchDevices = newRotationSpeed;
-	};
-
-	this.enableVerticalRotation = function () {
-		verticalRotationEnabled = true;
-	};
-
-	this.disableVerticalRotation = function () {
-		verticalRotationEnabled = false;
-	};
-
-	this.enableHorizontalRotation = function () {
-		horizontalRotationEnabled = true;
-	};
-
-	this.disableHorizontalRotation = function () {
-		horizontalRotationEnabled = false;
-	};
-
-	this.setMaxVerticalRotationAngle = function (min, max) {
-		this.maxRotationAngles.x.from = min;
-		this.maxRotationAngles.x.to = max;
-		this.maxRotationAngles.x.enabled = true;
-	};
-
-	this.setMaxHorizontalRotationAngle = function (min, max) {
-		this.maxRotationAngles.y.from = min;
-		this.maxRotationAngles.y.to = max;
-		this.maxRotationAngles.y.enabled = true;
-	};
-
-	this.disableMaxHorizontalAngleRotation = function () {
-		this.maxRotationAngles.y.enabled = false;
-	};
-
-	this.disableMaxVerticalAngleRotation = function () {
-		this.maxRotationAngles.x.enabled = false;
-	};
-
-	this.update = function(delta) {
-		if (!isDragging){
-			mesh.rotation.y += this.autoSpeed * delta;
-		}
-	}
+  /**
+  * setObjectToMove
+  * @description changes the object to control
+  * @param newMesh
+  **/
+  this.setObjectToMove = function (newMesh) {
+    mesh = newMesh;
+  };
 
 
 
-	domElement = (domElement !== undefined) ? domElement : document;
+  this.autoSpeed = 0.1;
+  this.rotationSpeed = 0.07;
+  // Set to true when mouse hovering over something else
+  this.mouseBusy = false;
 
-	/********************* Private control variables *************************/
+  /**
+  * setRotationSpeed
+  * @param {number} newRotationSpeed - (1 == fast)  (0.01 == slow)
+  **/
+  this.setRotationSpeed = function (newRotationSpeed) {
+    this.rotationSpeed = newRotationSpeed;
+  };
 
-	this.maxRotationAngles = {
-		x: {
-			// Vertical from bottom to top.
-			enabled: true,
-			from: 0.92,
-			to: 0.74,
-		},
-		y: {
-			// Horizontal from left to right.
-			enabled: false,
-			from: Math.PI / 4,
-			to: Math.PI / 4
-		}
-	};
+  /**
+  * setRotationSpeedTouchDevices
+  * @param {number} newRotationSpeed - (1 == fast)  (0.01 == slow)
+  **/
+  this.setRotationSpeedTouchDevices = function (newRotationSpeed) {
+    rotationSpeedTouchDevices = newRotationSpeed;
+  };
 
-	let
-	flag,
-	mesh = objectToMove,
-	rotationSpeedTouchDevices = 0.05,
-	isDragging = false,
-	verticalRotationEnabled = true,
-	horizontalRotationEnabled = true,
-	mouseFlags = { MOUSEDOWN: 0, MOUSEMOVE: 1 },
-	previousMousePosition = { x: 0, y: 0 },
-	/**
-	* CurrentTouches
-	* length 0 : no zoom
-	* length 2 : is zoomming
-	*/
-	currentTouches = [];
+  this.enableVerticalRotation = function () {
+    verticalRotationEnabled = true;
+  };
 
-	/***************************** Private shared functions **********************/
+  this.disableVerticalRotation = function () {
+    verticalRotationEnabled = false;
+  };
 
-	let scope = this;
+  this.enableHorizontalRotation = function () {
+    horizontalRotationEnabled = true;
+  };
 
-	/**
-	* isWithinMaxAngle
-	* @description Checks if the rotation in a specific axe is within the maximum
-	* values allowed.
-	* @param delta is the difference of the current rotation angle and the
-	*     expected rotation angle
-	* @param axe is the axe of rotation: x(vertical rotation), y (horizontal
-	*     rotation)
-	* @return true if the rotation with the new delta is included into the
-	*     allowed angle range, false otherwise
-	*/
-	function isWithinMaxAngle(delta, axe) {
-		if (scope.maxRotationAngles[axe].enabled) {
-			const condition = ((scope.maxRotationAngles[axe].from * -1) <
-			(mesh.rotation[axe] + delta)) &&
-			((mesh.rotation[axe] + delta) < scope.maxRotationAngles[axe].to);
-			return condition ? true : false;
-		}
-		return true;
-	}
+  this.disableHorizontalRotation = function () {
+    horizontalRotationEnabled = false;
+  };
 
-	function resetMousePosition() {
-		previousMousePosition = { x: 0, y: 0 };
-	}
+  this.setMaxVerticalRotationAngle = function (min, max) {
+    this.maxRotationAngles.x.from = min;
+    this.maxRotationAngles.x.to = max;
+    this.maxRotationAngles.x.enabled = true;
+  };
 
-	/******************  MOUSE interaction functions - desktop  *****/
-	function mouseDown(e) {
-		if (!scope.mouseBusy){
-			isDragging = true;
-			flag = mouseFlags.MOUSEDOWN;
-			domElement.style.cursor = 'grabbing';
-		}
-	}
+  this.setMaxHorizontalRotationAngle = function (min, max) {
+    this.maxRotationAngles.y.from = min;
+    this.maxRotationAngles.y.to = max;
+    this.maxRotationAngles.y.enabled = true;
+  };
 
-	function mouseMove(e) {
-		if (isDragging) {
-			const deltaMove = {
-				x: e.offsetX - previousMousePosition.x,
-				y: e.offsetY - previousMousePosition.y
-			};
+  this.disableMaxHorizontalAngleRotation = function () {
+    this.maxRotationAngles.y.enabled = false;
+  };
 
-			previousMousePosition = { x: e.offsetX, y: e.offsetY };
+  this.disableMaxVerticalAngleRotation = function () {
+    this.maxRotationAngles.x.enabled = false;
+  };
 
-			if (horizontalRotationEnabled && deltaMove.x != 0)
-			// && (Math.abs(deltaMove.x) > Math.abs(deltaMove.y))) {
-			// enabling this, the mesh will rotate only in one specific direction
-			// for mouse movement
-			{
-				if (!isWithinMaxAngle(Math.sign(deltaMove.x) * scope.rotationSpeed, 'y'))
-				return;
-
-				mesh.rotation.y += Math.sign(deltaMove.x) * scope.rotationSpeed;
-				flag = mouseFlags.MOUSEMOVE;
-			}
-
-			if (verticalRotationEnabled && deltaMove.y != 0)
-			// &&(Math.abs(deltaMove.y) > Math.abs(deltaMove.x)) //
-			// enabling this, the mesh will rotate only in one specific direction for
-			// mouse movement
-			{
-				if (!isWithinMaxAngle(Math.sign(deltaMove.y) * scope.rotationSpeed, 'x'))
-				return;
-				mesh.rotation.x += Math.sign(deltaMove.y) * scope.rotationSpeed;
-				flag = mouseFlags.MOUSEMOVE;
-			}
-		}
-	}
-
-	function mouseUp() {
-		isDragging = false;
-		resetMousePosition();
-		domElement.style.cursor = 'grab';
-	}
-
-
-	/****************** TOUCH interaction functions - mobile  *****/
-
-	function onTouchStart(e) {
-		e.preventDefault();
-		flag = mouseFlags.MOUSEDOWN;
-		if (e.touches.length === 2) {
-		} else {
-			previousMousePosition = { x: e.touches[0].pageX, y: e.touches[0].pageY };
-		}
-	}
-
-	function onTouchEnd(e) {
+  this.update = function(delta) {
+    if (!isDragging){
+      mesh.rotation.y += this.autoSpeed * delta;
+    }
+  }
 
 
 
-		if (currentTouches.length > 0) {
-			currentTouches.pop();
-		} else {
-			currentTouches = [];
-		}
-		e.preventDefault();
-		if (flag === mouseFlags.MOUSEDOWN) {
-			// TouchClick
-			// You can invoke more other functions for animations and so on...
-		} else if (flag === mouseFlags.MOUSEMOVE) {
-			// Touch drag
-			// You can invoke more other functions for animations and so on...
-		}
-		resetMousePosition();
-	}
+  domElement = (domElement !== undefined) ? domElement : document;
 
-	function onTouchMove(e) {
-		e.preventDefault();
-		flag = mouseFlags.MOUSEMOVE;
-		// Touch zoom.
-		// If two pointers are down, check for pinch gestures.
-		if (currentTouches.length === 0) {
+  /********************* Private control variables *************************/
 
-			const deltaMove = {
-				x: e.touches[0].pageX - previousMousePosition.x,
-				y: e.touches[0].pageY - previousMousePosition.y
-			};
-			previousMousePosition = { x: e.touches[0].pageX, y: e.touches[0].pageY };
+  this.maxRotationAngles = {
+    x: {
+      // Vertical from bottom to top.
+      enabled: true,
+      from: 0.92,
+      to: 0.74,
+    },
+    y: {
+      // Horizontal from left to right.
+      enabled: false,
+      from: Math.PI / 4,
+      to: Math.PI / 4
+    }
+  };
 
-			if (horizontalRotationEnabled && deltaMove.x != 0) {
-				if (!isWithinMaxAngle(
-					Math.sign(deltaMove.x) * rotationSpeedTouchDevices, 'y'))
-					return;
-					mesh.rotation.y += Math.sign(deltaMove.x) * rotationSpeedTouchDevices;
-				}
+  let
+  flag,
+  mesh = objectToMove,
+  rotationSpeedTouchDevices = 0.05,
+  isDragging = false,
+  verticalRotationEnabled = true,
+  horizontalRotationEnabled = true,
+  mouseFlags = { MOUSEDOWN: 0, MOUSEMOVE: 1 },
+  previousMousePosition = { x: 0, y: 0 },
+  /**
+  * CurrentTouches
+  * length 0 : no zoom
+  * length 2 : is zoomming
+  */
+  currentTouches = [];
 
-				if (verticalRotationEnabled && deltaMove.y != 0) {
-					if (!isWithinMaxAngle(
-						Math.sign(deltaMove.y) * rotationSpeedTouchDevices, 'x'))
-						return;
-						mesh.rotation.x += Math.sign(deltaMove.y) * rotationSpeedTouchDevices;
-					}
-				}
-			}
+  /***************************** Private shared functions **********************/
+
+  let scope = this;
+
+  /**
+  * isWithinMaxAngle
+  * @description Checks if the rotation in a specific axe is within the maximum
+  * values allowed.
+  * @param delta is the difference of the current rotation angle and the
+  *     expected rotation angle
+  * @param axe is the axe of rotation: x(vertical rotation), y (horizontal
+  *     rotation)
+  * @return true if the rotation with the new delta is included into the
+  *     allowed angle range, false otherwise
+  */
+  function isWithinMaxAngle(delta, axe) {
+    if (scope.maxRotationAngles[axe].enabled) {
+      const condition = ((scope.maxRotationAngles[axe].from * -1) <
+      (mesh.rotation[axe] + delta)) &&
+      ((mesh.rotation[axe] + delta) < scope.maxRotationAngles[axe].to);
+      return condition ? true : false;
+    }
+    return true;
+  }
+
+  function resetMousePosition() {
+    previousMousePosition = { x: 0, y: 0 };
+  }
+
+  /******************  MOUSE interaction functions - desktop  *****/
+  function mouseDown(e) {
+    if (!scope.mouseBusy){
+      isDragging = true;
+      flag = mouseFlags.MOUSEDOWN;
+      domElement.style.cursor = 'grabbing';
+    }
+  }
+
+  function mouseMove(e) {
+    if (isDragging) {
+      const deltaMove = {
+        x: e.offsetX - previousMousePosition.x,
+        y: e.offsetY - previousMousePosition.y
+      };
+
+      previousMousePosition = { x: e.offsetX, y: e.offsetY };
+
+      if (horizontalRotationEnabled && deltaMove.x != 0)
+      // && (Math.abs(deltaMove.x) > Math.abs(deltaMove.y))) {
+      // enabling this, the mesh will rotate only in one specific direction
+      // for mouse movement
+      {
+        if (!isWithinMaxAngle(Math.sign(deltaMove.x) * scope.rotationSpeed, 'y'))
+        return;
+
+        mesh.rotation.y += Math.sign(deltaMove.x) * scope.rotationSpeed;
+        flag = mouseFlags.MOUSEMOVE;
+      }
+
+      if (verticalRotationEnabled && deltaMove.y != 0)
+      // &&(Math.abs(deltaMove.y) > Math.abs(deltaMove.x)) //
+      // enabling this, the mesh will rotate only in one specific direction for
+      // mouse movement
+      {
+        if (!isWithinMaxAngle(Math.sign(deltaMove.y) * scope.rotationSpeed, 'x'))
+        return;
+        mesh.rotation.x += Math.sign(deltaMove.y) * scope.rotationSpeed;
+        flag = mouseFlags.MOUSEMOVE;
+      }
+    }
+  }
+
+  function mouseUp() {
+    isDragging = false;
+    resetMousePosition();
+    domElement.style.cursor = 'grab';
+  }
 
 
-			/********************* Event Listeners *************************/
+  /****************** TOUCH interaction functions - mobile  *****/
 
-			/** Mouse Interaction Controls (rotate & zoom, desktop **/
-			// Mouse - move
-			if (hasHover){
-				domElement.addEventListener('mousedown', mouseDown, false);
-				domElement.addEventListener('mousemove', mouseMove, false);
-				domElement.addEventListener('mouseup', mouseUp, false);
-				domElement.addEventListener('mouseout', mouseUp, false);
+  function onTouchStart(e) {
+    e.preventDefault();
+    flag = mouseFlags.MOUSEDOWN;
+    if (e.touches.length === 2) {
+    } else {
+      previousMousePosition = { x: e.touches[0].pageX, y: e.touches[0].pageY };
+    }
+  }
+
+  function onTouchEnd(e) {
 
 
-				/** Touch Interaction Controls (rotate & zoom, mobile) **/
-				// Touch - move
-				domElement.addEventListener('touchstart', onTouchStart, false);
-				domElement.addEventListener('touchmove', onTouchMove, false);
-				domElement.addEventListener('touchend', onTouchEnd, false);
-			}
-		};
+
+    if (currentTouches.length > 0) {
+      currentTouches.pop();
+    } else {
+      currentTouches = [];
+    }
+    e.preventDefault();
+    if (flag === mouseFlags.MOUSEDOWN) {
+      // TouchClick
+      // You can invoke more other functions for animations and so on...
+    } else if (flag === mouseFlags.MOUSEMOVE) {
+      // Touch drag
+      // You can invoke more other functions for animations and so on...
+    }
+    resetMousePosition();
+  }
+
+  function onTouchMove(e) {
+    e.preventDefault();
+    flag = mouseFlags.MOUSEMOVE;
+    // Touch zoom.
+    // If two pointers are down, check for pinch gestures.
+    if (currentTouches.length === 0) {
+
+      const deltaMove = {
+        x: e.touches[0].pageX - previousMousePosition.x,
+        y: e.touches[0].pageY - previousMousePosition.y
+      };
+      previousMousePosition = { x: e.touches[0].pageX, y: e.touches[0].pageY };
+
+      if (horizontalRotationEnabled && deltaMove.x != 0) {
+        if (!isWithinMaxAngle(
+          Math.sign(deltaMove.x) * rotationSpeedTouchDevices, 'y'))
+          return;
+          mesh.rotation.y += Math.sign(deltaMove.x) * rotationSpeedTouchDevices;
+        }
+
+        if (verticalRotationEnabled && deltaMove.y != 0) {
+          if (!isWithinMaxAngle(
+            Math.sign(deltaMove.y) * rotationSpeedTouchDevices, 'x'))
+            return;
+            mesh.rotation.x += Math.sign(deltaMove.y) * rotationSpeedTouchDevices;
+          }
+        }
+      }
+
+
+      /********************* Event Listeners *************************/
+
+      /** Mouse Interaction Controls (rotate & zoom, desktop **/
+      // Mouse - move
+      if (hasHover || !restrictMobile){
+        domElement.addEventListener('mousedown', mouseDown, false);
+        domElement.addEventListener('mousemove', mouseMove, false);
+        domElement.addEventListener('mouseup', mouseUp, false);
+        domElement.addEventListener('mouseout', mouseUp, false);
+
+
+        /** Touch Interaction Controls (rotate & zoom, mobile) **/
+        // Touch - move
+        domElement.addEventListener('touchstart', onTouchStart, false);
+        domElement.addEventListener('touchmove', onTouchMove, false);
+        domElement.addEventListener('touchend', onTouchEnd, false);
+      }
+    };

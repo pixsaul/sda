@@ -1,3 +1,5 @@
+//Homepage slides
+
 //set first slide to active
 $(".seq img:first-child").addClass('active');
 
@@ -43,7 +45,7 @@ function animate(thisObj,direction) {
     }, 20);
   }
 
-  //if animating forward, move active class step by step back to first slide
+  //if animating backward, move active class step by step back to first slide
   else {
     var i = slides;
     var myVar = setInterval(function() {
@@ -83,5 +85,4 @@ $('select#filter').change(function(){
   }
 
   window.location = url;
-  //console.log($(this).val());
 });

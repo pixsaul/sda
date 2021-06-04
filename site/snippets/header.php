@@ -16,11 +16,10 @@
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-
   <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
 </head>
 
-  <?php if ($page->template() == "artist"): ?>
+  <?php if ($page->template() == "participant"): ?>
     <body class="artist">
     <?php else: ?>
     <body>
@@ -31,7 +30,7 @@
       <a href="<?= $site->url() ?>/">Home</a>
     <?php else: ?>
     <select class="filter" name="filter" id="filter">
-      <option selected="true" disabled="disabled" value="">Filter</option>
+      <option selected disabled hidden value="">Filter</option>
       <option value="fashionandtextile">Fashion + Textile Design</option>
       <option value="product">Product Design</option>
       <option value="graphic">Graphic Design</option>
