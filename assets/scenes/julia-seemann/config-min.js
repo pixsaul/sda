@@ -1,0 +1,1 @@
+var path="/sda/assets/scenes/after-work-studio/";roomConfig={images:[],blobs:[]};

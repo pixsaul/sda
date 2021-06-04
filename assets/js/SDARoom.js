@@ -90,7 +90,6 @@ const colourGUI = gui.addFolder('Colour');
 const lightsGUI = gui.addFolder('Lights');
 */
 
-
 let infiniteFloorMaterial;
 
 // Used to stop clicking too fast which causes bugs
@@ -242,14 +241,14 @@ function applyFadeToAllExcept(exceptMesh){
       if (Array.isArray(mesh.material)){
         for (let m of mesh.material){
           const opacityTween = new TWEEN.Tween(m)
-          .to({opacity:0.5}, 500)
+          .to({opacity:0.25}, 500)
           .easing(TWEEN.Easing.Quadratic.InOut)
           opacityTween.start();
         }
       } else {
 
         const opacityTween = new TWEEN.Tween(mesh.material)
-        .to({opacity:0.5}, 500)
+        .to({opacity:0.25}, 500)
         .easing(TWEEN.Easing.Quadratic.InOut)
         opacityTween.start();
       }
@@ -335,9 +334,9 @@ function animate() {
 
 // Slowly rotate selected object
 function animateSelectedObj(){
-  // selectedObj.position.y += Math.sin(clock.getElapsedTime()) * 0.001;
-  // selectedObj.rotation.x += Math.sin(clock.getElapsedTime()*1.2) * 0.0002;
-  // selectedObj.rotation.y += Math.sin(clock.getElapsedTime()*0.7) * 0.0005;
+  selectedObj.position.y += Math.sin(clock.getElapsedTime()) * 0.001;
+  selectedObj.rotation.x += Math.sin(clock.getElapsedTime()*1.2) * 0.0002;
+  selectedObj.rotation.y += Math.sin(clock.getElapsedTime()*0.7) * 0.0005;
 }
 
 // Check if mouse is over the top of an object, then hover or unhover
@@ -430,6 +429,7 @@ function configLoadingManager(){
     c.style.opacity = 1;
     let l = document.getElementById("loader");
     l.style.opacity = 0;
+    spinIn();
     setTimeout(function(){
       l.remove();
     }, 2000)
@@ -676,7 +676,6 @@ function init(){
   //initGUI();
   configLoadingManager();
   render();
-  spinIn();
   //initMinimap();
 }
 

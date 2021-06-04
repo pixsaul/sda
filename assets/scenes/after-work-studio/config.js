@@ -88,7 +88,7 @@ roomConfig = {
   ],
   blobs: [
     {
-      path: path+'metaballs.fbx',
+      path: path+'after-work-studio.fbx',
       scale: 0.25,
       position: {
         x: 0,
