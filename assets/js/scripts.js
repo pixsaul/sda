@@ -22,7 +22,7 @@ $( ".seq" ).hover(
   }
 );
 
-function animate(thisObj,direction) {
+function animaten(thisObj,direction) {
 
   //get number of slides
   slides = $("img", thisObj).length;

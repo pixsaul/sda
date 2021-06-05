@@ -65,7 +65,7 @@
 				<h3>Behind the scene</h3>
 				<div class="videoOverflow">
 					<div class="videoWrap">
-						<video autoplay loop muted>
+						<video loop muted>
 							<source src="<?= $page->video() ?>" type="video/mp4">
 							Sorry, your browser doesn't support embedded videos.
 						</video>
@@ -91,7 +91,7 @@ var flkty = new Flickity( elem, {
 	pageDots: false,
 	cellAlign: 'left',
 	wrapAround: true,
-	lazyLoad: 3
+	lazyLoad: 2
 });
 
 var $carousel = $('.projectGallery').flickity()

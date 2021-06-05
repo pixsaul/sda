@@ -47,9 +47,12 @@ Video: https://player.vimeo.com/external/558090725.hd.mp4?s=53d68fce62b5285c52d2
 
 ----
 
+Room: 
+
+----
+
 Cover:
 
-- annina-arter_0010.jpg
 - annina-arter_0011.jpg
 - annina-arter_0012.jpg
 - annina-arter_0013.jpg
@@ -59,3 +62,4 @@ Cover:
 - annina-arter_0017.jpg
 - annina-arter_0018.jpg
 - annina-arter_0019.jpg
+- annina-arter_0010.jpg
