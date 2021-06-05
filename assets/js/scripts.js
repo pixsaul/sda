@@ -10,7 +10,7 @@ $( ".seq" ).hover(
     $(this).addClass('animating--fwd');
 
     //animate this, direction forward
-    animate($(this), true);
+    animateSequence($(this), true);
 
   }, function() {
     //on hover out, set to animating rev
@@ -18,11 +18,11 @@ $( ".seq" ).hover(
     $(this).addClass('animating--rev');
 
     //animate this, direction backward
-    animate($(this), false);
+    animateSequence($(this), false);
   }
 );
 
-function animaten(thisObj,direction) {
+function animateSequence(thisObj,direction) {
 
   //get number of slides
   slides = $("img", thisObj).length;
