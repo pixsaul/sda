@@ -19,11 +19,11 @@ $artistPage = $artistPage->paginate(9);
 				<?php
 				$images = $artist->cover()->toFiles();
 				foreach($images as $image): ?>
-					<img src="<?= $image->url() ?>" alt="">
+					<img src="<?= $image->url() ?>?width=600&quality=70" alt="">
 				<?php endforeach ?>
 			</div>
 			<?php $firstImage = $artist->cover()->toFiles()->first(); ?>
-			<img class="spacer" src="<?= $firstImage->url(); ?>" />
+			<img class="spacer" src="<?= $firstImage->url(); ?>?width=600&quality=70" />
 			<span><?= $artist->title()->html() ?></span>
 	  </a>
 	<?php endforeach ?>
