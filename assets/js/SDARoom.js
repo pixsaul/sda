@@ -204,16 +204,6 @@ function initFloor(){
 	group.add(room);
 	objects.push(room);
 	initInfiniteFloor();
-
-	const size = 6;
-	const divisions = 6;
-	const colorGrid = 0x000000;
-
-	const gridHelper = new THREE.GridHelper( size, divisions, colorGrid, colorGrid );
-	gridHelper.position.y = -2.1;
-	scene.add(gridHelper);
-	group.add(gridHelper);
-	objects.push(gridHelper);
 }
 
 // Handle resize
