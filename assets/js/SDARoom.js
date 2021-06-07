@@ -102,11 +102,11 @@ function initLightHelpers(){
 	directionalLightHelper1 = new THREE.DirectionalLightHelper( directionalLight1, 1 , 'purple');
 	directionalLightHelper2 = new THREE.DirectionalLightHelper( directionalLight2, 1 , 'blue');
 	directionalLightHelper3 = new THREE.DirectionalLightHelper( directionalLight3, 1 , 'red');
-	directionalLightHelper4 = new THREE.DirectionalLightHelper( directionalLight4, 1 , 'green');	
+	directionalLightHelper4 = new THREE.DirectionalLightHelper( directionalLight4, 1 , 'green');
 	scene.add(directionalLightHelper1);
 	scene.add(directionalLightHelper2);
 	scene.add(directionalLightHelper3);
-	scene.add(directionalLightHelper4);	
+	scene.add(directionalLightHelper4);
 	config.showLightHelpers = true;
 }
 
@@ -119,7 +119,7 @@ function disposeLightHelpers(){
 	if (directionalLightHelper2){
 		directionalLightHelper2.dispose();
 		scene.remove(directionalLightHelper2);
-	}	
+	}
 	if (directionalLightHelper3){
 		directionalLightHelper3.dispose();
 		scene.remove(directionalLightHelper3);
@@ -136,7 +136,7 @@ function initLights(){
 	directionalLight1.position.set(0, 2.5, 3.9);
 	directionalLight2.position.set(4, 1, -4);
 	directionalLight3.position.set(-4, 1, -4);
-	directionalLight4.position.set(0, -4, 0);	
+	directionalLight4.position.set(0, -4, 0);
 	scene.add(directionalLight1)
 	scene.add(directionalLight2)
 	scene.add(directionalLight3)
@@ -159,10 +159,10 @@ function initInfiniteFloor(){
 	// 	uniforms: uniforms,
 	// 	vertexShader: document.getElementById('vertexshader').textContent,
 	// 	fragmentShader: document.getElementById('fragmentshader').textContent
-	// 
+	//
 	// });
-	
-	const texture = textureLoader.load('./assets/images/tiles.png')
+
+	const texture = textureLoader.load('/sda/assets/images/tiles.png')
 	texture.anisotrophy = 2;
 	texture.minFilter = THREE.LinearFilter;
 	texture.wrapS = THREE.RepeatWrapping
@@ -186,7 +186,7 @@ function initInfiniteFloor(){
 
 // Init the floor tilig
 function initFloor(){
-	const texture = textureLoader.load('./assets/images/tiles.png')
+	const texture = textureLoader.load('/sda/assets/images/tiles.png')
 	texture.anisotrophy = 8;
 	texture.minFilter = THREE.LinearFilter;
 	texture.wrapS = THREE.RepeatWrapping
@@ -204,11 +204,11 @@ function initFloor(){
 	group.add(room);
 	objects.push(room);
 	initInfiniteFloor();
-	
+
 	const size = 6;
 	const divisions = 6;
 	const colorGrid = 0x000000;
-	
+
 	const gridHelper = new THREE.GridHelper( size, divisions, colorGrid, colorGrid );
 	gridHelper.position.y = -2.1;
 	scene.add(gridHelper);
@@ -241,8 +241,8 @@ function applyFadeToAllExcept(exceptMesh){
 					const opacityTween = new TWEEN.Tween(m)
 					.to({opacity:0.7}, 500)
 					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();  
-					
+					opacityTween.start();
+
 					if (m.map){
 						const colourTween = new TWEEN.Tween(m.color)
 						.to({r:0.7, g: 0.7, b: 0.7}, 500)
@@ -251,7 +251,7 @@ function applyFadeToAllExcept(exceptMesh){
 					}
 				}
 			} else {
-				
+
 				// const opacityTween = new TWEEN.Tween(mesh.material)
 				// .to({opacity:0.7}, 500)
 				// .easing(TWEEN.Easing.Quadratic.InOut)
@@ -259,8 +259,8 @@ function applyFadeToAllExcept(exceptMesh){
 				// const opacityTween = new TWEEN.Tween(mesh.material)
 				// .to({opacity:0.7}, 500)
 				// .easing(TWEEN.Easing.Quadratic.InOut)
-				// opacityTween.start(); 
-				
+				// opacityTween.start();
+
 				if (mesh.name == "blob"){
 					const x = {
 						v: 1
@@ -282,7 +282,7 @@ function applyFadeToAllExcept(exceptMesh){
 					const opacityTween = new TWEEN.Tween(mesh.material)
 					.to({opacity:0.5}, 500)
 					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();  
+					opacityTween.start();
 				}
 			}
 		}
@@ -300,9 +300,9 @@ function removeFadeFromAll(){
 					const opacityTween = new TWEEN.Tween(m)
 					.to({opacity:1}, 500)
 					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();  
+					opacityTween.start();
 					if (m.map){
-						
+
 						const colourTween = new TWEEN.Tween(m.color)
 						.to({r:1, g: 1, b: 1}, 500)
 						.easing(TWEEN.Easing.Quadratic.InOut)
@@ -315,7 +315,7 @@ function removeFadeFromAll(){
 				// .to({opacity:1.0}, 500)
 				// .easing(TWEEN.Easing.Quadratic.InOut)
 				// opacityTween.start();
-				
+
 				if (mesh.name == "blob"){
 					const x = {
 						v: 3
@@ -337,7 +337,7 @@ function removeFadeFromAll(){
 					const opacityTween = new TWEEN.Tween(mesh.material)
 					.to({opacity:1}, 500)
 					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();  
+					opacityTween.start();
 				}
 			}
 		}
@@ -351,7 +351,7 @@ function handleImgClicked(obj){
 	obj.selected = true;
 	selectedObj.bringToFocus(camera, config.selectedDist);
 	applyFadeToAllExcept(selectedObj);
-	
+
 }
 
 // Put selected object back
@@ -422,7 +422,7 @@ function handleRaycast(){
 							imageMesh.putBack();
 						}
 					}
-				} 
+				}
 			} else {
 				controls.mouseBusy = false;
 				renderer.domElement.style.cursor = 'grab';
@@ -478,7 +478,7 @@ function addEvents() {
 	} else {
 		renderer.domElement.addEventListener( 'touchstart', handleTouchStart, false );
 	}
-	
+
 }
 
 // Configure the loading manager
@@ -520,7 +520,7 @@ function addObj(path, manipFunction){
 			// console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 		},
 		function ( error ) {
-			console.log(error);	
+			console.log(error);
 		}
 	)
 }
@@ -540,7 +540,7 @@ function addFbx(path, manipFunction){
 			// console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 		},
 		function ( error ) {
-			console.log(error);	
+			console.log(error);
 		}
 	)
 }
@@ -574,10 +574,10 @@ function giveUsASpin(){
 	const tweenUp = new TWEEN.Tween(controls).to({autoSpeed: prevSpeed*30*config.mobileTapRotateAmount}, 100).easing(TWEEN.Easing.Quadratic.In)
 	.onComplete(() => {
 		tweenDown.start();
-	}); 
+	});
 	const tweenDown = new TWEEN.Tween(controls).to({autoSpeed: prevSpeed}, 2000*config.mobileTapRotateAmount).easing(TWEEN.Easing.Quadratic.Out)
 	.onComplete(() => {
-	}); 
+	});
 	tweenUp.start();
 }
 
@@ -587,14 +587,14 @@ function spinIn(){
 	const tweenUp = new TWEEN.Tween(controls).to({autoSpeed: prevSpeed*150}, 100).easing(TWEEN.Easing.Quadratic.In)
 	.onComplete(() => {
 		tweenDown.start();
-	}); 
+	});
 	const tweenDown = new TWEEN.Tween(controls).to({autoSpeed: prevSpeed}, 2000).easing(TWEEN.Easing.Quadratic.Out)
 	.onComplete(() => {
-	}); 
+	});
 	tweenUp.start();
 	const tweenSize = new TWEEN.Tween(group.scale).to({x: 1, y:1, z: 1}, 2000).easing(TWEEN.Easing.Quadratic.Out)
 	.onComplete(() => {
-	}); 
+	});
 	tweenSize.start();
 	tweenUp.start();
 }
@@ -737,7 +737,7 @@ function init(){
   initFloor();
   initRoomFromConfig();
   addEvents();
-  //initGUI();
+  initGUI();
   configLoadingManager();
   render();
   //initMinimap();

@@ -115,6 +115,19 @@
       "oAP" : "\/assets\/fonts\/Selecta\/Selecta-Medium.woff",
       "oF" : 0
     },
+    "\/assets\/images\/frame.png" : {
+      "ft" : 32768,
+      "iS" : 158690,
+      "oA" : 0,
+      "oAP" : "\/assets\/images\/frame.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/assets\/images\/larr.png" : {
       "ft" : 32768,
       "iS" : 1214,
@@ -133,6 +146,19 @@
       "iS" : 1214,
       "oA" : 0,
       "oAP" : "\/assets\/images\/rarr.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/images\/tiles.png" : {
+      "ft" : 32768,
+      "iS" : 623,
+      "oA" : 0,
+      "oAP" : "\/assets\/images\/tiles.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -660,32 +686,6 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
-    },
-    "\/assets\/scenes\/global\/frame.png" : {
-      "ft" : 32768,
-      "iS" : 158690,
-      "oA" : 0,
-      "oAP" : "\/assets\/scenes\/global\/frame.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/scenes\/global\/tiles.png" : {
-      "ft" : 32768,
-      "iS" : 623,
-      "oA" : 0,
-      "oAP" : "\/assets\/scenes\/global\/tiles.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
     },
     "\/assets\/scenes\/julia-seemann\/3d_Julia-Seeman_01.jpg" : {
       "ft" : 16384,
