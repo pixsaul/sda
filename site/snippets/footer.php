@@ -8,6 +8,10 @@
 
   </footer>
   
+  <div class="cookies">
+    <span>swissdesignawardsblog.ch uses cookies. <a href="#">got it</a></span>
+  </div>
+  
   <?= js([
 	'assets/js/scripts.js',
 	'@auto'

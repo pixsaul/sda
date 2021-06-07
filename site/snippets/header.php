@@ -48,7 +48,7 @@
     <?php if ($page->is("info")): ?>
       <a href="javascript:history.go(-1)">Close</a>
     <?php else: ?>
-      <a href="<?= $site->url() ?>/info/">Info</a>
+      <a class="info" href="<?= $site->url() ?>/info/">Info</a>
     <?php endif; ?>
   </header>
   
