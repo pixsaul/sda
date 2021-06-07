@@ -655,13 +655,14 @@ button, a.btn {
 
   .videoWrap {
     position: relative;
-    max-width: 800px;
+    max-width: 550px;
 
     margin-left: auto;
     margin-right: auto;
 
     video {
       max-width: 100%;
+      cursor: pointer;
     }
   }
 
@@ -674,11 +675,20 @@ button, a.btn {
     overflow: visible;
     display: flex;
     justify-content: center;
+    pointer-events: none;
 
     img {
       height: 103%;
       width: 184vw;
       max-width: none;
+    }
+
+    img.playBtn {
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      top: 50%;
+      pointer-events: none;
     }
   }
 }

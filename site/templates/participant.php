@@ -14,6 +14,12 @@
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/js/FBXLoader.js"></script>
 
 <!-- room config -->
+<script>
+	roomConfig = {
+		images: [],
+		blobs: []
+	};
+</script>
 <script crossorigin="anonymous" src="<?= $site->url() ?>/assets/scenes/<?= $page->slug() ?>/config.js"></script>
 
 <main class="project">
@@ -61,20 +67,23 @@
 				<?= $page->credits()->kirbytext() ?>
 			</div>
 			
+			<?php if ($page->video()->isNotEmpty()): ?>
 			<div class="projectVideo">
 				<h3>Behind the scene</h3>
 				<div class="videoOverflow">
 					<div class="videoWrap">
-						<video loop muted>
+						<video id="video" onclick="this.paused?this.play():this.pause();">
 							<source src="<?= $page->video() ?>" type="video/mp4">
 							Sorry, your browser doesn't support embedded videos.
 						</video>
 						<div class="videoOver">
-							<img src="<?= $site->url() ?>/assets/scenes/global/frame.png"/>
+							<img src="<?= $site->url() ?>/assets/images/frame.png" accesskey=""/>
+							<img class="playBtn" src="<?= $site->url() ?>/assets/images/play.svg" />
 						</div>
 					</div>
 				</div>
-		</div>
+			</div>
+			<?php endif; ?>
 
   </article>
 </main>

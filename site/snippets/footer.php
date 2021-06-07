@@ -12,6 +12,8 @@
     <span>swissdesignawardsblog.ch uses cookies. <a href="#">got it</a></span>
   </div>
   
+  <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+  
   <?= js([
 	'assets/js/scripts.js',
 	'@auto'
