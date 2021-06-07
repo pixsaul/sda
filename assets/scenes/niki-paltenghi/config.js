@@ -1,8 +1,8 @@
-var path = '/sda/assets/scenes/mariel-manuel/'
+var path = '/sda/assets/scenes/niki-paltenghi/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Mariel-Manuel_01.jpg',
+      path: path+'3d_Niki-Paltenghi_01.jpg',
       scale: 2.3,
       position: {
         x: -2,
@@ -16,7 +16,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Mariel-Manuel_02.jpg',
+      path: path+'3d_Niki-Paltenghi_02.jpg',
       scale: 2.3,
       position: {
         x: 0,
@@ -30,7 +30,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Mariel-Manuel_03.jpg',
+      path: path+'3d_Niki-Paltenghi_03.jpg',
       scale: 1.6,
       position: {
         x: 2.3,
@@ -44,7 +44,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Mariel-Manuel_04.jpg',
+      path: path+'3d_Niki-Paltenghi_04.jpg',
       scale: 1.6,
       position: {
         x: 2.3,
@@ -58,7 +58,21 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Mariel-Manuel_05.jpg',
+      path: path+'3d_Niki-Paltenghi_05.jpg',
+      scale: 1.6,
+      position: {
+        x: 2.3,
+        y: -0.3,
+        z: -1.8,
+      },
+      rotation: {
+        x: 0,
+        y: Math.PI/3,
+        z: 0,
+      }
+    },
+	{
+      path: path+'3d_Niki-Paltenghi_06.jpg',
       scale: 1.6,
       position: {
         x: 2.3,
@@ -74,7 +88,7 @@ roomConfig = {
   ],
   blobs: [
     {
-      path: path+'mariel-manuel.fbx',
+      path: path+'Niki-Paltenghi.fbx',
       scale: 0.25,
       position: {
         x: 0,
@@ -90,8 +104,8 @@ roomConfig = {
   ],
   videos: [
 	  {
-        path: path+'3d_Mariel-Manuel_BTS.mp4',
-		scale: 1.6,
+        path: path+'3d_Niki-Paltenghi_06.mp4',
+        scale: 1.6,
         position: {
           x: 2.3,
           y: -0.3,
@@ -102,7 +116,6 @@ roomConfig = {
           y: Math.PI/3,
           z: 0,
         }
-	}
-  ],
-
+      },
+  ]
 }

@@ -1,8 +1,8 @@
-var path = '/sda/assets/scenes/mariel-manuel/'
+var path = '/sda/assets/scenes/kaj-lehmann/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Mariel-Manuel_01.jpg',
+      path: path+'3d_Kaj-Lehmann_01.jpg',
       scale: 2.3,
       position: {
         x: -2,
@@ -16,7 +16,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Mariel-Manuel_02.jpg',
+      path: path+'3d_Kaj-Lehmann_02.jpg',
       scale: 2.3,
       position: {
         x: 0,
@@ -30,7 +30,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Mariel-Manuel_03.jpg',
+      path: path+'3d_Kaj-Lehmann_03.jpg',
       scale: 1.6,
       position: {
         x: 2.3,
@@ -44,10 +44,10 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Mariel-Manuel_04.jpg',
+      path: path+'3d_Kaj-Lehmann_04.jpg',
       scale: 1.6,
       position: {
-        x: 2.3,
+        x: 2.5,
         y: -0.3,
         z: -1.8,
       },
@@ -58,10 +58,52 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Mariel-Manuel_05.jpg',
+      path: path+'3d_Kaj-Lehmann_05.jpg',
       scale: 1.6,
       position: {
-        x: 2.3,
+        x: 2.8,
+        y: -0.3,
+        z: -1.8,
+      },
+      rotation: {
+        x: 0,
+        y: Math.PI/3,
+        z: 0,
+      }
+    },
+	{
+      path: path+'3d_Kaj-Lehmann_06.jpg',
+      scale: 1.6,
+      position: {
+        x: 2.9,
+        y: -0.3,
+        z: -1.8,
+      },
+      rotation: {
+        x: 0,
+        y: Math.PI/3,
+        z: 0,
+      }
+    },
+	{
+      path: path+'3d_Kaj-Lehmann_07.jpg',
+      scale: 1.6,
+      position: {
+        x: 2.9,
+        y: -0.3,
+        z: -1.8,
+      },
+      rotation: {
+        x: 0,
+        y: Math.PI/3,
+        z: 0,
+      }
+    },
+	{
+      path: path+'3d_Kaj-Lehmann_08.jpg',
+      scale: 1.6,
+      position: {
+        x: 2.9,
         y: -0.3,
         z: -1.8,
       },
@@ -74,7 +116,7 @@ roomConfig = {
   ],
   blobs: [
     {
-      path: path+'mariel-manuel.fbx',
+      path: path+'Kaj-Lehmann.fbx',
       scale: 0.25,
       position: {
         x: 0,
@@ -87,22 +129,5 @@ roomConfig = {
         z: 0,
       }
     },
-  ],
-  videos: [
-	  {
-        path: path+'3d_Mariel-Manuel_BTS.mp4',
-		scale: 1.6,
-        position: {
-          x: 2.3,
-          y: -0.3,
-          z: -1.8,
-        },
-        rotation: {
-          x: 0,
-          y: Math.PI/3,
-          z: 0,
-        }
-	}
-  ],
-
+  ]
 }

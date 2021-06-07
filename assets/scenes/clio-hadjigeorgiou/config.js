@@ -2,7 +2,7 @@ var path = '/sda/assets/scenes/clio-hadjigeorgiou/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Clio-Hadjigeorgiou_01.jpg',
+      path: path+'3d_Clio-Hadjigeorgiou_1.jpg',
       scale: 2.3,
       position: {
         x: -2,
@@ -16,7 +16,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clio-Hadjigeorgiou_02.jpg',
+      path: path+'3d_Clio-Hadjigeorgiou_2.jpg',
       scale: 2.3,
       position: {
         x: 0,
@@ -30,7 +30,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clio-Hadjigeorgiou_03.jpg',
+      path: path+'3d_Clio-Hadjigeorgiou_3.jpg',
       scale: 1.6,
       position: {
         x: 2.3,
@@ -44,7 +44,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clio-Hadjigeorgiou_04.jpg',
+      path: path+'3d_Clio-Hadjigeorgiou_4.jpg',
       scale: 2.3,
       position: {
         x: 2.1,

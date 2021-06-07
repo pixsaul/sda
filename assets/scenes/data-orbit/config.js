@@ -1,8 +1,8 @@
-var path = '/sda/assets/scenes/dafi-kuhne/'
+var path = '/sda/assets/scenes/data-orbit/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Dafi-Kuhne_1.jpg',
+      path: path+'3d_Data-Orbit_1.jpg',
       scale: 2.3,
       position: {
         x: -2,
@@ -16,7 +16,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Dafi-Kuhne_2.jpg',
+      path: path+'3d_Data-Orbit_2.jpg',
       scale: 2.3,
       position: {
         x: 0,
@@ -30,7 +30,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Dafi-Kuhne_3.jpg',
+      path: path+'3d_Data-Orbit_3.jpg',
       scale: 1.6,
       position: {
         x: 2.3,
@@ -43,38 +43,10 @@ roomConfig = {
         z: 0,
       }
     },
-    {
-      path: path+'3d_Dafi-Kuhne_4.jpg',
-      scale: 2.3,
-      position: {
-        x: 2.1,
-        y: -0.2,
-        z: 0,
-      },
-      rotation: {
-        x: 0,
-        y: Math.PI/1.5,
-        z: 0,
-      }
-    },
-	{
-      path: path+'3d_Dafi-Kuhne_5.jpg',
-      scale: 2.3,
-      position: {
-        x: 2.5,
-        y: -0.2,
-        z: 0,
-      },
-      rotation: {
-        x: 0,
-        y: Math.PI/1.5,
-        z: 0,
-      }
-    },
   ],
   blobs: [
     {
-      path: path+'Dafi-Kuhne.fbx',
+      path: path+'Data-Orbit.fbx',
       scale: 0.25,
       position: {
         x: 0,
