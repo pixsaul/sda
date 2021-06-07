@@ -33,9 +33,16 @@
 		</div>
 		<canvas id="threeCanvas">
 		</canvas>
-		
+		<div id="minimapContainer">
+			<!-- <div id="minimapArtistName">Livia Rita</div>
+			<img id="minimapArtistImg" src="./assets/images/livia.jpeg"></img> -->
+			<div id="minimapArtistNames"></div>
+			<div id="minimapArtistImgs"></div>
+			<div id="minimap">
+			</div>
+		</div>
 		<script src="<?= $site->url() ?>/assets/js/SDARoom.js"></script>
-
+		<script src="<?= $site->url() ?>/assets/js/Minimap.js"></script>
 		<div class="project-text text">
 			
 			<h1><?= $page->title() ?></h1>			
