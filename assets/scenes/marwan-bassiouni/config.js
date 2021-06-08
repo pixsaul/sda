@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/marwan-bassiouni/'
+var path = '/assets/scenes/marwan-bassiouni/'
 roomConfig = {
   images: [
     {

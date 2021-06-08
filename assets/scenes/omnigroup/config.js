@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/omnigroup/'
+var path = '/assets/scenes/omnigroup/'
 roomConfig = {
   images: [
     {

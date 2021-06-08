@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/chaumont-zaerpour/'
+var path = '/assets/scenes/chaumont-zaerpour/'
 roomConfig = {
   images: [
     {

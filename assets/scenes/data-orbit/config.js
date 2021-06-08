@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/data-orbit/'
+var path = '/assets/scenes/data-orbit/'
 roomConfig = {
   images: [
     {

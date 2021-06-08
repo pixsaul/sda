@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/weichi-he/'
+var path = '/assets/scenes/weichi-he/'
 roomConfig = {
   images: [
     {

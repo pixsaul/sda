@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/clio-hadjigeorgiou/'
+var path = '/assets/scenes/clio-hadjigeorgiou/'
 roomConfig = {
   images: [
     {

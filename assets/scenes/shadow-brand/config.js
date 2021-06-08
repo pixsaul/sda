@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/shadow-brand/'
+var path = '/assets/scenes/shadow-brand/'
 roomConfig = {
   images: [
     {

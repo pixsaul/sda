@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/alice-franchetti/'
+var path = '/assets/scenes/alice-franchetti/'
 roomConfig = {
   images: [
     {
