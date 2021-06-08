@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/after-work-studio/'
+var path = '/assets/scenes/after-work-studio/'
 roomConfig = {
   images: [
     {

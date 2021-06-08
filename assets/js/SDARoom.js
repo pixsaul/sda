@@ -146,13 +146,13 @@ function initLights(){
 function initInfiniteFloor(){
 
 
-	const texture = textureLoader.load('./sda/assets/images/tiles.png')
+	const texture = textureLoader.load('/assets/images/tiles.png')
 	texture.anisotrophy = 2;
 	texture.minFilter = THREE.LinearFilter;
 	texture.wrapS = THREE.RepeatWrapping
 	texture.wrapT = THREE.RepeatWrapping
 	// texture.repeat = new THREE.Vector2(config.infiniteFloorSize, config.infiniteFloorSize)
-	const alphaMap = textureLoader.load('./sda/assets/images/infiniteTilesAlphaMap.png');
+	const alphaMap = textureLoader.load('/assets/images/infiniteTilesAlphaMap.png');
 	alphaMap.wrapS = THREE.RepeatWrapping
 	alphaMap.wrapT = THREE.RepeatWrapping
 	alphaMap.repeat.set(1, 1);
@@ -219,7 +219,7 @@ function initInfiniteFloor(){
 
 // Init the floor tilig
 function initFloor(){
-	const texture = textureLoader.load('./sda/assets/images/tiles.png')
+	const texture = textureLoader.load('/assets/images/tiles.png')
 	texture.anisotrophy = 8;
 	texture.minFilter = THREE.LinearFilter;
 	texture.wrapS = THREE.RepeatWrapping
