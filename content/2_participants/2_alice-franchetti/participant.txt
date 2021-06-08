@@ -6,7 +6,7 @@ Subtitle: Unesco World Heritage
 
 ----
 
-Categories: graphic
+Categories: graphic, awarded
 
 ----
 

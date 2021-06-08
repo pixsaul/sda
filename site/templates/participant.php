@@ -49,9 +49,8 @@
 			<?php
 			$field = $page->blueprint()->field('categories');
 			$categories = $page->categories()->split(',');
-			foreach ($categories as $category) {
-					echo $field['options'][$category] ?? html($category);
-			}?>
+			$categories = $categories[0];
+					echo $field['options'][$categories] ?? html($categories); ?>
 			</span>
 			
 			<h2><?= $page->subtitle() ?></h2>
@@ -89,6 +88,56 @@
 				</div>
 			</div>
 			<?php endif; ?>
+			
+			<div class="projectRelated">
+				<h3>Related participants</h3>
+				<?php if ($artistPage = page('participants')):
+				
+				$artistPage = $artistPage->children()->listed();
+				$tag = $page->categories()->split(',');
+				
+				$artistPage = $artistPage->filterBy('categories', $tag[0], ',');
+				
+				$artistPage = $artistPage->paginate(12);
+				
+				?>
+				
+					<div class="home-grid">
+					<?php foreach ($artistPage as $artist): ?>
+						<a class="grid-item" href="<?= $artist->url() ?>">
+							<div class="seq">
+								<?php
+								$images = $artist->cover()->toFiles();
+								foreach($images as $image): ?>
+									<img src="<?= $image->url() ?>?width=600&quality=70" alt="">
+								<?php endforeach ?>
+							</div>
+							<?php $firstImage = $artist->cover()->toFiles()->first(); ?>
+							<img class="spacer" src="<?= $firstImage->url(); ?>?width=600&quality=70" />
+							<span><?= $artist->title()->html() ?></span>
+						</a>
+					<?php endforeach ?>
+					</div>
+				<?php endif ?>
+				
+				<?php if ($artistPage->pagination()->hasPages()): ?>
+				<nav class="pagination">
+				
+					<?php if ($artistPage->pagination()->hasNextPage()): ?>
+					<a class="next" href="<?= $artistPage->pagination()->nextPageURL() ?>">
+						‹ older posts
+					</a>
+					<?php endif ?>
+				
+					<?php if ($artistPage->pagination()->hasPrevPage()): ?>
+					<a class="prev" href="<?= $artistPage->pagination()->prevPageURL() ?>">
+						newer posts ›
+					</a>
+					<?php endif ?>
+				
+				</nav>
+				<?php endif ?>
+			</div>
 
   </article>
 </main>

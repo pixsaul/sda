@@ -738,20 +738,17 @@ button, a.btn {
 .flickity-slider {
   display: flex;
   align-items: center;
-  margin-left: 10px;
   @include for-desktop-up {
     margin-left: 0;
   }
   img {
     margin-right: 10px;
-    width: 80vw;
+    max-height: 60vh;
     @include for-desktop-up {
-     width: calc(33vw - 7.5px);
      margin-right: 20px;
     }
     @include for-big-desktop-up {
       margin-right: 30px;
-      width: calc(33vw - 12.5px);
     }
   }
   @include for-desktop-up {

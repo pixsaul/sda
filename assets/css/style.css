@@ -737,7 +737,6 @@ button, a.btn {
 .flickity-slider {
   display: flex;
   align-items: center;
-  margin-left: 10px;
 }
 @media (min-width: 1200px) {
   .flickity-slider {
@@ -746,18 +745,16 @@ button, a.btn {
 }
 .flickity-slider img {
   margin-right: 10px;
-  width: 80vw;
+  max-height: 60vh;
 }
 @media (min-width: 1200px) {
   .flickity-slider img {
-    width: calc(33vw - 7.5px);
     margin-right: 20px;
   }
 }
 @media (min-width: 1800px) {
   .flickity-slider img {
     margin-right: 30px;
-    width: calc(33vw - 12.5px);
   }
 }
 @media (min-width: 1200px) {
