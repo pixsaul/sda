@@ -801,6 +801,7 @@ button, a.btn {
   img {
     margin-right: 10px;
     max-height: 60vh;
+    max-width: 80vw;
     @include for-desktop-up {
      margin-right: 20px;
     }

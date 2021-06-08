@@ -448,7 +448,7 @@ canvas {
   border: 1px solid #303030;
 }
 
-#minimap > a {
+#minimap > div {
   height: 0.75rem;
   width: 0.75rem;
   /* margin: 0.1rem; */
@@ -463,7 +463,7 @@ canvas {
   cursor: pointer;
 }
 
-#minimap > a > div {
+#minimap > div > div {
   height: 0.125rem;
   width: 0.125rem;
   /* margin: 0.1rem; */
@@ -473,13 +473,13 @@ canvas {
   transition: all 0.2s;
 }
 
-#minimap > a:hover > div {
+#minimap > div:hover > div {
   /* background-color: red; */
   height: 0.5rem;
   width: 0.5rem;
 }
 
-#minimap > a.active > div {
+#minimap > div.active > div {
   background-color: red;
   height: 0.5rem;
   width: 0.5rem;
@@ -804,6 +804,7 @@ button, a.btn {
 .flickity-slider img {
   margin-right: 10px;
   max-height: 60vh;
+  max-width: 80vw;
 }
 @media (min-width: 1200px) {
   .flickity-slider img {
@@ -903,21 +904,4 @@ button, a.btn {
 }
 .cookies a {
   color: white;
-}
-
-
-#videoTextureContainer{
-	position: fixed;
-	z-index: -99999;
-	opacity: 0;
-	pointer-events: none;
-	height: 0;
-	width: 0;
-}
-
-#videoTextureContainer *{
-	opacity: 0;
-	pointer-events: none;
-	height: 0;
-	width: 0;
 }
