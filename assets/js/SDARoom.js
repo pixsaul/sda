@@ -25,7 +25,7 @@ const hasHover = window.matchMedia("(hover: hover)").matches;
 
 const renderer = new THREE.WebGLRenderer({
 	alpha: true,
-	canvas: document.getElementById('threeCanvas')
+	canvas: document.getElementById('threeCanvas'),
 });
 renderer.setPixelRatio(window.devicePixelRatio * 1);
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -94,6 +94,8 @@ let infiniteFloorMaterial;
 var clickBusy = false;
 
 const clock = new THREE.Clock();
+
+let fadePlaneMesh;
 
 // End variables and definitions
 
@@ -220,8 +222,8 @@ function initInfiniteFloor(){
 // Init the floor tilig
 function initFloor(){
 	const texture = textureLoader.load('/assets/images/tiles.png')
-	texture.anisotrophy = 8;
-	// texture.minFilter = THREE.LinearFilter;
+	texture.anisotrophy = 16;
+	texture.minFilter = THREE.NearestFilter;
 	texture.wrapS = THREE.RepeatWrapping
 	texture.wrapT = THREE.RepeatWrapping
 	texture.repeat = new THREE.Vector2(6, 6)
@@ -268,114 +270,75 @@ function onMouseMove( event ) {
 function applyFadeToAllExcept(exceptMesh){
 	let canvasBg = document.getElementById('canvasBg');
 	canvasBg.classList.add('faded');
-	for (let mesh of objects){
-		if (mesh !== exceptMesh && mesh.name !== "infiniteFloor"){
-			if (Array.isArray(mesh.material)){
-				for (let m of mesh.material){
-					const opacityTween = new TWEEN.Tween(m)
-					.to({opacity:0.7}, 500)
-					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();
-					
-					if (m.map){
-						const colourTween = new TWEEN.Tween(m.color)
-						.to({r:0.7, g: 0.7, b: 0.7}, 500)
-						.easing(TWEEN.Easing.Quadratic.InOut)
-						colourTween.start();
-					}
-				}
-			} else {
-				
-				// const opacityTween = new TWEEN.Tween(mesh.material)
-				// .to({opacity:0.7}, 500)
-				// .easing(TWEEN.Easing.Quadratic.InOut)
-				// opacityTween.start();
-				// const opacityTween = new TWEEN.Tween(mesh.material)
-				// .to({opacity:0.7}, 500)
-				// .easing(TWEEN.Easing.Quadratic.InOut)
-				// opacityTween.start();
-				
-				if (mesh.name == "blob"){
-					const x = {
-						v: 1
-					}
-					const ogColour = new THREE.Color(config.blobFresnelColour);
-					const colourTween = new TWEEN.Tween(x)
-					.to({v:3}, 500)
-					.easing(TWEEN.Easing.Quadratic.InOut)
-					.onUpdate(() => {
-						const colour = new THREE.Color(config.blobFresnelColour);
-						colour.g = ogColour.g * x.v;
-						colour.b = ogColour.g * x.v;
-						console.log(colour.getHexString());
-						blobMaterial = fresnelMaterial(colour.getHex(), config.blobFresnelAmount1, config.blobFresnelAmount2, config.blobFresnelAmount3, config.blobFresnelAmount4, config.blobFresnelAmount5, config.blobFresnelAmount6, config.blobFresnelAmount7, config.blobFresnelAmount8);
-						mesh.material = blobMaterial;
-					})
-					colourTween.start();
-				} else {
-					const opacityTween = new TWEEN.Tween(mesh.material)
-					.to({opacity:0.5}, 500)
-					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();
-				}
-			}
-		}
-	}
+	// for (let mesh of objects){
+		
+		// if (mesh.name == "blob"){
+		// 	const x = {
+		// 		v: 3
+		// 	}
+		// 	const ogColour = new THREE.Color(config.blobFresnelColour);
+		// 	const colourTween = new TWEEN.Tween(x)
+		// 	.to({v:1.0}, 500)
+		// 	.easing(TWEEN.Easing.Quadratic.InOut)
+		// 	.onUpdate(() => {
+		// 		const colour = new THREE.Color(config.blobFresnelColour);
+		// 		colour.g = ogColour.g * x.v;
+		// 		colour.b = ogColour.g * x.v;
+		// 		console.log(colour.getHex());
+		// 		blobMaterial = fresnelMaterial(colour.getHex(), config.blobFresnelAmount1, config.blobFresnelAmount2, config.blobFresnelAmount3, config.blobFresnelAmount4, config.blobFresnelAmount5, config.blobFresnelAmount6, config.blobFresnelAmount7, config.blobFresnelAmount8);
+		// 		mesh.material = blobMaterial;
+		// 	})
+		// 	colourTween.start();
+		// } 
+		
+	// }
+	// fadePlaneMesh.material.opacity = 0.3
+	const opacityTween = new TWEEN.Tween(fadePlaneMesh.material)
+	.to({opacity: 0.3}, 300)
+	.delay(300)
+	.easing(TWEEN.Easing.Quadratic.InOut)
+	.start();
 }
 
 // Remove effects of applyFadeToAllExcept()
 function removeFadeFromAll(){
 	let canvasBg = document.getElementById('canvasBg');
 	canvasBg.classList.remove('faded');
-	for (let mesh of objects){
-		if (mesh.name !== "infiniteFloor"){
-			if (Array.isArray(mesh.material)){
-				for (let m of mesh.material){
-					const opacityTween = new TWEEN.Tween(m)
-					.to({opacity:1}, 500)
-					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();
-					if (m.map){
-						
-						const colourTween = new TWEEN.Tween(m.color)
-						.to({r:1, g: 1, b: 1}, 500)
-						.easing(TWEEN.Easing.Quadratic.InOut)
-						colourTween.start();
-					}
-				}
-			} else {
-				// mesh.material.opacity = 1;
-				// const opacityTween = new TWEEN.Tween(mesh.material)
-				// .to({opacity:1.0}, 500)
-				// .easing(TWEEN.Easing.Quadratic.InOut)
-				// opacityTween.start();
-				
-				if (mesh.name == "blob"){
-					const x = {
-						v: 3
-					}
-					const ogColour = new THREE.Color(config.blobFresnelColour);
-					const colourTween = new TWEEN.Tween(x)
-					.to({v:1.0}, 500)
-					.easing(TWEEN.Easing.Quadratic.InOut)
-					.onUpdate(() => {
-						const colour = new THREE.Color(config.blobFresnelColour);
-						colour.g = ogColour.g * x.v;
-						colour.b = ogColour.g * x.v;
-						console.log(colour.getHex());
-						blobMaterial = fresnelMaterial(colour.getHex(), config.blobFresnelAmount1, config.blobFresnelAmount2, config.blobFresnelAmount3, config.blobFresnelAmount4, config.blobFresnelAmount5, config.blobFresnelAmount6, config.blobFresnelAmount7, config.blobFresnelAmount8);
-						mesh.material = blobMaterial;
-					})
-					colourTween.start();
-				} else {
-					const opacityTween = new TWEEN.Tween(mesh.material)
-					.to({opacity:1}, 500)
-					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();
-				}
-			}
-		}
-	}
+	const opacityTween = new TWEEN.Tween(fadePlaneMesh.material)
+	.to({opacity: 0.0}, 500)
+	.easing(TWEEN.Easing.Quadratic.InOut)
+	// .delay(250);
+	.start();
+	// fadePlaneMesh.material.opacity = 0.0
+	// for (let mesh of objects){
+		
+			
+		// mesh.material.opacity = 1;
+		// const opacityTween = new TWEEN.Tween(mesh.material)
+		// .to({opacity:1.0}, 500)
+		// .easing(TWEEN.Easing.Quadratic.InOut)
+		// opacityTween.start();
+
+		// if (mesh.name == "blob"){
+		// 	const x = {
+		// 		v: 3
+		// 	}
+		// 	const ogColour = new THREE.Color(config.blobFresnelColour);
+		// 	const colourTween = new TWEEN.Tween(x)
+		// 	.to({v:1.0}, 500)
+		// 	.easing(TWEEN.Easing.Quadratic.InOut)
+		// 	.onUpdate(() => {
+		// 		const colour = new THREE.Color(config.blobFresnelColour);
+		// 		colour.g = ogColour.g * x.v;
+		// 		colour.b = ogColour.g * x.v;
+		// 		console.log(colour.getHex());
+		// 		blobMaterial = fresnelMaterial(colour.getHex(), config.blobFresnelAmount1, config.blobFresnelAmount2, config.blobFresnelAmount3, config.blobFresnelAmount4, config.blobFresnelAmount5, config.blobFresnelAmount6, config.blobFresnelAmount7, config.blobFresnelAmount8);
+		// 		mesh.material = blobMaterial;
+		// 	})
+		// 	colourTween.start();
+		// } 
+		
+	// }
 }
 
 // Bring selected object to focus
@@ -384,6 +347,8 @@ function handleImgClicked(obj){
 	scene.attach(obj);
 	obj.selected = true;
 	selectedObj.bringToFocus(camera, config.selectedDist);
+	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist+0.4),  camera.position.z - (config.selectedDist+0.4));
+	fadePlaneMesh.quaternion.copy(camera.quaternion);
 	applyFadeToAllExcept(selectedObj);
 	
 }
@@ -391,7 +356,7 @@ function handleImgClicked(obj){
 // Put selected object back
 function putSelectedBack(){
 	group.attach(selectedObj);
-	selectedObj.putSelectedBack(700);
+	selectedObj.putSelectedBack(400);
 	removeFadeFromAll();
 	selectedObj = null;
 }
@@ -434,6 +399,9 @@ function animateSelectedObj(){
 	selectedObj.position.y += Math.sin(clock.getElapsedTime()) * 0.001;
 	selectedObj.rotation.x += Math.sin(clock.getElapsedTime()*1.2) * 0.0002;
 	selectedObj.rotation.y += Math.sin(clock.getElapsedTime()*0.7) * 0.0005;
+	fadePlaneMesh.position.y += Math.sin(clock.getElapsedTime()) * 0.001;
+	fadePlaneMesh.rotation.x += Math.sin(clock.getElapsedTime()*1.2) * 0.0002;
+	fadePlaneMesh.rotation.y += Math.sin(clock.getElapsedTime()*0.7) * 0.0005;
 }
 
 // Check if mouse is over the top of an object, then hover or unhover
@@ -588,11 +556,11 @@ function addFbx(path, manipFunction){
 // Add image from path, creates very thin cuboid
 function addImage(path, manipFunction){
 	try {
-		const frontMaterial = new THREE.MeshBasicMaterial({transparent: false});
+		const frontMaterial = new THREE.MeshBasicMaterial({alphaTest: 0.5});
 		const texture = textureLoader.load(path);
 		texture.anisotrophy = 4;
 		frontMaterial.map = texture;
-		const sideMaterial = new THREE.MeshBasicMaterial({color: 0x000000, transparent: true, opacity: 0});
+		const sideMaterial = new THREE.MeshBasicMaterial({color: 0x000000, transparent: true, opacity: 0, depthWrite: false});
 		const materials = [sideMaterial, sideMaterial, sideMaterial, sideMaterial, frontMaterial, frontMaterial];
 		const img = new Image()
 		img.onload = () => {
@@ -831,7 +799,14 @@ function initGroup(){
 	group.scale.set(0.05, 0.05, 0.05);
 }
 
-
+function initFadePlaneMesh(){
+	const geo = new THREE.PlaneGeometry(10, 10);
+	const material = new THREE.MeshBasicMaterial({color: 0xffffff, opacity: 0, transparent: true});
+	fadePlaneMesh = new THREE.Mesh(geo, material);
+	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist+0.1),  camera.position.z - (config.selectedDist+0.1));
+	fadePlaneMesh.quaternion.copy(camera.quaternion);
+	scene.add(fadePlaneMesh);
+}
 
 // Init
 function init(){
@@ -843,7 +818,7 @@ function init(){
 	initGUI();
 	configLoadingManager();
 	render();
-	
+	initFadePlaneMesh();
 }
 
 init();
