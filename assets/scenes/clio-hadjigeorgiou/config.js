@@ -2,12 +2,12 @@ var path = '/assets/scenes/clio-hadjigeorgiou/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Clio-Hadjigeorgiou_1.jpg',
-      scale: 2.3,
+      path: path+'3d_Clio-Hadjigeorgiou_1.png',
+      scale: 2.7,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: 1.7,
+        y: 0,
+        z: 1.7,
       },
       rotation: {
         x: 0,
@@ -16,44 +16,44 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clio-Hadjigeorgiou_2.jpg',
-      scale: 2.3,
+      path: path+'3d_Clio-Hadjigeorgiou_2.png',
+	  scale: 2.7,
       position: {
-        x: 0,
-        y: 0.2,
-        z: -2.7,
+        x: -1.7,
+        y: 0,
+        z: -1.7,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: Math.PI/4,
         z: 0,
       }
     },
     {
-      path: path+'3d_Clio-Hadjigeorgiou_3.jpg',
-      scale: 1.6,
-      position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
-      },
-      rotation: {
-        x: 0,
-        y: Math.PI/3,
-        z: 0,
-      }
+      path: path+'3d_Clio-Hadjigeorgiou_3.png',
+	  scale: 2.7,
+ 	 position: {
+ 	   x: -1.7,
+ 	   y: 0,
+ 	   z: 1.7,
+ 	 },
+ 	 rotation: {
+ 	   x: 0,
+ 	   y: -Math.PI/4,
+ 	   z: 0,
+ 	 }
     },
     {
-      path: path+'3d_Clio-Hadjigeorgiou_4.jpg',
-      scale: 2.3,
+      path: path+'3d_Clio-Hadjigeorgiou_4.png',
+	  scale: 2.7,
       position: {
-        x: 2.1,
-        y: -0.2,
-        z: 0,
+        x: 1.7,
+        y: 0,
+        z: -1.7,
       },
       rotation: {
         x: 0,
-        y: Math.PI/1.5,
+        y: -Math.PI/4,
         z: 0,
       }
     },
