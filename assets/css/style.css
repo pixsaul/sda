@@ -345,7 +345,7 @@ canvas {
   right: 1.5rem;
   width: 6rem;
   position: fixed;
-  display: none;
+  /* display: none; */
 }
 @media (min-width: 1200px) {
   #minimapContainer {
@@ -354,13 +354,14 @@ canvas {
 }
 
 #minimapArtistNames {
-  position: static;
+  position: relative;
   width: 6rem;
-  height: 1rem;
+  /* min-height: 1rem; */
   margin-bottom: 0.5rem;
   opacity: 0;
   transition: opacity 0.2s;
   pointer-events: none;
+  /* bottom: 14rem; */
 }
 
 #minimapArtistNames > div {
@@ -372,7 +373,9 @@ canvas {
   width: 100%;
   /* transition: opacity 0.4s; */
   right: -200%;
+  bottom: 0rem;
   transition: all 0.4s;
+  /* min-height: 1rem; */
 }
 
 #minimapArtistNames > div.fadeIn {
@@ -394,10 +397,12 @@ canvas {
 }
 
 #minimapArtistImgs > img {
-  width: 100%;
+  width: 6rem;
+  height: 6rem;
   position: absolute;
   opacity: 0;
   transition: opacity 1s;
+  object-fit: cover;
   /* transition-delay: 0.2s; */
   /* right: -200%; */
   /* transition: all 0.4s; */
