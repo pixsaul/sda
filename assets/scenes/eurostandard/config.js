@@ -3,43 +3,43 @@ roomConfig = {
   images: [
     {
       path: path+'3d_Eurostandard_01.jpg',
-      scale: 2.3,
+      scale: 1.8,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: 0.9,
+        y: -0.4,
+        z: -0.3,
       },
       rotation: {
         x: 0,
-        y: Math.PI/4,
+        y: 22.7*Math.PI/180,
         z: 0,
       }
     },
     {
       path: path+'3d_Eurostandard_02.jpg',
-      scale: 2.3,
+      scale: 1.8,
       position: {
-        x: 0,
-        y: 0.2,
-        z: -2.7,
+        x: -0.5,
+        y: 1.0,
+        z: 0.8,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: 67.7*Math.PI/180,
         z: 0,
       }
     },
     {
       path: path+'3d_Eurostandard_03.jpg',
-      scale: 1.6,
+      scale: 1.8,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -1.15,
+        y: 2.0,
+        z: -0.66,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: -22.3*Math.PI/180,
         z: 0,
       }
     },

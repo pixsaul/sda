@@ -3,71 +3,71 @@ roomConfig = {
   images: [
     {
       path: path+'3d_Virginie-Jemmely_01.jpg',
-      scale: 2.3,
+      scale: 2.4,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: 2.5,
+        y: -0.1,
+        z: 1.6,
       },
       rotation: {
         x: 0,
-        y: Math.PI/4,
+        y: Math.PI/2,
         z: 0,
       }
     },
     {
       path: path+'3d_Virginie-Jemmely_02.jpg',
-      scale: 2.3,
+      scale: 2.4,
       position: {
-        x: 0,
-        y: 0.2,
-        z: -2.7,
+        x: 1.7,
+        y: -0.1,
+        z: -0.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: -30*Math.PI/180,
         z: 0,
       }
     },
     {
       path: path+'3d_Virginie-Jemmely_03.jpg',
-      scale: 1.6,
+      scale: 2.4,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: 1.5,
+        y: -0.1,
+        z: -2.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: 0,
         z: 0,
       }
     },
 	{
       path: path+'3d_Virginie-Jemmely_04.jpg',
-      scale: 1.6,
+      scale: 2.5,
       position: {
-        x: 2.3,
-        y: -0.3,
+        x: -1.3,
+        y: -0.1,
         z: -1.8,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: 50*Math.PI/180,
         z: 0,
       }
     },
 	{
       path: path+'3d_Virginie-Jemmely_05.jpg',
-      scale: 1.6,
+      scale: 3.4,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -1.2,
+        y: 0.5,
+        z: 1.2,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: 11*Math.PI/180,
         z: 0,
       }
     },
@@ -75,13 +75,13 @@ roomConfig = {
       path: path+'3d_Virginie-Jemmely_06.jpg',
       scale: 1.6,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: 1,
+        y: -0.8,
+        z: 2.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: -40*Math.PI/180,
         z: 0,
       }
     },
@@ -89,13 +89,13 @@ roomConfig = {
       path: path+'3d_Virginie-Jemmely_07.jpg',
       scale: 1.6,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -2.5,
+        y: -0.8,
+        z: -0,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: Math.PI/2,
         z: 0,
       }
     },
@@ -119,15 +119,15 @@ roomConfig = {
 videos: [
 	{
       path: path+'3d_Virginie-Jemmely_BTS.mp4',
-      scale: 1.6,
+      scale: 1.4,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -2.5,
+        y: -0.65,
+        z: -2.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: Math.PI/4,
         z: 0,
       }
     },

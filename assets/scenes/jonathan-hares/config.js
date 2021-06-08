@@ -2,12 +2,12 @@ var path = '/assets/scenes/jonathan-hares/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Jonathan-Hares_1.jpg',
-      scale: 2.3,
+      path: path+'3d_Jonathan-Hares_1.png',
+      scale: 5.2,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: 0,
+        y: 0.7,
+        z: 0,
       },
       rotation: {
         x: 0,
@@ -16,16 +16,16 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Jonathan-Hares_2.jpg',
-      scale: 2.3,
+      path: path+'3d_Jonathan-Hares_2.png',
+      scale: 5.2,
       position: {
         x: 0,
-        y: 0.2,
-        z: -2.7,
+        y: 0.7,
+        z: 0,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: -Math.PI/4,
         z: 0,
       }
     },

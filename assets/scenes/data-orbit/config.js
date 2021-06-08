@@ -3,43 +3,43 @@ roomConfig = {
   images: [
     {
       path: path+'3d_Data-Orbit_1.jpg',
-      scale: 2.3,
+      scale: 3.2,
       position: {
-        x: -2,
+        x: 2,
         y: 1,
-        z: 0.01,
+        z: 0.4,
       },
       rotation: {
         x: 0,
-        y: Math.PI/4,
+        y: 18.4*Math.PI/180,
         z: 0,
       }
     },
     {
       path: path+'3d_Data-Orbit_2.jpg',
-      scale: 2.3,
+      scale: 3.2,
       position: {
-        x: 0,
-        y: 0.2,
-        z: -2.7,
+		  x: -1.5,
+          y: 0.6,
+          z: -0.4,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: -71.9*Math.PI/180,
         z: 0,
       }
     },
     {
       path: path+'3d_Data-Orbit_3.jpg',
-      scale: 1.6,
+      scale: 3.2,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -0.5,
+        y: -0.4,
+        z: 1.8,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: -17.8*Math.PI/180,
         z: 0,
       }
     },

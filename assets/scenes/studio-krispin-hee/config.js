@@ -1,45 +1,45 @@
-var path = '/assets/scenes/krispin-hee/'
+var path = '/assets/scenes/studio-krispin-hee/'
 roomConfig = {
   images: [
     {
       path: path+'3d_Krispin-Hee_01.jpg',
-      scale: 2.3,
+      scale: 3.6,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: 1.23,
+        y: 0.35,
+        z: -0.05,
       },
       rotation: {
         x: 0,
-        y: Math.PI/4,
+        y: 103*Math.PI/180,
         z: 0,
       }
     },
     {
       path: path+'3d_Krispin-Hee_02.jpg',
-      scale: 2.3,
+      scale: 3.6,
       position: {
-        x: 0,
-        y: 0.2,
-        z: -2.7,
+        x: -0.487,
+        y: 0.35,
+        z: -0.595,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: -137*Math.PI/180,
         z: 0,
       }
     },
     {
       path: path+'3d_Krispin-Hee_03.jpg',
-      scale: 1.6,
+      scale: 3.6,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -0.1,
+        y: 0.35,
+        z: 1.161,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: -17.2*Math.PI/180,
         z: 0,
       }
     },
