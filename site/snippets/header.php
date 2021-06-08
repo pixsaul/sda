@@ -31,7 +31,8 @@
     <?php if ( ($page->is("info")) || ($page->isChildOf("participants")) ) : ?>
       <a href="<?= $site->url() ?>/">Home</a>
     <?php else: ?>
-    <select class="filter" name="filter" id="filter">
+    <label class="filter">
+    <select name="filter" id="filter">
       <option selected disabled hidden value="">Filter</option>
       <option value="fashionandtextile">Fashion + Textile Design</option>
       <option value="product">Product Design</option>
@@ -41,6 +42,7 @@
       <option value="scenography">Scenography</option>
       <!--<option value="awared">Awarded</option>-->
     </select>
+    </label>
     <?php endif; ?>
     
     <a class="home" href="<?= $site->url() ?>/">
