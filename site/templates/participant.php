@@ -147,64 +147,60 @@
 
 <script>
 
+Flickity.createMethods.push('_createPrevNextCells')
+Flickity.prototype._createPrevNextCells = function() {
+	this.on( 'select', this.setPrevNextCells )
+}
+Flickity.prototype.setPrevNextCells = function() {
+	// remove classes
+	changeSlideClasses( this.previousSlide, 'remove', 'is-prev' )
+	changeSlideClasses( this.nextSlide, 'remove', 'is-next' )
+	// set slides
+	if (this.selectedIndex - 1 < 0) {
+		this.previousSlide = this.slides[ this.slides.length - 1 ]
+	}
+	else {
+		this.previousSlide = this.slides[ this.selectedIndex - 1 ]
+	}
+	if (this.selectedIndex + 1 === this.slides.length) {
+		this.nextSlide = this.slides[0]
+	}
+	else {
+		this.nextSlide = this.slides[this.selectedIndex + 1]
+	}
+	// add classes
+	changeSlideClasses( this.previousSlide, 'add', 'is-prev' )
+	changeSlideClasses( this.nextSlide, 'add', 'is-next' )
+}
+function changeSlideClasses( slide, method, className ) {
+	if (!slide) {
+		return
+	}
+	slide.getCellElements().forEach( function( cellElem ) {
+		cellElem.classList[ method ]( className )
+	})
+}
+
 var elem = document.querySelector('.projectGallery');
 var flkty = new Flickity( elem, {
 	imagesLoaded: true,
 	prevNextButtons: false,
 	pageDots: false,
-	cellAlign: 'left',
+	cellAlign: 'center',
 	wrapAround: true,
-	lazyLoad: 2
+	lazyLoad: 999
 });
 
-var $carousel = $('.projectGallery').flickity()
+var $carousel = $('.projectGallery').flickity();
 
-//set previous slide
-var $selectedSlide = $(flkty.selectedElement);
-
-//set next slide
-var $nextSlide = ($selectedSlide).next().next();
-$nextSlide.addClass("is-next");
-
-$carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-	var $selectedSlide = $(flkty.selectedElement);
-	var $nextSlide = ($selectedSlide).next().next();
-	
-	//if next slide is start, set it
-	if (!($nextSlide).length ) {
-		var $nextSlide = $(".flickity-slider img:first-child");
-	}
-	var $currSlide = $(cellElement);
-	
-	$(".flickity-slider img").removeClass("is-next");
-	
-	if ( cellElement == flkty.selectedElement ) {
-		$carousel.flickity( 'previous', true );
-
-	} else if ( $currSlide.is($nextSlide) ) {
-		$carousel.flickity( 'next', true );
-	} else {
-		$carousel.flickity( 'next', true );
-	}
+$(document).on('click', '.is-next', function(){
+	$carousel.flickity( 'next', true );
 });
 
-//update next slide once moved
-$carousel.on( 'change.flickity', function( event, index ) {
-	var $selectedSlide = $(flkty.selectedElement);
-	var $nextSlide = ($selectedSlide).next().next();
-	
-	if ( ($nextSlide).length ) {
-		$nextSlide.addClass("is-next");
-	} else {
-		$(".flickity-slider img:first-child").addClass("is-next");
-	}
-	
-	if (($selectedSlide).is(':last-child')) {
-		$(".flickity-slider img").removeClass("is-next");
-		$(".flickity-slider img:first-child").next().addClass("is-next");
-	}
-
+$(document).on('click', '.is-prev', function(){
+	$carousel.flickity( 'previous', true );
 });
+
 
 </script>
 
