@@ -157,12 +157,15 @@ var visited = readCookie('visited');
 
 if (visited || visited == "true") {
   $(".cookies").hide();
+  $("body").removeClass('cookieNotification');
 }
 
 $( ".cookies a" ).click(function(event) {
   event.preventDefault();
   createCookie('visited', "true", 30);
   $(".cookies").hide();
+  $("body").removeClass('cookieNotification');
+
 });
 
 //video play

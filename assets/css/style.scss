@@ -185,16 +185,18 @@ header {
   }
 }
 
+body.cookieNotification {
+  padding-bottom: 40px;
+}
+
 footer {
   background: #F64500;
   font-family: "Metaballs";
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
-  height: 140px;
-  padding-top: 40px;
+  height: 60px;
   box-sizing: border-box;
-  height: 100px;
 
   @include for-desktop-up {
     height: 140px;

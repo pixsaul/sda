@@ -22,9 +22,9 @@
 </head>
 
   <?php if ($page->template() == "participant"): ?>
-    <body class="artist">
+    <body class="artist cookieNotification">
     <?php else: ?>
-    <body>
+    <body class="cookieNotification">
   <?php endif; ?>
 
   <header class="header">
