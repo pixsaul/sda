@@ -3,8 +3,8 @@
 //set first slide to active
 $(".seq img:first-child").addClass('active');
 
-$( ".seq" ).hover(
-  function() {
+$(document).on({
+  mouseenter: function () {
     //set it to animating fwd
     $(this).removeClass('animating--rev');
     $(this).addClass('animating--fwd');
@@ -12,7 +12,7 @@ $( ".seq" ).hover(
     //animate this, direction forward
     animateSequence($(this), true);
 
-  }, function() {
+  }, mouseleave: function () {
     //on hover out, set to animating rev
     $(this).removeClass('animating--fwd');
     $(this).addClass('animating--rev');
@@ -20,7 +20,7 @@ $( ".seq" ).hover(
     //animate this, direction backward
     animateSequence($(this), false);
   }
-);
+}, ".seq");
 
 function animateSequence(thisObj,direction) {
 
@@ -182,6 +182,13 @@ $('.home-grid').infiniteScroll({
   hideNav: '.pagination'
 });
 
+// jQuery
+$('.home-grid').on( 'append.infiniteScroll', function( event, body, path, items, response ) {
+  $(".seq img:first-child").addClass('active');
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
 function animateFwd(gridItem) {
   animateSequenceMobile($(gridItem), true);
   $(gridItem).addClass("animating");
@@ -194,7 +201,6 @@ function animateBkd(gridItem) {
 
 
 //mobile homepage scroll
-
 if ($(window).width() < 600) {
 
 const boxes = gsap.utils.toArray('.grid-item');
