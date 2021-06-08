@@ -41,18 +41,6 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/assets\/css\/style.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/css\/style-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/css\/style.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -326,17 +314,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/js\/Minimap.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/js\/Minimap-min.js",
-      "oF" : 0,
-      "sC" : 0,
-      "tS" : 0
-    },
     "\/assets\/js\/ObjectControls-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -401,17 +378,6 @@
       "oAP" : "\/assets\/js\/SDARoom-min-min.js",
       "oF" : 0,
       "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/js\/SDARoom.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/js\/SDARoom-min.js",
-      "oF" : 0,
-      "sC" : 0,
       "tS" : 0
     },
     "\/assets\/js\/Sketch.js" : {
@@ -1205,7 +1171,7 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/scenes\/dafi-kuhne\/3d_Dafi-Kühne_1.png" : {
+    "\/assets\/scenes\/dafi-kuhne\/3d_Dafi-Kühne_1.png" : {
       "ft" : 32768,
       "iS" : 717222,
       "oA" : 0,
@@ -1218,7 +1184,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/dafi-kuhne\/3d_Dafi-Kühne_2.png" : {
+    "\/assets\/scenes\/dafi-kuhne\/3d_Dafi-Kühne_2.png" : {
       "ft" : 32768,
       "iS" : 2210243,
       "oA" : 0,
@@ -1231,7 +1197,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/dafi-kuhne\/3d_Dafi-Kühne_3.png" : {
+    "\/assets\/scenes\/dafi-kuhne\/3d_Dafi-Kühne_3.png" : {
       "ft" : 32768,
       "iS" : 2065656,
       "oA" : 0,
@@ -1244,7 +1210,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/dafi-kuhne\/3d_Dafi-Kühne_4.png" : {
+    "\/assets\/scenes\/dafi-kuhne\/3d_Dafi-Kühne_4.png" : {
       "ft" : 32768,
       "iS" : 134951,
       "oA" : 0,
@@ -1257,7 +1223,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/dafi-kuhne\/3d_Dafi-Kühne_5.png" : {
+    "\/assets\/scenes\/dafi-kuhne\/3d_Dafi-Kühne_5.png" : {
       "ft" : 32768,
       "iS" : 2694971,
       "oA" : 0,
@@ -1281,7 +1247,7 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/scenes\/dafi-kuhne\/Dafi-Kühne_6.png" : {
+    "\/assets\/scenes\/dafi-kuhne\/Dafi-Kühne_6.png" : {
       "ft" : 32768,
       "iS" : 2225091,
       "oA" : 0,
@@ -1294,7 +1260,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/dafi-kuhne\/Dafi-Kühne_7.png" : {
+    "\/assets\/scenes\/dafi-kuhne\/Dafi-Kühne_7.png" : {
       "ft" : 32768,
       "iS" : 122501,
       "oA" : 0,
@@ -1307,7 +1273,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/dafi-kuhne\/Dafi-Kühne.fbx" : {
+    "\/assets\/scenes\/dafi-kuhne\/Dafi-Kühne.fbx" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
@@ -3085,7 +3051,7 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_04.jpg" : {
+    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_04.jpg" : {
       "ft" : 16384,
       "iS" : 169620,
       "jF" : 0,
@@ -3098,7 +3064,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_05.png" : {
+    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_05.png" : {
       "ft" : 32768,
       "iS" : 448879,
       "oA" : 0,
@@ -3111,7 +3077,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_06.png" : {
+    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_06.png" : {
       "ft" : 32768,
       "iS" : 1350541,
       "oA" : 0,
@@ -3124,7 +3090,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_07.png" : {
+    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_07.png" : {
       "ft" : 32768,
       "iS" : 425202,
       "oA" : 0,
@@ -3137,7 +3103,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_08.png" : {
+    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_08.png" : {
       "ft" : 32768,
       "iS" : 608148,
       "oA" : 0,
@@ -3150,7 +3116,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_09.png" : {
+    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_09.png" : {
       "ft" : 32768,
       "iS" : 612091,
       "oA" : 0,
@@ -3163,7 +3129,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_10.png" : {
+    "\/assets\/scenes\/krispin-hee\/Krispin-Hée_10.png" : {
       "ft" : 32768,
       "iS" : 423613,
       "oA" : 0,
@@ -3455,7 +3421,7 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/scenes\/lina-muller\/Lina-Mullër.fbx" : {
+    "\/assets\/scenes\/lina-muller\/Lina-Mullër.fbx" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
@@ -17196,102 +17162,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/.jobs\/after-work-07-38x38.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/.jobs\/after-work-07-38x38.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/.jobs\/after-work-07-76x76.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/.jobs\/after-work-07-76x76.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/.jobs\/after-work-07-352x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/.jobs\/after-work-07-352x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/.jobs\/after-work-07-864x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/.jobs\/after-work-07-864x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/after-work_07.jpg" : {
+    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623084534\/after-work_07.jpg" : {
       "ft" : 16384,
       "iS" : 279980,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/after-work_07.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/after-work-07-1408x.jpg" : {
-      "ft" : 16384,
-      "iS" : 157237,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1622821082\/after-work-07-1408x.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623083350\/.jobs\/after-work-07-76x76.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623083350\/.jobs\/after-work-07-76x76.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623083350\/.jobs\/after-work-07-352x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623083350\/.jobs\/after-work-07-352x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623083350\/.jobs\/after-work-07-864x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623083350\/.jobs\/after-work-07-864x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623083350\/.jobs\/after-work-07-1408x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623083350\/.jobs\/after-work-07-1408x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623083350\/after-work-07-38x38.jpg" : {
-      "ft" : 16384,
-      "iS" : 1268,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623083350\/after-work-07-38x38.jpg",
+      "oAP" : "\/media\/pages\/participants\/after-work-studio\/2dcfa58715-1623084534\/after-work_07.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -19317,102 +19193,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/.jobs\/3d-after-work-06-38x38.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/.jobs\/3d-after-work-06-38x38.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/.jobs\/3d-after-work-06-76x76.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/.jobs\/3d-after-work-06-76x76.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/.jobs\/3d-after-work-06-352x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/.jobs\/3d-after-work-06-352x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/.jobs\/3d-after-work-06-864x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/.jobs\/3d-after-work-06-864x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/3d_after-work_06.jpg" : {
+    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623084534\/3d_after-work_06.jpg" : {
       "ft" : 16384,
-      "iS" : 76320,
+      "iS" : 189371,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/3d_after-work_06.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/3d-after-work-06-1408x.jpg" : {
-      "ft" : 16384,
-      "iS" : 43200,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1622821077\/3d-after-work-06-1408x.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623083348\/.jobs\/3d-after-work-06-76x76.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623083348\/.jobs\/3d-after-work-06-76x76.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623083348\/.jobs\/3d-after-work-06-352x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623083348\/.jobs\/3d-after-work-06-352x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623083348\/.jobs\/3d-after-work-06-864x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623083348\/.jobs\/3d-after-work-06-864x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623083348\/.jobs\/3d-after-work-06-1408x.jpg.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623083348\/.jobs\/3d-after-work-06-1408x.jpg-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623083348\/3d-after-work-06-38x38.jpg" : {
-      "ft" : 16384,
-      "iS" : 1275,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623083348\/3d-after-work-06-38x38.jpg",
+      "oAP" : "\/media\/pages\/participants\/after-work-studio\/f2c517b4ac-1623084534\/3d_after-work_06.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
