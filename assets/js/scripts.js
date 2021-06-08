@@ -192,9 +192,10 @@ function animateBkd(gridItem) {
   $(gridItem).removeClass("animating");
 }
 
+
 //mobile homepage scroll
-var gridItem = $(".grid-item").first().children();
-//animateSequenceMobile($(gridItem), true);
+
+if ($(window).width() < 600) {
 
 const boxes = gsap.utils.toArray('.grid-item');
 boxes.forEach(box => {
@@ -209,3 +210,5 @@ boxes.forEach(box => {
     }
   })
 });
+
+}

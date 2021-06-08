@@ -1,12 +1,24 @@
 const minimapConfig = {
 	entrants: [
 		{
-			name: "Livia Rita",
-			imgSrc: "/assets/images/livia.jpeg",
+			name: "After Work Studio",
+			imgSrc: "/assets/scenes/after-work-studio/3d_After-Work_01.jpg",
+			path: "after-work-studio"
 		},
 		{
-			name: "Test",
-			imgSrc: "/assets/images/test1.jpg",
+			name: "Alice Franchetti",
+			imgSrc: "/assets/scenes/alice-franchetti/3d_Alice-Franchetti_1.jpg",
+			path: "alice-franchetti",
+		},
+		{
+			name: "Annina Arter",
+			imgSrc: "/assets/scenes/annina-arter/3d_Annina-Arter_01.jpg",
+			path: "annina-arter",
+		},
+		{
+			name: "Chaumont Zaerpour",
+			imgSrc: "/assets/scenes/chaumont-zaerpour/3d_Chaumont-Zaerpour_01.jpeg",
+			path: "chaumont-zaerpour",
 		},
 	],
 }
@@ -22,7 +34,7 @@ function handleEnterMinimap(){
 }
 
 function handleMinimapSelection(i){
-	console.log(i);
+	// console.log(i);
 	let minimapArtistName = minimapArtistNameEls[i];
 	let minimapArtistImg = minimapArtistImgEls[i];
 	minimapArtistName.classList.add("fadeIn");
@@ -30,7 +42,7 @@ function handleMinimapSelection(i){
 }
 
 function handleMinimapSelectionLeave(i){
-	console.log(i);
+	// console.log(i);
 	let minimapArtistName = minimapArtistNameEls[i];
 	let minimapArtistImg = minimapArtistImgEls[i];
 	minimapArtistName.classList.remove("fadeIn");
@@ -44,6 +56,13 @@ function hideMinimapSelection(){
 	minimapArtistImgs.classList.remove("fadeIn");
 }
 
+function getCurrentArtistPath(){
+	let path = window.location.pathname;
+	let r =  path.substring(path.lastIndexOf('/') + 1);
+	console.log(r);
+	return r;
+}
+
 function initMinimap(){
 	let minimap = document.getElementById('minimap');
 	minimap.addEventListener('mouseenter', function(){
@@ -54,13 +73,13 @@ function initMinimap(){
 		// hideInfiniteFloor();
 		hideMinimapSelection();
 	});
+	const currentArtistsPath = getCurrentArtistPath()
 	// Change this
-	let currentId = 13;
+	let minimapArtistNames = document.getElementById("minimapArtistNames");
+	let minimapArtistImgs = document.getElementById("minimapArtistImgs");
 	for (let i = 0; i< 64; i++){
 		let cell = document.createElement("div");
-		if (i == currentId){
-			cell.classList.add("active");
-		}
+		
 		minimap.appendChild(cell);
 		let circle = document.createElement("div");
 		cell.appendChild(circle);
@@ -70,20 +89,22 @@ function initMinimap(){
 		cell.addEventListener("mouseleave", function(e){
 			handleMinimapSelectionLeave(i);
 		});
-	}
-	let minimapArtistNames = document.getElementById("minimapArtistNames");
-	let minimapArtistImgs = document.getElementById("minimapArtistImgs");
-	for (let i = 0; i<minimapConfig.entrants.length; i++){
-		let name = document.createElement("div");
-		name.innerHTML = minimapConfig.entrants[i].name;
-		name.id = "minimapArtistName" + i;
-		let img = document.createElement("img");
-		img.id = "minimapArtistImg" + i;
-		img.src = minimapConfig.entrants[i].imgSrc;
-		minimapArtistNames.appendChild(name);
-		minimapArtistNameEls.push(name);
-		minimapArtistImgs.appendChild(img);
-		minimapArtistImgEls.push(img);
+		// Remove this line once all are added
+		if (i < minimapConfig.entrants.length){
+			let name = document.createElement("div");
+			name.innerHTML = minimapConfig.entrants[i].name;
+			name.id = "minimapArtistName" + i;
+			let img = document.createElement("img");
+			img.id = "minimapArtistImg" + i;
+			img.src = minimapConfig.entrants[i].imgSrc;
+			minimapArtistNames.appendChild(name);
+			minimapArtistNameEls.push(name);
+			minimapArtistImgs.appendChild(img);
+			minimapArtistImgEls.push(img);
+			if (minimapConfig.entrants[i].path == currentArtistsPath){
+				cell.classList.add("active");
+			}
+		}
 	}
 }
 
