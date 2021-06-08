@@ -179,5 +179,4 @@ $('.home-grid').infiniteScroll({
 
 //mobile homepage scroll
 var gridItem = $(".grid-item").first().children();
-
-animateSequenceMobile($(gridItem), true);
+//animateSequenceMobile($(gridItem), true);

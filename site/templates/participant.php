@@ -34,8 +34,6 @@
 		<canvas id="threeCanvas">
 		</canvas>
 		<div id="minimapContainer">
-			<!-- <div id="minimapArtistName">Livia Rita</div>
-			<img id="minimapArtistImg" src="./assets/images/livia.jpeg"></img> -->
 			<div id="minimapArtistNames"></div>
 			<div id="minimapArtistImgs"></div>
 			<div id="minimap">

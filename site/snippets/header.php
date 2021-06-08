@@ -25,7 +25,7 @@
   <?php endif; ?>
 
   <header class="header">
-    <?php if ( ($page->is("info")) || ($page->isChildOf("artists")) ) : ?>
+    <?php if ( ($page->is("info")) || ($page->isChildOf("participants")) ) : ?>
       <a href="<?= $site->url() ?>/">Home</a>
     <?php else: ?>
     <select class="filter" name="filter" id="filter">

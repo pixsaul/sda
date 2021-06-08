@@ -341,11 +341,16 @@ canvas {
   }
 }
 #minimapContainer {
-  bottom: 15rem;
-  /* bottom: 40vh; */
+  bottom: 40vh;
   right: 1.5rem;
   width: 6rem;
   position: fixed;
+  display: none;
+}
+@media (min-width: 1200px) {
+  #minimapContainer {
+    display: block;
+  }
 }
 
 #minimapArtistNames {
@@ -373,6 +378,38 @@ canvas {
 #minimapArtistNames > div.fadeIn {
   opacity: 1;
   right: 0;
+}
+
+#minimapArtistNames.fadeIn {
+  opacity: 1;
+}
+
+#minimapArtistImgs {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transition: opacity 1s;
+  pointer-events: none;
+}
+
+#minimapArtistImgs > img {
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+  /* transition-delay: 0.2s; */
+  /* right: -200%; */
+  /* transition: all 0.4s; */
+}
+
+#minimapArtistImgs > img.fadeIn {
+  opacity: 1;
+  /* right: 0; */
+}
+
+#minimapArtistImgs.fadeIn {
+  opacity: 1;
 }
 
 #minimap {
