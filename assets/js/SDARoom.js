@@ -51,7 +51,7 @@ scene.add(group);
 let controls = new THREE.ObjectControls(group, renderer.domElement , hasHover, config.restrictMobile);
 
 
-scene.fog = new THREE.FogExp2(0x000000, 0.05);
+
 
 const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0);
 const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.2);
