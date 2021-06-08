@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/niki-paltenghi/'
+var path = '/assets/scenes/niki-paltenghi/'
 roomConfig = {
   images: [
     {

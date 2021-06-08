@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/mathias-renner/'
+var path = '/assets/scenes/mathias-renner/'
 roomConfig = {
   images: [
     {

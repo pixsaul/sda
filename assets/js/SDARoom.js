@@ -221,11 +221,12 @@ function initInfiniteFloor(){
 function initFloor(){
 	const texture = textureLoader.load('/assets/images/tiles.png')
 	texture.anisotrophy = 8;
-	texture.minFilter = THREE.LinearFilter;
+	// texture.minFilter = THREE.LinearFilter;
 	texture.wrapS = THREE.RepeatWrapping
 	texture.wrapT = THREE.RepeatWrapping
 	texture.repeat = new THREE.Vector2(6, 6)
 	const roomMaterial = new THREE.MeshBasicMaterial({
+		color: 0xffffff,
 		map: texture,
 		side: THREE.DoubleSide,
 	})

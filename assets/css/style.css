@@ -448,7 +448,7 @@ canvas {
   border: 1px solid #303030;
 }
 
-#minimap > div {
+#minimap > a {
   height: 0.75rem;
   width: 0.75rem;
   /* margin: 0.1rem; */
@@ -463,7 +463,7 @@ canvas {
   cursor: pointer;
 }
 
-#minimap > div > div {
+#minimap > a > div {
   height: 0.125rem;
   width: 0.125rem;
   /* margin: 0.1rem; */
@@ -473,13 +473,13 @@ canvas {
   transition: all 0.2s;
 }
 
-#minimap > div:hover > div {
+#minimap > a:hover > div {
   /* background-color: red; */
   height: 0.5rem;
   width: 0.5rem;
 }
 
-#minimap > div.active > div {
+#minimap > a.active > div {
   background-color: red;
   height: 0.5rem;
   width: 0.5rem;

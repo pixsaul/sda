@@ -1,4 +1,4 @@
-var path = '/sda/assets/scenes/livia-rita/'
+var path = '/assets/scenes/livia-rita/'
 roomConfig = {
   images: [
     {
