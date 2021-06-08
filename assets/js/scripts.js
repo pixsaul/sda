@@ -63,6 +63,8 @@ function animateSequence(thisObj,direction) {
 
 function animateSequenceMobile(thisObj,direction) {
 
+
+
   //get number of slides
   slides = $("img", thisObj).length;
 
@@ -73,13 +75,16 @@ function animateSequenceMobile(thisObj,direction) {
       //check we are still hovering over
       var isHovered = true;
       if (isHovered == true) {
-        if (i < slides - 1) {
+        if (i < slides - 2) {
           $("img.active", thisObj).removeClass('active').next().addClass('active');
           i++;
+        } else {
+          $("img:not(.spacer)", thisObj).last().addClass('active');
+          clearInterval(myVar);
+
+
         }
       } else {
-        //not hovering anymore, so stop this
-        clearInterval(myVar);
       }
     }, 20);
   }
@@ -177,6 +182,30 @@ $('.home-grid').infiniteScroll({
   hideNav: '.pagination'
 });
 
+function animateFwd(gridItem) {
+  animateSequenceMobile($(gridItem), true);
+  $(gridItem).addClass("animating");
+}
+
+function animateBkd(gridItem) {
+  animateSequenceMobile($(gridItem), false);
+  $(gridItem).removeClass("animating");
+}
+
 //mobile homepage scroll
 var gridItem = $(".grid-item").first().children();
 //animateSequenceMobile($(gridItem), true);
+
+const boxes = gsap.utils.toArray('.grid-item');
+boxes.forEach(box => {
+  gsap.to(box, {
+    x: 0,
+    scrollTrigger: {
+      trigger: box,
+      scrub: true,
+      start: "bottom 70%",
+      onEnter: () => animateFwd(box),
+      onLeaveBack: () => animateBkd(box),
+    }
+  })
+});
