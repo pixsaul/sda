@@ -341,11 +341,16 @@ canvas {
   }
 }
 #minimapContainer {
-  bottom: 15rem;
-  /* bottom: 40vh; */
+  bottom: 40vh;
   right: 1.5rem;
   width: 6rem;
   position: fixed;
+  display: none;
+}
+@media (min-width: 1200px) {
+  #minimapContainer {
+    display: block;
+  }
 }
 
 #minimapArtistNames {
@@ -375,6 +380,38 @@ canvas {
   right: 0;
 }
 
+#minimapArtistNames.fadeIn {
+  opacity: 1;
+}
+
+#minimapArtistImgs {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transition: opacity 1s;
+  pointer-events: none;
+}
+
+#minimapArtistImgs > img {
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+  /* transition-delay: 0.2s; */
+  /* right: -200%; */
+  /* transition: all 0.4s; */
+}
+
+#minimapArtistImgs > img.fadeIn {
+  opacity: 1;
+  /* right: 0; */
+}
+
+#minimapArtistImgs.fadeIn {
+  opacity: 1;
+}
+
 #minimap {
   width: 6rem;
   height: 6rem;
@@ -400,6 +437,7 @@ canvas {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
 }
 
 #minimap > div > div {
@@ -699,7 +737,6 @@ button, a.btn {
 .flickity-slider {
   display: flex;
   align-items: center;
-  margin-left: 10px;
 }
 @media (min-width: 1200px) {
   .flickity-slider {
@@ -708,18 +745,16 @@ button, a.btn {
 }
 .flickity-slider img {
   margin-right: 10px;
-  width: 80vw;
+  max-height: 60vh;
 }
 @media (min-width: 1200px) {
   .flickity-slider img {
-    width: calc(33vw - 7.5px);
     margin-right: 20px;
   }
 }
 @media (min-width: 1800px) {
   .flickity-slider img {
     margin-right: 30px;
-    width: calc(33vw - 12.5px);
   }
 }
 @media (min-width: 1200px) {

@@ -8,7 +8,7 @@ $artistPage = $artistPage->children()->listed() ?>
 	$artistPage = $artistPage->filterBy('categories', $tag, ',');
 }
 
-$artistPage = $artistPage->paginate(9);
+$artistPage = $artistPage->paginate(12);
 
 ?>
 
