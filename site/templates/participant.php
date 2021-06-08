@@ -24,7 +24,7 @@
 
 <main class="project">
   <article>
-		
+		<div id="videoTextureContainer"></div>
 		<div id="loader">
 			<div id="loaderImg"></div>
 			<div id="loaderText">loading</div>

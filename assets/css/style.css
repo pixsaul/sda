@@ -851,3 +851,20 @@ button, a.btn {
 .cookies a {
   color: white;
 }
+
+
+#videoTextureContainer{
+	position: fixed;
+	z-index: -99999;
+	opacity: 0;
+	pointer-events: none;
+	height: 0;
+	width: 0;
+}
+
+#videoTextureContainer *{
+	opacity: 0;
+	pointer-events: none;
+	height: 0;
+	width: 0;
+}

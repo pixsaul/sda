@@ -70,7 +70,7 @@ const objLoader = new THREE.OBJLoader();
 const fbxLoader = new THREE.FBXLoader();
 const textureLoader = new THREE.TextureLoader()
 
-var video;
+var videos = [];
 var videoTexture;
 var videoMaterial;
 var videoObj;
@@ -144,8 +144,8 @@ function initLights(){
 }
 
 function initInfiniteFloor(){
-
-
+	
+	
 	const texture = textureLoader.load('/assets/images/tiles.png')
 	texture.anisotrophy = 2;
 	texture.minFilter = THREE.LinearFilter;
@@ -161,7 +161,7 @@ function initInfiniteFloor(){
 	// 	alphaMap: alphaMap,
 	// 	transparent: true,
 	// })
-
+	
 	infiniteFloorMaterial = new THREE.MeshBasicMaterial( {
 		side: THREE.DoubleSide,
 		transparent: true,
@@ -169,9 +169,9 @@ function initInfiniteFloor(){
 		alphaMap: alphaMap,
 		opacity: 0.0,
 	} );
-
+	
 	infiniteFloorMaterial.onBeforeCompile = function( shader ) {
-
+		
 		// vertex modifications
 		var vertex_pars = 'attribute vec2 uvB;\nvarying vec2 vUvB;\n';
 		var vertex_uv = shader.vertexShader.replace(
@@ -181,10 +181,10 @@ function initInfiniteFloor(){
 				'vUvB = uvB;'
 			].join( '\n' )
 		);
-
+		
 		shader.vertexShader = vertex_pars + vertex_uv;
-
-
+		
+		
 		// fragment modifications
 		var frag_pars = 'varying vec2 vUvB;\n';
 		var frag_uv = shader.fragmentShader.replace(
@@ -195,18 +195,18 @@ function initInfiniteFloor(){
 				'diffuseColor *= texelColor;'
 			].join( '\n' )
 		);
-
+		
 		shader.fragmentShader = frag_pars + frag_uv;
-
+		
 	}
 	const roomPlaneGeo = new THREE.PlaneBufferGeometry(config.infiniteFloorSize, config.infiniteFloorSize);
 	roomPlaneGeo.rotateX(-Math.PI/2);
 	roomPlaneGeo.translate(0,-2.01,0);
 	var uvb = new Float32Array( [
 		0.0, config.infiniteFloorSize,
-        config.infiniteFloorSize, config.infiniteFloorSize,
-        0.0, 0.0,
-        config.infiniteFloorSize, 0.0
+		config.infiniteFloorSize, config.infiniteFloorSize,
+		0.0, 0.0,
+		config.infiniteFloorSize, 0.0
 	] );
 	console.log(roomPlaneGeo);
 	roomPlaneGeo.setAttribute( 'uvB', new THREE.BufferAttribute( uvb, 2 ) );
@@ -238,16 +238,16 @@ function initFloor(){
 	group.add(room);
 	objects.push(room);
 	initInfiniteFloor();
-
-	const size = 6;
-	const divisions = 6;
-	const colorGrid = 0x000000;
-
-	const gridHelper = new THREE.GridHelper( size, divisions, colorGrid, colorGrid );
-	gridHelper.position.y = -2.1;
-	scene.add(gridHelper);
-	group.add(gridHelper);
-	objects.push(gridHelper);
+	
+	// const size = 6;
+	// const divisions = 6;
+	// const colorGrid = 0x000000;
+	// 
+	// const gridHelper = new THREE.GridHelper( size, divisions, colorGrid, colorGrid );
+	// gridHelper.position.y = -2.1;
+	// scene.add(gridHelper);
+	// group.add(gridHelper);
+	// objects.push(gridHelper);
 }
 
 // Handle resize
@@ -276,7 +276,7 @@ function applyFadeToAllExcept(exceptMesh){
 					.to({opacity:0.7}, 500)
 					.easing(TWEEN.Easing.Quadratic.InOut)
 					opacityTween.start();
-
+					
 					if (m.map){
 						const colourTween = new TWEEN.Tween(m.color)
 						.to({r:0.7, g: 0.7, b: 0.7}, 500)
@@ -285,7 +285,7 @@ function applyFadeToAllExcept(exceptMesh){
 					}
 				}
 			} else {
-
+				
 				// const opacityTween = new TWEEN.Tween(mesh.material)
 				// .to({opacity:0.7}, 500)
 				// .easing(TWEEN.Easing.Quadratic.InOut)
@@ -294,7 +294,7 @@ function applyFadeToAllExcept(exceptMesh){
 				// .to({opacity:0.7}, 500)
 				// .easing(TWEEN.Easing.Quadratic.InOut)
 				// opacityTween.start();
-
+				
 				if (mesh.name == "blob"){
 					const x = {
 						v: 1
@@ -336,7 +336,7 @@ function removeFadeFromAll(){
 					.easing(TWEEN.Easing.Quadratic.InOut)
 					opacityTween.start();
 					if (m.map){
-
+						
 						const colourTween = new TWEEN.Tween(m.color)
 						.to({r:1, g: 1, b: 1}, 500)
 						.easing(TWEEN.Easing.Quadratic.InOut)
@@ -349,7 +349,7 @@ function removeFadeFromAll(){
 				// .to({opacity:1.0}, 500)
 				// .easing(TWEEN.Easing.Quadratic.InOut)
 				// opacityTween.start();
-
+				
 				if (mesh.name == "blob"){
 					const x = {
 						v: 3
@@ -385,7 +385,7 @@ function handleImgClicked(obj){
 	obj.selected = true;
 	selectedObj.bringToFocus(camera, config.selectedDist);
 	applyFadeToAllExcept(selectedObj);
-
+	
 }
 
 // Put selected object back
@@ -607,6 +607,55 @@ function addImage(path, manipFunction){
 	}
 }
 
+// Add video from path, creates very thin cuboid
+function addVideo(path, manipFunction){
+	try {
+		// const frontMaterial = new THREE.MeshBasicMaterial({transparent: false});
+		// const texture = textureLoader.load(path);
+		// texture.anisotrophy = 4;
+		// frontMaterial.map = texture;
+		// const sideMaterial = new THREE.MeshBasicMaterial({color: 0x000000, transparent: true, opacity: 0});
+		// const materials = [sideMaterial, sideMaterial, sideMaterial, sideMaterial, frontMaterial, frontMaterial];
+		// const vid = new Image()
+		// img.onload = () => {
+		// 	const imgRatio = img.height / img.width
+		// 	const cubeGeometry = new THREE.BoxGeometry(1, imgRatio * 1, 0.0001)
+		// 	const cube = new ImageMesh(cubeGeometry, materials);
+		// 	manipFunction(cube);
+		// }
+		// img.src = path
+		const video = document.createElement('video');
+		const source = document.createElement('source');
+		source.setAttribute('src', path);
+		video.appendChild(source);
+		video.classList.add("3dVideoTexture");
+		video.setAttribute("autoplay", "");
+		video.autoplay = true;
+		video.setAttribute("muted", "");
+		video.muted=true;
+		video.setAttribute("loop", "");
+		video.loop=true;
+		const videoTextureContainer = document.getElementById("videoTextureContainer");
+		videoTextureContainer.appendChild(video);
+		// video.play();
+		const videoTexture = new THREE.VideoTexture(video);
+		const frontMaterial = new THREE.MeshBasicMaterial({transparent: false});
+		frontMaterial.map  = videoTexture;
+		const sideMaterial = new THREE.MeshBasicMaterial({color: 0x000000, transparent: true, opacity: 0});
+		const materials = [sideMaterial, sideMaterial, sideMaterial, sideMaterial, frontMaterial, frontMaterial];
+		video.addEventListener( "loadedmetadata", function (e) {
+			const ratio = video.videoHeight / video.videoWidth;
+			console.log(ratio);
+			const cubeGeometry = new THREE.BoxGeometry(1, ratio * 1, 0.0001)
+			const cube = new ImageMesh(cubeGeometry, materials);
+			manipFunction(cube);
+		});
+		// }
+	} catch(e){
+		console.log(e);
+	}
+}
+
 // Handle spin when tapped on mobile
 function giveUsASpin(){
 	// !!!!Replace this with actual value once decided!!!!
@@ -757,6 +806,24 @@ function initRoomFromConfig(){
 			blobs.push(mesh);
 		});
 	}
+	if (roomConfig.videos){
+		for (let v of roomConfig.videos){
+			console.log(v);
+			addVideo(v.path, function(mesh){
+				mesh.scale.set(v.scale,v.scale,v.scale);
+				mesh.position.set(v.position.x, v.position.y, v.position.z);
+				mesh.rotation.set(v.rotation.x, v.rotation.y, v.rotation.z);
+				mesh.position0.copy(mesh.position);
+				mesh.rotation0.copy(mesh.rotation);
+				mesh.quaternion0.copy(mesh.quaternion)
+				mesh.scale0.copy(mesh.scale);
+				group.add(mesh);
+				objects.push(mesh);
+				clickables.push(mesh);
+				videos.push(mesh);
+			})
+		}
+	}
 }
 
 // Shrink the group (ready for spinning to large)
@@ -776,7 +843,7 @@ function init(){
 	initGUI();
 	configLoadingManager();
 	render();
-
+	
 }
 
 init();
