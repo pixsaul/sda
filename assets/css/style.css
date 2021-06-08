@@ -437,6 +437,7 @@ canvas {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
 }
 
 #minimap > div > div {
