@@ -76,9 +76,9 @@ const minimapConfig = {
 			path: "kaj-lehmann",
 		},
 		{
-			name: "Krispin Hee",
+			name: "Studio Krispin Hee",
 			imgSrc: "/assets/scenes/krispin-hee/3d_Krispin-Hee_01.jpg",
-			path: "krispin-hee",
+			path: "studio-krispin-hee",
 		},
 		{
 			name: "Lina Muller",
