@@ -4,10 +4,10 @@ const config = {
 	simulateMobileTap: false,
 	mobileTapRotateAmount: 1,
 	blobFresnelColour: 0xff3f26,
-	blobFresnelAmount1: 0.82,
-	blobFresnelAmount2: 1.84,
-	blobFresnelAmount3: 0.69,
-	blobFresnelAmount4: 2,
+	blobFresnelAmount1: 0.3,
+	blobFresnelAmount2: 1,
+	blobFresnelAmount3: 0.5,
+	blobFresnelAmount4: 0.2,
 	blobFresnelAmount5: 0,
 	blobFresnelAmount6: 0,
 	blobFresnelAmount7: 0,
@@ -53,9 +53,9 @@ let controls = new THREE.ObjectControls(group, renderer.domElement , hasHover, c
 
 scene.fog = new THREE.FogExp2(0x000000, 0.05);
 
-const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.2);
-const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.1);
-const directionalLight3 = new THREE.DirectionalLight(0xffffff, 1);
+const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0);
+const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.2);
+const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.2);
 const directionalLight4 = new THREE.DirectionalLight(0xffffff, 1);
 var directionalLightHelper1;
 var directionalLightHelper2;
@@ -102,11 +102,11 @@ function initLightHelpers(){
 	directionalLightHelper1 = new THREE.DirectionalLightHelper( directionalLight1, 1 , 'purple');
 	directionalLightHelper2 = new THREE.DirectionalLightHelper( directionalLight2, 1 , 'blue');
 	directionalLightHelper3 = new THREE.DirectionalLightHelper( directionalLight3, 1 , 'red');
-	directionalLightHelper4 = new THREE.DirectionalLightHelper( directionalLight4, 1 , 'green');	
+	directionalLightHelper4 = new THREE.DirectionalLightHelper( directionalLight4, 1 , 'green');
 	scene.add(directionalLightHelper1);
 	scene.add(directionalLightHelper2);
 	scene.add(directionalLightHelper3);
-	scene.add(directionalLightHelper4);	
+	scene.add(directionalLightHelper4);
 	config.showLightHelpers = true;
 }
 
@@ -119,7 +119,7 @@ function disposeLightHelpers(){
 	if (directionalLightHelper2){
 		directionalLightHelper2.dispose();
 		scene.remove(directionalLightHelper2);
-	}	
+	}
 	if (directionalLightHelper3){
 		directionalLightHelper3.dispose();
 		scene.remove(directionalLightHelper3);
@@ -136,7 +136,7 @@ function initLights(){
 	directionalLight1.position.set(0, 2.5, 3.9);
 	directionalLight2.position.set(4, 1, -4);
 	directionalLight3.position.set(-4, 1, -4);
-	directionalLight4.position.set(0, -4, 0);	
+	directionalLight4.position.set(0, -4, 0);
 	scene.add(directionalLight1)
 	scene.add(directionalLight2)
 	scene.add(directionalLight3)
@@ -144,8 +144,8 @@ function initLights(){
 }
 
 function initInfiniteFloor(){
-	
-	
+
+
 	const texture = textureLoader.load('./sda/assets/images/tiles.png')
 	texture.anisotrophy = 2;
 	texture.minFilter = THREE.LinearFilter;
@@ -161,7 +161,7 @@ function initInfiniteFloor(){
 	// 	alphaMap: alphaMap,
 	// 	transparent: true,
 	// })
-	
+
 	infiniteFloorMaterial = new THREE.MeshBasicMaterial( {
 		side: THREE.DoubleSide,
 		transparent: true,
@@ -169,9 +169,9 @@ function initInfiniteFloor(){
 		alphaMap: alphaMap,
 		opacity: 0.0,
 	} );
-	
+
 	infiniteFloorMaterial.onBeforeCompile = function( shader ) {
-		
+
 		// vertex modifications
 		var vertex_pars = 'attribute vec2 uvB;\nvarying vec2 vUvB;\n';
 		var vertex_uv = shader.vertexShader.replace(
@@ -181,10 +181,10 @@ function initInfiniteFloor(){
 				'vUvB = uvB;'
 			].join( '\n' )
 		);
-		
+
 		shader.vertexShader = vertex_pars + vertex_uv;
-		
-		
+
+
 		// fragment modifications
 		var frag_pars = 'varying vec2 vUvB;\n';
 		var frag_uv = shader.fragmentShader.replace(
@@ -195,9 +195,9 @@ function initInfiniteFloor(){
 				'diffuseColor *= texelColor;'
 			].join( '\n' )
 		);
-		
+
 		shader.fragmentShader = frag_pars + frag_uv;
-		
+
 	}
 	const roomPlaneGeo = new THREE.PlaneBufferGeometry(config.infiniteFloorSize, config.infiniteFloorSize);
 	roomPlaneGeo.rotateX(-Math.PI/2);
@@ -237,11 +237,11 @@ function initFloor(){
 	group.add(room);
 	objects.push(room);
 	initInfiniteFloor();
-	
+
 	const size = 6;
 	const divisions = 6;
 	const colorGrid = 0x000000;
-	
+
 	const gridHelper = new THREE.GridHelper( size, divisions, colorGrid, colorGrid );
 	gridHelper.position.y = -2.1;
 	scene.add(gridHelper);
@@ -274,8 +274,8 @@ function applyFadeToAllExcept(exceptMesh){
 					const opacityTween = new TWEEN.Tween(m)
 					.to({opacity:0.7}, 500)
 					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();  
-					
+					opacityTween.start();
+
 					if (m.map){
 						const colourTween = new TWEEN.Tween(m.color)
 						.to({r:0.7, g: 0.7, b: 0.7}, 500)
@@ -284,7 +284,7 @@ function applyFadeToAllExcept(exceptMesh){
 					}
 				}
 			} else {
-				
+
 				// const opacityTween = new TWEEN.Tween(mesh.material)
 				// .to({opacity:0.7}, 500)
 				// .easing(TWEEN.Easing.Quadratic.InOut)
@@ -292,8 +292,8 @@ function applyFadeToAllExcept(exceptMesh){
 				// const opacityTween = new TWEEN.Tween(mesh.material)
 				// .to({opacity:0.7}, 500)
 				// .easing(TWEEN.Easing.Quadratic.InOut)
-				// opacityTween.start(); 
-				
+				// opacityTween.start();
+
 				if (mesh.name == "blob"){
 					const x = {
 						v: 1
@@ -315,7 +315,7 @@ function applyFadeToAllExcept(exceptMesh){
 					const opacityTween = new TWEEN.Tween(mesh.material)
 					.to({opacity:0.5}, 500)
 					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();  
+					opacityTween.start();
 				}
 			}
 		}
@@ -333,9 +333,9 @@ function removeFadeFromAll(){
 					const opacityTween = new TWEEN.Tween(m)
 					.to({opacity:1}, 500)
 					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();  
+					opacityTween.start();
 					if (m.map){
-						
+
 						const colourTween = new TWEEN.Tween(m.color)
 						.to({r:1, g: 1, b: 1}, 500)
 						.easing(TWEEN.Easing.Quadratic.InOut)
@@ -348,7 +348,7 @@ function removeFadeFromAll(){
 				// .to({opacity:1.0}, 500)
 				// .easing(TWEEN.Easing.Quadratic.InOut)
 				// opacityTween.start();
-				
+
 				if (mesh.name == "blob"){
 					const x = {
 						v: 3
@@ -370,7 +370,7 @@ function removeFadeFromAll(){
 					const opacityTween = new TWEEN.Tween(mesh.material)
 					.to({opacity:1}, 500)
 					.easing(TWEEN.Easing.Quadratic.InOut)
-					opacityTween.start();  
+					opacityTween.start();
 				}
 			}
 		}
@@ -384,7 +384,7 @@ function handleImgClicked(obj){
 	obj.selected = true;
 	selectedObj.bringToFocus(camera, config.selectedDist);
 	applyFadeToAllExcept(selectedObj);
-	
+
 }
 
 // Put selected object back
@@ -455,7 +455,7 @@ function handleRaycast(){
 							imageMesh.putBack();
 						}
 					}
-				} 
+				}
 			} else {
 				controls.mouseBusy = false;
 				renderer.domElement.style.cursor = 'grab';
@@ -559,7 +559,7 @@ function addObj(path, manipFunction){
 			// console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 		},
 		function ( error ) {
-			console.log(error);	
+			console.log(error);
 		}
 	)
 }
@@ -579,7 +579,7 @@ function addFbx(path, manipFunction){
 			// console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 		},
 		function ( error ) {
-			console.log(error);	
+			console.log(error);
 		}
 	)
 }
@@ -613,10 +613,10 @@ function giveUsASpin(){
 	const tweenUp = new TWEEN.Tween(controls).to({autoSpeed: prevSpeed*30*config.mobileTapRotateAmount}, 100).easing(TWEEN.Easing.Quadratic.In)
 	.onComplete(() => {
 		tweenDown.start();
-	}); 
+	});
 	const tweenDown = new TWEEN.Tween(controls).to({autoSpeed: prevSpeed}, 2000*config.mobileTapRotateAmount).easing(TWEEN.Easing.Quadratic.Out)
 	.onComplete(() => {
-	}); 
+	});
 	tweenUp.start();
 }
 
@@ -626,14 +626,14 @@ function spinIn(){
 	const tweenUp = new TWEEN.Tween(controls).to({autoSpeed: prevSpeed*150}, 100).easing(TWEEN.Easing.Quadratic.In)
 	.onComplete(() => {
 		tweenDown.start();
-	}); 
+	});
 	const tweenDown = new TWEEN.Tween(controls).to({autoSpeed: prevSpeed}, 2000).easing(TWEEN.Easing.Quadratic.Out)
 	.onComplete(() => {
-	}); 
+	});
 	tweenUp.start();
 	const tweenSize = new TWEEN.Tween(group.scale).to({x: 1, y:1, z: 1}, 2000).easing(TWEEN.Easing.Quadratic.Out)
 	.onComplete(() => {
-	}); 
+	});
 	tweenSize.start();
 	tweenUp.start();
 }
@@ -775,7 +775,7 @@ function init(){
 	initGUI();
 	configLoadingManager();
 	render();
-	
+
 }
 
 init();
