@@ -262,8 +262,10 @@ function onResize() {
 
 // Handle mouse move
 function onMouseMove( event ) {
-	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+	mouse.x = ( event.offsetX / renderer.domElement.scrollWidth ) * 2 - 1;
+	mouse.y = - ( event.offsetY / renderer.domElement.scrollHeight ) * 2 + 1;
+	// console.log(event.offsetY);
+	// console.log(renderer.domElement.scrollHeight);
 }
 
 // Fade canvas and fade 3d objects

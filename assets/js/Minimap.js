@@ -32,7 +32,7 @@ const minimapConfig = {
 		},
 		{
 			name: "Dafi Kühne",
-			imgSrc: "/assets/scenes/dafi-kuhne/3d_Dafi-Kühne_1.png",
+			imgSrc: "/assets/scenes/dafi-kuhne/3d_Dafi-Kuhne_1.png",
 			path: "dafi-kuhne",
 		},
 		{
