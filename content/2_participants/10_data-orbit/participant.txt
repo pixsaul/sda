@@ -1,0 +1,72 @@
+Title: Data-Orbit
+
+----
+
+Subtitle: Urgent and Moving
+
+----
+
+Categories: graphic
+
+----
+
+Awarded: 
+
+----
+
+Text:
+
+Data Orbit’s Urgent and Moving project aims to develop solutions for editing and designing cultural publications in the digital space.
+Their work operates at the interface between classic contextual book design and the possibilities of technology. This leads to coded books that operate on a multimedia basis, interlink content, and use interaction for a sensual experience.
+
+Roy Bosier
+The participatory publication encouraged readers to get involved in the editing process. The private archive of those portrayed is thereby gradually enriched with anecdotes.
+*In collaboration with the Musée Visionnaire*
+
+Walbaum
+The publication acts as a hybrid of book for reading and art book.
+This approach makes the working method of the Zurich poet Walbaum interactively accessible.
+*In collaboration with the Musée Visionnaire*
+
+La Luce Alpina
+The catalogue extends accessibility beyond the duration of the exhibition and allows for three different directions of reading by using a split navigation.
+*In collaboration with the Kunstmuseum St.Gallen*
+
+Initiated as a diploma project for the BA in Visual Communication at Zurich University of the Arts.
+
+----
+
+Gallery:
+
+- 3d_data-orbit_1.jpg
+- 3d_data-orbit_2.jpg
+- 3d_data-orbit_3.jpg
+
+----
+
+Credits:
+
+Louis Vaucher, born in 1996
+Nayla Baumgartner, born in 1994
+Fabio Menet, born in 1995
+(link: https://www.data-orbit.ch text: www.data-orbit.ch)
+(link: https://www.instagram.com/data_orbit text: @data_orbit)
+
+----
+
+Video: https://player.vimeo.com/external/559044700.hd.mp4?s=728f84bb059f4ab7f94f4244f452d398509a5773&profile_id=175
+
+----
+
+Cover:
+
+- home_data-orbit_1.jpg
+- home_data-orbit_2.jpg
+- home_data-orbit_3.jpg
+- home_data-orbit_4.jpg
+- home_data-orbit_5.jpg
+- home_data-orbit_6.jpg
+- home_data-orbit_7.jpg
+- home_data-orbit_8.jpg
+- home_data-orbit_9.jpg
+- home_data-orbit_10.jpg
