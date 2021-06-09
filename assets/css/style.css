@@ -955,3 +955,20 @@ button, a.btn {
     font-family: "Metaballs";
   }
 }
+
+@media (min-width: 1200px) {
+  .notifications {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    z-index: 10000;
+  }
+  .notifications .filterBar, .notifications .cookies {
+    position: static;
+    z-index: 1000;
+  }
+  .notifications .filterBar {
+    order: 1;
+  }
+}

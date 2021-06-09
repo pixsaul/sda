@@ -165,7 +165,6 @@ $( ".cookies a" ).click(function(event) {
   createCookie('visited', "true", 30);
   $(".cookies").hide();
   $("body").removeClass('cookieNotification');
-
 });
 
 //video play

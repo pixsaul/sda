@@ -8,13 +8,30 @@
 
   </footer>
   
-  <a href="/" class="filterBar">
-    <span>Photography</span>
-  </a>
+  <?php
+  $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
   
-  <div class="cookies">
-    <span>swissdesignawardsblog.ch uses cookies. <a href="#">got&nbsp;it</a>.</span>
-  </div>
+  
+  if (strpos($url,'filter:') !== false) { ?>
+  
+    <?php
+    $field = $page->blueprint()->field('categories');
+    $categories = param('filter');
+    //$categories = $categories[0];
+    ?>
+      <div class="notifications">
+        <a href="/" class="filterBar">
+          <span><?php echo $field['label']?></span>
+          </a>
+      
+        <div class="cookies">
+          <span>swissdesignawardsblog.ch uses cookies. <a href="#">got&nbsp;it</a>.</span>
+        </div>
+      </div>
+  <?php } else {
+      echo 'No cars.';
+  }
+  ?>
   
   <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
   

@@ -950,3 +950,20 @@ button, a.btn {
     font-family: 'Metaballs';
   }
 }
+
+.notifications {
+  @include for-desktop-up {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    z-index: 10000;
+    .filterBar, .cookies {
+      position: static;
+      z-index: 1000;
+    }
+    .filterBar {
+      order: 1;
+    }
+  }
+}
