@@ -8,6 +8,10 @@
 
   </footer>
   
+  <a href="/" class="filterBar">
+    <span>Photography</span>
+  </a>
+  
   <div class="cookies">
     <span>swissdesignawardsblog.ch uses cookies. <a href="#">got&nbsp;it</a>.</span>
   </div>
