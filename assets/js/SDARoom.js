@@ -13,8 +13,9 @@ const config = {
 	blobFresnelAmount7: 0,
 	blobFresnelAmount8: 0,
 	initialFov: 97,
-	cameraDist: 3.8,
-	selectedDist: 0.6,
+	cameraDist: 8.8,
+	selectedDist: 0.127,
+	selectedScale: 0.163,
 	showLightHelpers: false,
 	restrictMobile: false,
 	infiniteFloorSize: 100,
@@ -27,14 +28,22 @@ const renderer = new THREE.WebGLRenderer({
 	alpha: true,
 	canvas: document.getElementById('threeCanvas'),
 });
+const canvas = renderer.domElement;
+const cWidth = canvas.clientWidth;
+const cHeight = canvas.clientHeight;
 renderer.setPixelRatio(window.devicePixelRatio * 1);
-renderer.setSize(window.innerWidth, window.innerHeight);
+if (canvas.width !== cWidth || canvas.height !== cHeight) {
+    // you must pass false here or three.js sadly fights the browser
+    renderer.setSize(cWidth, cHeight, false);
+    // update any render target sizes here
+  }
+
 renderer.setClearColor(0xFFFFFF, 0);
 
 const camera = new THREE.PerspectiveCamera(
 	config.initialFov,
-	window.innerWidth / window.innerHeight,
-	0.01,
+	cWidth / cHeight,
+	0.001,
 	20000
 );
 camera.position.z = Math.sqrt((config.cameraDist*config.cameraDist)/2);
@@ -348,7 +357,7 @@ function handleImgClicked(obj){
 	selectedObj = obj;
 	scene.attach(obj);
 	obj.selected = true;
-	selectedObj.bringToFocus(camera, config.selectedDist);
+	selectedObj.bringToFocus(camera, config.selectedDist, config.selectedScale);
 	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist+0.4),  camera.position.z - (config.selectedDist+0.4));
 	fadePlaneMesh.quaternion.copy(camera.quaternion);
 	applyFadeToAllExcept(selectedObj);
@@ -398,12 +407,13 @@ function animate() {
 
 // Slowly rotate selected object
 function animateSelectedObj(){
-	selectedObj.position.y += Math.sin(clock.getElapsedTime()) * 0.001;
-	selectedObj.rotation.x += Math.sin(clock.getElapsedTime()*1.2) * 0.0002;
-	selectedObj.rotation.y += Math.sin(clock.getElapsedTime()*0.7) * 0.0005;
-	fadePlaneMesh.position.y += Math.sin(clock.getElapsedTime()) * 0.001;
-	fadePlaneMesh.rotation.x += Math.sin(clock.getElapsedTime()*1.2) * 0.0002;
-	fadePlaneMesh.rotation.y += Math.sin(clock.getElapsedTime()*0.7) * 0.0005;
+	let t = clock.getElapsedTime();
+	selectedObj.position.y += Math.sin(t) * 0.001* (Math.pow(config.selectedDist, 1));
+	selectedObj.rotation.x += Math.sin(t*1.2) * 0.0002;
+	selectedObj.rotation.y += Math.sin(t*0.7) * 0.0005;
+	fadePlaneMesh.position.y += Math.sin(t) * 0.001 * (Math.pow(config.selectedDist, 1));
+	fadePlaneMesh.rotation.x += Math.sin(t*1.2) * 0.0002;
+	fadePlaneMesh.rotation.y += Math.sin(t*0.7) * 0.0005;
 }
 
 // Check if mouse is over the top of an object, then hover or unhover
@@ -684,6 +694,14 @@ function handleSelectedDistUpdate(){
 	if (selectedObj){
 		selectedObj.position.y = camera.position.y - config.selectedDist;
 		selectedObj.position.z = camera.position.z - config.selectedDist;
+		fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist*0.99),  camera.position.z - (config.selectedDist*0.99));
+		camera.near = Math.pow(config.selectedDist*0.999, 2);
+	}
+}
+
+function handleSelectedScaleUpdate(){
+	if (selectedObj){
+		selectedObj.scale.set(config.selectedScale, config.selectedScale,config.selectedScale);
 	}
 }
 
@@ -723,7 +741,8 @@ function initGUI(){
 	// colourGUI.add(infiniteFloorMaterial, 'opacity', 0.0, 1.0, 0.01).name("Infinite Floor Opacity");
 	cameraGUI.add(camera, 'fov', 0, 150, 1).onChange( handleUpdateCameraMatrix ).name("FOV");
 	cameraGUI.add(config, 'cameraDist', 1, 20, 0.1).onChange( handleUpdateCameraDist ).name("Camera Dist");
-	cameraGUI.add(config, 'selectedDist', 0.0, 5, 0.1).onChange( handleSelectedDistUpdate ).name("Selected Obj Dist");
+	cameraGUI.add(config, 'selectedDist', 0.0, 0.8, 0.001).onChange( handleSelectedDistUpdate ).name("Selected Obj Dist");
+	cameraGUI.add(config, 'selectedScale', 0.0, 2, 0.001).onChange( handleSelectedScaleUpdate ).name("Selected Obj Scale");
 	lightsGUI.add(config, 'showLightHelpers').onChange( handleToggleLightHelpers ).name("Show Light Helpers");
 	directionalLight1GUI = lightsGUI.addFolder('Directional Light 1');
 	directionalLight1GUI.add(directionalLight1, 'intensity', 0, 1, 0.1)  .name("Intensity");
@@ -803,9 +822,9 @@ function initGroup(){
 
 function initFadePlaneMesh(){
 	const geo = new THREE.PlaneGeometry(10, 10);
-	const material = new THREE.MeshBasicMaterial({color: 0xffffff, opacity: 0, transparent: true});
+	const material = new THREE.MeshBasicMaterial({color: 0xffffff, opacity: 0.0, transparent: true});
 	fadePlaneMesh = new THREE.Mesh(geo, material);
-	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist+0.1),  camera.position.z - (config.selectedDist+0.1));
+	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist+0.001),  camera.position.z - (config.selectedDist+0.001));
 	fadePlaneMesh.quaternion.copy(camera.quaternion);
 	scene.add(fadePlaneMesh);
 }
