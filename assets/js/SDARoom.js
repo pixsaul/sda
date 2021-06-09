@@ -358,7 +358,7 @@ function handleImgClicked(obj){
 	scene.attach(obj);
 	obj.selected = true;
 	selectedObj.bringToFocus(camera, config.selectedDist, config.selectedScale);
-	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist+0.4),  camera.position.z - (config.selectedDist+0.4));
+	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist+0.01),  camera.position.z - (config.selectedDist+0.01));
 	fadePlaneMesh.quaternion.copy(camera.quaternion);
 	applyFadeToAllExcept(selectedObj);
 	
@@ -694,7 +694,7 @@ function handleSelectedDistUpdate(){
 	if (selectedObj){
 		selectedObj.position.y = camera.position.y - config.selectedDist;
 		selectedObj.position.z = camera.position.z - config.selectedDist;
-		fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist*0.99),  camera.position.z - (config.selectedDist*0.99));
+		fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist*1.01),  camera.position.z - (config.selectedDist*1.01));
 		camera.near = Math.pow(config.selectedDist*0.999, 2);
 	}
 }
