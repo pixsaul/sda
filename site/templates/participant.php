@@ -31,8 +31,10 @@
 		</div>
 		<div id="canvasBg">
 		</div>
-		<canvas id="threeCanvas">
-		</canvas>
+		<div id="canvasContainer">
+			<canvas id="threeCanvas">
+			</canvas>
+		</div>
 		<div id="minimapContainer">
 			<div id="minimapArtistNames"></div>
 			<div id="minimapArtistImgs"></div>

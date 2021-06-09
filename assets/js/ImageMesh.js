@@ -165,7 +165,7 @@ class ImageMesh extends THREE.Mesh {
   }
 
   // When image clicked, bring to front
-  bringToFocus(camera, dist){
+  bringToFocus(camera, dist, scale){
     this.cancelTweens();
     this.tweening = true;
     const tweenPosition = new TWEEN.Tween(this.position)
@@ -212,7 +212,7 @@ class ImageMesh extends THREE.Mesh {
     tweenquaternion.start();
     this.tweens.push(tweenquaternion);
     const tweenScale = new TWEEN.Tween(this.scale)
-    .to({x: 1, y: 1, z: 1}, 500)
+    .to({x: scale, y: scale, z: scale}, 500)
     .easing(TWEEN.Easing.Quadratic.InOut)
     .onStart(() => {
       this.tweening = true;
