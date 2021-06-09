@@ -1,0 +1,66 @@
+Title: Niki Paltenghi
+
+----
+
+Subtitle: CSX369
+
+----
+
+Categories: graphic
+
+----
+
+Awarded: 
+
+----
+
+Text:
+
+CSX369 features research on variable fonts in the ASCII technique.
+A technical quality is identified – that of precise quantification between two instances – to rasterise images through typography.
+Nine matrix unicase fonts are designed with three basic shapes applied to three different definitions. For the chromatic system, text is tripled in the same position and each layer gets a primary colour. Each letter adapts the size of its matrixes according to the RGB coordinates of an image. Interspersed variations from 0 (matrix 0%) to 255 (matrix 100%) create secondary, tertiary, hues and so on. The system is implemented with an image-processing tool.
+All raster combinations are demonstrated in the specimen, easily displayable in the form of an exhibition.
+
+----
+
+Gallery:
+
+- 3d_niki-paltenghi_01.jpg
+- 3d_niki-paltenghi_02.jpg
+- 3d_niki-paltenghi_03.jpg
+- 3d_niki-paltenghi_04.jpg
+- 3d_niki-paltenghi_05.jpg
+- niki-paltenghi_07.jpg
+- niki-paltenghi_08.jpg
+- niki-paltenghi_09.jpg
+- niki-paltenghi_10.jpg
+- niki-paltenghi_11.jpg
+- niki-paltenghi_12.jpg
+- niki-paltenghi_13.jpg
+
+----
+
+Credits:
+
+Niki Paltenghi, born in 1997
+(link: http://www.nikipaltenghi.ch text: www.nikipaltenghi.ch)
+(link: https://www.instagram.com/nikipaltenghi text: @nikipaltenghi)
+
+----
+
+Video: https://player.vimeo.com/external/559052992.hd.mp4?s=30c1b1fed0caebf4917a9a7d0eca1d15525b1322&profile_id=175
+
+----
+
+Cover:
+
+- home_niki-paltenghi_1.jpg
+- home_niki-paltenghi_2.jpg
+- home_niki-paltenghi_3.jpg
+- home_niki-paltenghi_4.jpg
+- home_niki-paltenghi_5.jpg
+- home_niki-paltenghi_6.jpg
+- home_niki-paltenghi_7.jpg
+- home_niki-paltenghi_8.jpg
+- home_niki-paltenghi_9.jpg
+- home_niki-paltenghi_10.jpg
