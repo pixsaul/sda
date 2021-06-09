@@ -158,6 +158,8 @@ var visited = readCookie('visited');
 if (visited || visited == "true") {
   $(".cookies").hide();
   $("body").removeClass('cookieNotification');
+} else {
+  $("body").addClass('cookieNotification');
 }
 
 $( ".cookies a" ).click(function(event) {

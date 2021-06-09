@@ -100,7 +100,7 @@
 				
 				$artistPage = $artistPage->filterBy('categories', $tag[0], ',');
 				
-				$artistPage = $artistPage->paginate(12);
+				$artistPage = $artistPage->paginate(4);
 				
 				?>
 				
@@ -120,24 +120,6 @@
 						</a>
 					<?php endforeach ?>
 					</div>
-				<?php endif ?>
-				
-				<?php if ($artistPage->pagination()->hasPages()): ?>
-				<nav class="pagination">
-				
-					<?php if ($artistPage->pagination()->hasNextPage()): ?>
-					<a class="next" href="<?= $artistPage->pagination()->nextPageURL() ?>">
-						‹ older posts
-					</a>
-					<?php endif ?>
-				
-					<?php if ($artistPage->pagination()->hasPrevPage()): ?>
-					<a class="prev" href="<?= $artistPage->pagination()->prevPageURL() ?>">
-						newer posts ›
-					</a>
-					<?php endif ?>
-				
-				</nav>
 				<?php endif ?>
 			</div>
 
