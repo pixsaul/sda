@@ -924,3 +924,34 @@ button, a.btn {
 .cookies a {
   color: white;
 }
+
+.filterBar {
+  position: fixed;
+  width: 100%;
+  background: #76BC21;
+  bottom: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8000;
+  font-family: "Selecta";
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+}
+.filterBar::after {
+  content: "X";
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  font-family: "Metaballs";
+}
+@media (min-width: 1200px) {
+  .filterBar {
+    bottom: 70px;
+    height: 70px;
+    font-size: 30px;
+    font-family: "Metaballs";
+  }
+}
