@@ -1,0 +1,70 @@
+Title: Fabien Roy Studio
+
+----
+
+Subtitle: Robust Nest
+
+----
+
+Categories: product
+
+----
+
+Awarded: 
+
+----
+
+Text:
+
+*A portable & blackout-resistant newborn incubator*
+
+According to UNICEF, every year in Sub-Saharan Africa, 1.1 million newborns die of hypothermia during their first month of life.
+
+Existing newborn incubators in industrialised countries cannot meet the technical specifications of this environment. The main causes are their inability to provide heat during frequent power outages and their vulnerability to high humidity levels, dust and high temperatures (not weatherproof).
+
+Developed in collaboration with EPFL’s Essential Tech Center, *Robust Nest* is a newborn incubator adapted to the context of district hospitals in Sub-Saharan countries. Compact, robust and affordable, *Robust Nest* allows the transport of patients in vehicles, resists frequent power cuts thanks to a special thermal battery developed by EPFL, and is characterised by components that can be easily replaced. This ensures that babies are kept warm.
+
+----
+
+Gallery:
+
+- 3d_fabien-roy_01.jpg
+- 3d_fabien-roy_02.jpg
+- 3d_fabien-roy_03.jpg
+- 3d_fabien-roy_04.jpg
+- fabien-roy_05.jpg
+- fabien-roy_06.jpg
+- fabien-roy_07.jpg
+- fabien-roy_08.jpg
+- fabien-roy_09.jpg
+- fabien-roy_10.jpg
+- fabien-roy_11.jpg
+- fabien-roy_12.jpg
+- fabien-roy_13.jpg
+
+----
+
+Credits:
+
+Fabien Roy, born in 1984
+(link: https://www.fabienroy.com text: www.fabienroy.com)
+(link: https://www.instagram.com/fabienroystudio text: @fabienroystudio)
+
+----
+
+Video: https://player.vimeo.com/external/559072257.hd.mp4?s=33312ae626f2476b24f116932019c0464c89dcff&profile_id=175
+
+----
+
+Cover:
+
+- home_fabien-roy_1.jpg
+- home_fabien-roy_2.jpg
+- home_fabien-roy_3.jpg
+- home_fabien-roy_4.jpg
+- home_fabien-roy_5.jpg
+- home_fabien-roy_6.jpg
+- home_fabien-roy_7.jpg
+- home_fabien-roy_8.jpg
+- home_fabien-roy_9.jpg
+- home_fabien-roy_10.jpg

@@ -1,0 +1,71 @@
+Title: Clément Lambelet
+
+----
+
+Subtitle: Happiness is the only true emotion
+
+----
+
+Categories: photography
+
+----
+
+Awarded: 
+
+----
+
+Text:
+
+Every photo you post on Facebook or Instagram is checked by an algorithm that recognises your emotions. How would you react if you knew that this process is essentially flawed?
+
+With the rapid development of artificial intelligence, systems capable of recognising and interpreting human emotions are spreading throughout our society. In *Happiness is the only true emotion*, I deconstruct this new phenomenon of population control. It is a criticism of the generalisation of obscure algorithms that is present on social networks, in shopping malls or airports.
+
+The body of this work is the hijacking of a series of portraits created by Stirling University in Scotland. Each of the actors in this database plays out the six “universal human emotions”. I selected one expression per subject and cropped the photographs to retain only the face. Then I subjectively modified the images in order to make these surfaces even more expressive. These portraits become vectors of emotions.
+
+In order to test the efficiency of current algorithms, each source image was submitted to Microsoft’s Face API, a leading algorithm in the field. The system only recognised happiness with certainty.
+
+----
+
+Gallery:
+
+- 3d_clement-lambelet_01.jpg
+- 3d_clement-lambelet_02.jpg
+- 3d_clement-lambelet_03.jpg
+- 3d_clement-lambelet_04.jpg
+- 3d_clement-lambelet_05.jpg
+- 3d_clement-lambelet_06.jpg
+- clement-lambelet_07.jpg
+- clement-lambelet_08.jpg
+- clement-lambelet_09.jpg
+- clement-lambelet_10.jpg
+- clement-lambelet_11.jpg
+- clement-lambelet_12.jpg
+- clement-lambelet_13.jpg
+
+----
+
+Credits:
+
+Clément Lambelet, born in 1991
+(link: https://c-lambelet.com/ text: www.c-lambelet.com)
+(link: https://www.instagram.com/clement_lambelet text: @clement_lambelet)
+Also in 2017, 2020
+
+----
+
+Video: https://player.vimeo.com/external/559063885.hd.mp4?s=c11b24e189a89ad1cc7f66fd06df6fd428ce8c82&profile_id=175
+
+----
+
+Cover:
+
+- home_clement-lambelet_1.jpg
+- home_clement-lambelet_2.jpg
+- home_clement-lambelet_3.jpg
+- home_clement-lambelet_4.jpg
+- home_clement-lambelet_5.jpg
+- home_clement-lambelet_6.jpg
+- home_clement-lambelet_7.jpg
+- home_clement-lambelet_8.jpg
+- home_clement-lambelet_9.jpg
+- home_clement-lambelet_10.jpg
