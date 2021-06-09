@@ -82,6 +82,11 @@ main.main {
   }
 }
 
+body.artist .main {
+padding-top: 0;
+}
+
+
 header {
   background: $primary;
   font-family: 'Metaballs';
@@ -186,7 +191,10 @@ header {
 }
 
 body.cookieNotification {
-  padding-bottom: 40px;
+  padding-bottom: 60px;
+  @include for-desktop-up {
+    padding-bottom: 70px;
+  }
 }
 
 footer {
@@ -199,7 +207,7 @@ footer {
   box-sizing: border-box;
 
   @include for-desktop-up {
-    height: 140px;
+    height: 70px;
   }
 
   a {
@@ -377,14 +385,14 @@ canvas{
   right: 1.5rem;
   width: 6rem;
   position: fixed;
-  /* display: none; */
+  display: none;
 }
-@media (min-width: 1200px) {
+
+@media (min-width: 900px) {
   #minimapContainer {
     display: block;
   }
 }
-
 #minimapArtistNames {
   position: relative;
   width: 6rem;
@@ -462,7 +470,7 @@ canvas{
   border: 1px solid #303030;
 }
 
-#minimap > div {
+#minimap > a {
   height: 0.75rem;
   width: 0.75rem;
   /* margin: 0.1rem; */
@@ -477,7 +485,7 @@ canvas{
   cursor: pointer;
 }
 
-#minimap > div > div {
+#minimap > a > div {
   height: 0.125rem;
   width: 0.125rem;
   /* margin: 0.1rem; */
@@ -487,13 +495,13 @@ canvas{
   transition: all 0.2s;
 }
 
-#minimap > div:hover > div {
+#minimap > a:hover > div {
   /* background-color: red; */
   height: 0.5rem;
   width: 0.5rem;
 }
 
-#minimap > div.active > div {
+#minimap > a.active > div {
   background-color: red;
   height: 0.5rem;
   width: 0.5rem;
@@ -515,16 +523,20 @@ body.artist header {
 }
 
 label.filter {
-  font-size: 30px;
+  font-size: 20px;
   position: relative;
 cursor: pointer;
 &:hover {
   border: none;
 }
 
+@include for-desktop-up {
+  font-size: 30px;
+}
+
   &::after {
     content: 'Filter';
-    font-size: 30px;
+    font-size: 20px;
     pointer-events: none;
     position: absolute;
     top: 4px;
@@ -537,6 +549,8 @@ cursor: pointer;
     @include for-desktop-up {
       width: 204px;
       top: 7px;
+      font-size: 30px;
+      line-height: 30px;
     }
   }
 }
@@ -843,6 +857,7 @@ button, a.btn {
     video {
       max-width: 100%;
       cursor: pointer;
+      transform: scale(0.735) translateY(50px);
     }
   }
 
@@ -884,7 +899,7 @@ button, a.btn {
 
 .cookies {
   text-align: center;
-  height: 40px;
+  height: 60px;
   width: 100%;
   position: fixed;
   bottom: 0;

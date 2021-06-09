@@ -9,7 +9,7 @@
   </footer>
   
   <div class="cookies">
-    <span>swissdesignawardsblog.ch uses cookies. <a href="#">got it</a></span>
+    <span>swissdesignawardsblog.ch uses cookies. <a href="#">got&nbsp;it</a>.</span>
   </div>
   
   <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
