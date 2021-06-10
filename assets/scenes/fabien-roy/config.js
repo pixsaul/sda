@@ -1,8 +1,8 @@
-var path = '/assets/scenes/eurostandard/'
+var path = '/assets/scenes/fabian-roy/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Eurostandard_01.jpg',
+      path: path+'3d_Fabian-Roy_01.jpg',
       scale: 1.8,
       position: {
         x: 0.9,
@@ -16,7 +16,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Eurostandard_02.jpg',
+      path: path+'3d_Fabian-Roy_02.jpg',
       scale: 1.8,
       position: {
         x: -0.5,
@@ -30,7 +30,21 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Eurostandard_03.jpg',
+      path: path+'3d_Fabian-Roy_03.jpg',
+      scale: 1.8,
+      position: {
+        x: -1.15,
+        y: 2.0,
+        z: -0.66,
+      },
+      rotation: {
+        x: 0,
+        y: -22.3*Math.PI/180,
+        z: 0,
+      }
+    },
+	{
+      path: path+'3d_Fabian-Roy_04.jpg',
       scale: 1.8,
       position: {
         x: -1.15,
@@ -46,7 +60,7 @@ roomConfig = {
   ],
   blobs: [
     {
-      path: path+'Eurostandard.fbx',
+      path: path+'Fabian-Roy.fbx',
       scale: 0.25,
       position: {
         x: 0,

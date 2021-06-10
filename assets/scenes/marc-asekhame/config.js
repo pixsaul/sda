@@ -3,11 +3,11 @@ roomConfig = {
   images: [
     {
       path: path+'3d_Marc-Asekhame_01.jpg',
-      scale: 2.3,
+      scale: 2.4,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: 0,
+        y: -0.4,
+        z: 0.00,
       },
       rotation: {
         x: 0,
@@ -16,30 +16,30 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Marc-Asekhamei_02.jpg',
-      scale: 2.3,
+      path: path+'3d_Marc-Asekhame_02.jpg',
+      scale: 2.9,
       position: {
-        x: 0,
-        y: 0.2,
-        z: -2.7,
+        x: 1.5,
+        y: -0.2,
+        z: -1.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: -Math.PI/4,
         z: 0,
       }
     },
     {
       path: path+'3d_Marc-Asekhame_03.jpg',
-      scale: 1.6,
+	  scale: 2.9,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -1.5,
+        y: -0.2,
+        z: 1.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: -Math.PI/4,
         z: 0,
       }
     },

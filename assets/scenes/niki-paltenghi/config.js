@@ -3,11 +3,11 @@ roomConfig = {
   images: [
     {
       path: path+'3d_Niki-Paltenghi_01.jpg',
-      scale: 2.3,
+      scale: 2.5,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: -1,
+        y: -0.2,
+        z: -1,
       },
       rotation: {
         x: 0,
@@ -17,71 +17,57 @@ roomConfig = {
     },
     {
       path: path+'3d_Niki-Paltenghi_02.jpg',
-      scale: 2.3,
+      scale: 3.0,
       position: {
-        x: 0,
-        y: 0.2,
-        z: -2.7,
+        x: 0.5,
+        y: -0.9,
+        z: 2.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: 0,
         z: 0,
       }
     },
     {
       path: path+'3d_Niki-Paltenghi_03.jpg',
-      scale: 1.6,
+      scale: 3,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -2.5,
+        y: -1.0,
+        z: -0.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: Math.PI/2,
         z: 0,
       }
     },
 	{
       path: path+'3d_Niki-Paltenghi_04.jpg',
-      scale: 1.6,
+      scale: 3,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -0.5,
+        y: -1,
+        z: -2.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: 0,
         z: 0,
       }
     },
 	{
       path: path+'3d_Niki-Paltenghi_05.jpg',
-      scale: 1.6,
+      scale: 3,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: 2.5,
+        y: -1,
+        z: 0.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
-        z: 0,
-      }
-    },
-	{
-      path: path+'3d_Niki-Paltenghi_06.jpg',
-      scale: 1.6,
-      position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
-      },
-      rotation: {
-        x: 0,
-        y: Math.PI/3,
+        y: Math.PI/2,
         z: 0,
       }
     },
@@ -105,15 +91,15 @@ roomConfig = {
   videos: [
 	  {
         path: path+'3d_Niki-Paltenghi_06.mp4',
-        scale: 1.6,
+        scale: 2.1,
         position: {
-          x: 2.3,
-          y: -0.3,
-          z: -1.8,
+          x: 0.5,
+          y: -0.0,
+          z: 0.5,
         },
         rotation: {
           x: 0,
-          y: Math.PI/3,
+          y: -Math.PI/4,
           z: 0,
         }
       },

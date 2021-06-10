@@ -1,8 +1,8 @@
-var path = '/assets/scenes/after-work-studio/'
+var path = '/assets/scenes/alexandra-gerber/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_After-Work_02.jpg',
+      path: path+'3d_Alexandra-Gerber_01.jpg',
       scale: 2.3,
       position: {
         x: -2,
@@ -16,7 +16,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_After-Work_05.jpg',
+      path: path+'3d_Alexandra-Gerber_02.jpg',
       scale: 2.3,
       position: {
         x: 0,
@@ -30,7 +30,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_After-Work_06.jpg',
+      path: path+'3d_Alexandra-Gerber_03.jpg',
       scale: 1.6,
       position: {
         x: 2.3,
@@ -44,7 +44,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_After-Work_01.jpg',
+      path: path+'3d_Alexandra-Gerber_04.jpg',
       scale: 2.3,
       position: {
         x: 2.1,
@@ -58,7 +58,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_After-Work_04.jpg',
+      path: path+'3d_Alexandra-Gerber_05.jpg',
       scale: 1.6,
       position: {
         x: 1.4,
@@ -72,7 +72,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_After-Work_03.jpg',
+      path: path+'3d_Alexandra-Gerber_06.jpg',
       scale: 2.3,
       position: {
         x: -1.6,
@@ -84,11 +84,12 @@ roomConfig = {
         y: Math.PI/1.1,
         z: 0,
       }
-    }
+  },
+  
   ],
   blobs: [
     {
-      path: path+'after-work-studio.fbx',
+      path: path+'Alexandra-Gerber-studio.fbx',
       scale: 0.25,
       position: {
         x: 0,
@@ -101,5 +102,21 @@ roomConfig = {
         z: 0,
       }
     },
-  ]
+],
+videos: [
+	{
+  	path: path+'3d_Alexandra-Gerber_07.mp4',
+  	scale: 2.3,
+  	position: {
+  	  x: -1.6,
+  	  y: -0.3,
+  	  z: 2.3,
+  	},
+  	rotation: {
+  	  x: 0,
+  	  y: Math.PI/1.1,
+  	  z: 0,
+  	}
+    }
+]
 }
