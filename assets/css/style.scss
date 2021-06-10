@@ -21,7 +21,6 @@
   src: url('../fonts/metaballs/Metaballs-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -29,7 +28,6 @@
   src: url('../fonts/metaballs/Metaballs-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -37,7 +35,6 @@
   src: url('../fonts/metaballs/Metaballs-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -45,7 +42,6 @@
   src: url('../fonts/metaballs/Metaballs-Thin.woff') format('woff');
   font-weight: 100;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -53,7 +49,6 @@
   src: url('../fonts/metaballs/Metaballs-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -106,17 +101,17 @@ header {
   }
 
   a.home {
-    width: 115px;
+    width: 130px;
     margin-top: -5px;
     transition: letter-spacing 500ms;
     @include for-tablet-landscape-up {
-      width: 700px;
-    }
-    @include for-desktop-up {
       width: 800px;
     }
-    @include for-big-desktop-up {
+    @include for-desktop-up {
       width: 900px;
+    }
+    @include for-big-desktop-up {
+      width: 1000px;
     }
 
     h1 {
@@ -125,6 +120,7 @@ header {
       margin: 0;
       color: black;
       text-decoration: none;
+      transition: none;
       @include for-desktop-up {
         font-size: 46px;
         line-break: 1.1;
@@ -145,7 +141,10 @@ header {
       }
     }
     &:hover {
-      letter-spacing: 0.15em;
+      letter-spacing: 0.3em;
+      h1 {
+        letter-spacing: 0;
+      }
     }
   }
 
@@ -159,14 +158,25 @@ header {
     cursor: pointer;
     transition: letter-spacing 500ms;
     &:hover {
-      letter-spacing: 0.15em;
+      letter-spacing: 0.3em;
     }
     @include for-desktop-up {
-      width: 125px;
+      width: 155px;
       font-size: 30px;
       line-height: 1.3;
     }
   }
+  .homeLink {
+    text-align: left;
+    margin-left: 30px;
+  }
+
+  .home {
+    &:hover {
+      letter-spacing: 0 !important;
+    }
+  }
+
   .filter {
     background: transparent;
     -webkit-appearance: none;
@@ -222,23 +232,28 @@ footer {
     color: black;
     text-decoration: none;
     font-size: 20px;
-    width: 150px;
+    width: 170px;
     display: block;
     text-align: center;
     cursor: pointer;
     transition: letter-spacing 500ms;
     &:hover {
-      letter-spacing: 0.15em;
+      letter-spacing: 0.3em;
     }
     @include for-desktop-up {
       font-size: 30px;
-      width: 250px;
+      width: 280px;
     }
     @include for-big-desktop-up {
       font-size: 35px;
-      width: 300px;
+      width: 340px;
     }
   }
+}
+
+.closeLink {
+  margin-right: 30px;
+  text-align: right;
 }
 
 //Home
@@ -258,7 +273,7 @@ footer {
     text-decoration: none;
     color: black;
     position: absolute;
-    bottom: 10px;
+    bottom: 25px;
     display: block;
     z-index: 4000;
     text-align: center;
@@ -296,7 +311,7 @@ footer {
 }
 
 .seq img {
-  max-width: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   display: block;
@@ -329,7 +344,7 @@ width: 100vw;
 height: 100vh;
 opacity: 1;
 background: #fff;
-background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 30%);
+background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(247,247,247,1) 90%, rgba(255,255,255,1) 100%);
 transition: opacity 0.25s;
 z-index: -9
 
@@ -505,6 +520,10 @@ canvas {
   cursor: pointer;
 }
 
+#minimap > a:not([href]) {
+opacity: 0.5;
+}
+
 #minimap > a > div {
   height: 0.125rem;
   width: 0.125rem;
@@ -568,7 +587,7 @@ cursor: pointer;
     height: 35px;
     @include for-desktop-up {
       width: 204px;
-      top: 7px;
+      top: 5px;
       font-size: 30px;
       line-height: 30px;
     }
@@ -597,7 +616,7 @@ cursor: pointer;
     font-family: 'Metaballs';
     text-align: center;
     font-weight: normal;
-    line-height: 1.1;
+    line-height: 1.16;
   }
 
   h1 {
@@ -618,7 +637,7 @@ cursor: pointer;
     display: block;
     @include for-desktop-up {
       font-size: 46px;
-      line-height: 1.1;
+      line-height: 1.16;
     }
     @include for-big-desktop-up {
       font-size: 66px;
@@ -743,6 +762,7 @@ cursor: pointer;
 .confederation-wrapper {
   margin-top: 50px;
   padding: 0 10px;
+  overflow: hidden;
   @include for-desktop-up {
     margin-top: 100px;
     .conf {
@@ -751,7 +771,8 @@ cursor: pointer;
       justify-content: center;
       align-items: flex-start;
       img {
-        max-width: 480px;
+        width: 480px;
+        max-width: 95%;
       }
     }
   }
@@ -839,7 +860,7 @@ button, a.btn {
   img {
     margin-right: 10px;
     max-height: 60vh;
-    max-width: 80vw;
+    max-width: 70vw;
     @include for-desktop-up {
      margin-right: 20px;
     }

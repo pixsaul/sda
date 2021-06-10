@@ -2,7 +2,7 @@
 
 <?php if ($artistPage = page('participants')):
 
-$artistPage = $artistPage->children()->listed() ?>
+$artistPage = $artistPage->children()->listed()->shuffle() ?>
 
 <?php if($tag = param('filter')) {
 	$artistPage = $artistPage->filterBy('categories', $tag, ',');

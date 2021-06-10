@@ -34,7 +34,7 @@
 
   <header class="header">
     <?php if ( ($page->is("info")) || ($page->isChildOf("participants")) ) : ?>
-      <a href="<?= $site->url() ?>/">Home</a>
+      <a class="homeLink" href="<?= $site->url() ?>/">Home</a>
     <?php else: ?>
     <label class="filter">
     <select name="filter" id="filter">
@@ -56,7 +56,7 @@
     </a>
     
     <?php if ($page->is("info")): ?>
-      <a href="javascript:history.go(-1)">Close</a>
+      <a class="closeLink" href="javascript:history.go(-1)">Close</a>
     <?php else: ?>
       <a class="info" href="<?= $site->url() ?>/info/">Info</a>
     <?php endif; ?>

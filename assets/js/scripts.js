@@ -214,7 +214,7 @@ boxes.forEach(box => {
     scrollTrigger: {
       trigger: box,
       scrub: true,
-      start: "bottom 70%",
+      start: "bottom 98%",
       onEnter: () => animateFwd(box),
       onLeaveBack: () => animateBkd(box),
     }
