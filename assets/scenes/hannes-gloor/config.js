@@ -2,58 +2,58 @@ var path = '/assets/scenes/hannes-gloor/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Hannes_Gloor_1.jpg',
-      scale: 2.3,
+      path: path+'3d_Hannes_Gloor_1.png',
+      scale: 2.8,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: -0.9,
+        y: -0.6,
+        z: 1.1,
       },
       rotation: {
         x: 0,
-        y: Math.PI/4,
+        y: 15.6*Math.PI/180,
         z: 0,
       }
     },
     {
-      path: path+'3d_Hannes_Gloor_2.jpg',
-      scale: 2.3,
+      path: path+'3d_Hannes_Gloor_2.png',
+      scale: 2.5,
       position: {
-        x: 0,
-        y: 0.2,
-        z: -2.7,
+        x: 1.4,
+        y: 0.4,
+        z: 0.8,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: -68.3*Math.PI/180,
         z: 0,
       }
     },
     {
-      path: path+'3d_Hannes_Gloor_3.jpg',
-      scale: 1.6,
+      path: path+'3d_Hannes_Gloor_3.png',
+      scale: 3.2,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: 1,
+        y: 1.6,
+        z: -1,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: 23.7*Math.PI/180,
         z: 0,
       }
     },
 	{
-      path: path+'3d_Hannes_Gloor_4.jpg',
-      scale: 1.6,
+      path: path+'3d_Hannes_Gloor_4.png',
+      scale: 2.8,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -1,
+        y: 0.6,
+        z: -0.4,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: -44*Math.PI/180,
         z: 0,
       }
     },
