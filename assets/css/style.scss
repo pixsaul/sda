@@ -896,6 +896,7 @@ button, a.btn {
 
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 
     video {
       max-width: 100%;
@@ -1029,4 +1030,11 @@ body.cookieNotification {
    pointer-events: none;
    height: 0;
    width: 0;
+}
+
+.projectRelated .grid-item:nth-child(3) {
+  display: none;
+  @include for-big-desktop-up {
+    display: block;
+  }
 }

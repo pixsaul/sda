@@ -96,7 +96,7 @@
 				<h3>Related participants</h3>
 				<?php if ($artistPage = page('participants')):
 				
-				$artistPage = $artistPage->children()->listed();
+				$artistPage = $artistPage->children()->listed()->shuffle();
 				$tag = $page->categories()->split(',');
 				
 				$artistPage = $artistPage->filterBy('categories', $tag[0], ',');

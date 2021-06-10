@@ -898,6 +898,7 @@ button, a.btn {
   max-width: 550px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 .projectVideo .videoWrap video {
   max-width: 100%;
@@ -1027,4 +1028,13 @@ body.cookieNotification .filterBar {
   pointer-events: none;
   height: 0;
   width: 0;
+}
+
+.projectRelated .grid-item:nth-child(3) {
+  display: none;
+}
+@media (min-width: 1800px) {
+  .projectRelated .grid-item:nth-child(3) {
+    display: block;
+  }
 }
