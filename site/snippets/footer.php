@@ -16,12 +16,26 @@
     if (strpos($url,'filter:') !== false) { ?>
     
       <?php
-      $field = $page->blueprint()->field('categories');
-      $categories = param('filter');
-      //$categories = $categories[0];
+      $field = param('filter');
       ?>
     <a href="/" class="filterBar">
-      <span><?php echo $categories; ?></span>
+      <span>
+        <?php
+          $fields = array(
+            "fashionandtextile" => "Fashion + Textile Design",
+            "product" => "Product Design",
+            "mediation" => "Mediation",
+            "photography" => "Photography",
+            "scenography" => "Scenography",
+            "graphic" => "Graphic Design"
+          );
+          if (array_key_exists($field, $fields)) { 
+            echo $fields[$field];
+          } else {
+            echo "Filtering results";
+          }
+        ?>
+      </span>
     </a>
     
     <?php }
