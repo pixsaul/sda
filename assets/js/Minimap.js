@@ -77,7 +77,7 @@ const minimapConfig = {
 		},
 		{
 			name: "Studio Krispin Hee",
-			imgSrc: "/assets/scenes/krispin-hee/3d_Krispin-Hee_01.jpg",
+			imgSrc: "/assets/scenes/studio-krispin-hee/3d_Krispin-Hee_01.jpg",
 			path: "studio-krispin-hee",
 		},
 		{
@@ -229,7 +229,7 @@ function initMinimap(){
 	let minimapArtistImgs = document.getElementById("minimapArtistImgs");
 	for (let i = 0; i< 64; i++){
 		let cell = document.createElement("a");
-		
+
 		minimap.appendChild(cell);
 		let circle = document.createElement("div");
 		cell.appendChild(circle);

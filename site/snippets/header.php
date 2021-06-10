@@ -20,11 +20,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 
 </head>
-
+  <?php 
+    $field = param('filter');
+    if ($field) {
+      $field = "filtering";
+    }
+  ?>
   <?php if ($page->template() == "participant"): ?>
-    <body class="artist">
+    <body class="artist <?= $field ?>">
     <?php else: ?>
-    <body class="">
+    <body class="<?= $field ?>">
   <?php endif; ?>
 
   <header class="header">

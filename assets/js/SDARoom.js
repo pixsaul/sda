@@ -4,10 +4,10 @@ const config = {
 	simulateMobileTap: false,
 	mobileTapRotateAmount: 1,
 	blobFresnelColour: 0xff3f26,
-	blobFresnelAmount1: 0.3,
-	blobFresnelAmount2: 1,
-	blobFresnelAmount3: 0.5,
-	blobFresnelAmount4: 0.2,
+	blobFresnelAmount1: 0.1,
+	blobFresnelAmount2: 1.18,
+	blobFresnelAmount3: 0.32,
+	blobFresnelAmount4: 0.28,
 	blobFresnelAmount5: 0,
 	blobFresnelAmount6: 0,
 	blobFresnelAmount7: 0,
@@ -63,9 +63,9 @@ let controls = new THREE.ObjectControls(group, renderer.domElement , hasHover, c
 
 
 const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0);
-const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.2);
-const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.2);
-const directionalLight4 = new THREE.DirectionalLight(0xffffff, 1);
+const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.3);
+const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.4);
+const directionalLight4 = new THREE.DirectionalLight(0xffffff, 0.5);
 var directionalLightHelper1;
 var directionalLightHelper2;
 var directionalLightHelper3;
@@ -155,8 +155,8 @@ function initLights(){
 }
 
 function initInfiniteFloor(){
-	
-	
+
+
 	const texture = textureLoader.load('/assets/images/tiles.png')
 	texture.anisotrophy = 2;
 	texture.minFilter = THREE.LinearFilter;
@@ -172,7 +172,7 @@ function initInfiniteFloor(){
 	// 	alphaMap: alphaMap,
 	// 	transparent: true,
 	// })
-	
+
 	infiniteFloorMaterial = new THREE.MeshBasicMaterial( {
 		side: THREE.DoubleSide,
 		transparent: true,
@@ -180,9 +180,9 @@ function initInfiniteFloor(){
 		alphaMap: alphaMap,
 		opacity: 0.0,
 	} );
-	
+
 	infiniteFloorMaterial.onBeforeCompile = function( shader ) {
-		
+
 		// vertex modifications
 		var vertex_pars = 'attribute vec2 uvB;\nvarying vec2 vUvB;\n';
 		var vertex_uv = shader.vertexShader.replace(
@@ -192,10 +192,10 @@ function initInfiniteFloor(){
 				'vUvB = uvB;'
 			].join( '\n' )
 		);
-		
+
 		shader.vertexShader = vertex_pars + vertex_uv;
-		
-		
+
+
 		// fragment modifications
 		var frag_pars = 'varying vec2 vUvB;\n';
 		var frag_uv = shader.fragmentShader.replace(
@@ -206,9 +206,9 @@ function initInfiniteFloor(){
 				'diffuseColor *= texelColor;'
 			].join( '\n' )
 		);
-		
+
 		shader.fragmentShader = frag_pars + frag_uv;
-		
+
 	}
 	const roomPlaneGeo = new THREE.PlaneBufferGeometry(config.infiniteFloorSize, config.infiniteFloorSize);
 	roomPlaneGeo.rotateX(-Math.PI/2);
@@ -249,11 +249,11 @@ function initFloor(){
 	group.add(room);
 	objects.push(room);
 	initInfiniteFloor();
-	
+
 	// const size = 6;
 	// const divisions = 6;
 	// const colorGrid = 0x000000;
-	// 
+	//
 	// const gridHelper = new THREE.GridHelper( size, divisions, colorGrid, colorGrid );
 	// gridHelper.position.y = -2.1;
 	// scene.add(gridHelper);
@@ -264,15 +264,9 @@ function initFloor(){
 // Handle resize
 function onResize() {
 	console.log('resizing');
-	const cWidth = canvas.clientWidth;
-	const cHeight = canvas.clientHeight;
-	if (canvas.width !== cWidth || canvas.height !== cHeight) {
-	    // you must pass false here or three.js sadly fights the browser
-	    renderer.setSize(cWidth, cHeight, false);
-	    // update any render target sizes here
-	  }
-	camera.aspect = cWidth / cHeight,
+	camera.aspect = window.innerWidth / window.innerHeight
 	camera.updateProjectionMatrix();
+	renderer.setSize(window.innerWidth, window.innerHeight)
 }
 
 // Handle mouse move
@@ -288,7 +282,7 @@ function applyFadeToAllExcept(exceptMesh){
 	let canvasBg = document.getElementById('canvasBg');
 	canvasBg.classList.add('faded');
 	// for (let mesh of objects){
-		
+
 		// if (mesh.name == "blob"){
 		// 	const x = {
 		// 		v: 3
@@ -306,8 +300,8 @@ function applyFadeToAllExcept(exceptMesh){
 		// 		mesh.material = blobMaterial;
 		// 	})
 		// 	colourTween.start();
-		// } 
-		
+		// }
+
 	// }
 	// fadePlaneMesh.material.opacity = 0.3
 	const opacityTween = new TWEEN.Tween(fadePlaneMesh.material)
@@ -328,8 +322,8 @@ function removeFadeFromAll(){
 	.start();
 	// fadePlaneMesh.material.opacity = 0.0
 	// for (let mesh of objects){
-		
-			
+
+
 		// mesh.material.opacity = 1;
 		// const opacityTween = new TWEEN.Tween(mesh.material)
 		// .to({opacity:1.0}, 500)
@@ -353,8 +347,8 @@ function removeFadeFromAll(){
 		// 		mesh.material = blobMaterial;
 		// 	})
 		// 	colourTween.start();
-		// } 
-		
+		// }
+
 	// }
 }
 
@@ -367,7 +361,7 @@ function handleImgClicked(obj){
 	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist+0.01),  camera.position.z - (config.selectedDist+0.01));
 	fadePlaneMesh.quaternion.copy(camera.quaternion);
 	applyFadeToAllExcept(selectedObj);
-	
+
 }
 
 // Put selected object back

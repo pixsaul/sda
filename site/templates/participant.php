@@ -49,10 +49,11 @@
 			
 			<span class="projectCat">
 			<?php
-			$field = $page->blueprint()->field('categories');
-			$categories = $page->categories()->split(',');
-			$categories = $categories[0];
-					echo $field['options'][$categories] ?? html($categories); ?>
+				$field = $page->blueprint()->field('categories');
+				$categories = $page->categories()->split(',');
+				$categories = $categories[0];
+				echo $field['options'][$categories] ?? html($categories); 
+			?>
 			</span>
 			
 			<h2><?= $page->subtitle() ?></h2>
