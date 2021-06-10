@@ -262,11 +262,17 @@ function initFloor(){
 }
 
 // Handle resize
-function onResize() {
+	function onResize() {
 	console.log('resizing');
-	camera.aspect = window.innerWidth / window.innerHeight
+	const cWidth = canvas.clientWidth;
+	const cHeight = canvas.clientHeight;
+	if (canvas.width !== cWidth || canvas.height !== cHeight) {
+	    // you must pass false here or three.js sadly fights the browser
+	    renderer.setSize(cWidth, cHeight, false);
+	    // update any render target sizes here
+	  }
+	camera.aspect = cWidth / cHeight,
 	camera.updateProjectionMatrix();
-	renderer.setSize(window.innerWidth, window.innerHeight)
 }
 
 // Handle mouse move
