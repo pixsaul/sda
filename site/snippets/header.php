@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
   <meta property="og:title" content="Swiss Design Awards">
   <meta property="og:description" content="Switzerland's leading national design competition. Organised annually by the Federal Office of Culture since 1918. 20-26 September 2021, Basel">

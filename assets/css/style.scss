@@ -102,7 +102,6 @@ header {
 
   a.home {
     width: 130px;
-    margin-top: -5px;
     transition: letter-spacing 500ms;
     @include for-tablet-landscape-up {
       width: 800px;
@@ -417,7 +416,7 @@ canvas {
   border-radius: 50%;
   border: 6px solid #000;
   border-color: #000 transparent #000 transparent;
-  animation: lds-dual-ring 1.2s ease infinite;
+  animation: lds-dual-ring .6s linear infinite;
 }
 @keyframes lds-dual-ring {
   0% {
