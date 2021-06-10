@@ -391,7 +391,9 @@ function handleClick(){
 		}
 		else {
 			if (clickables.length > 0){
+				raycaster.setFromCamera(mouse, camera);
 				const intersects = raycaster.intersectObjects( clickables );
+				console.log(intersects);
 				if (intersects.length > 0){
 					handleImgClicked(intersects[0].object);
 				}
@@ -485,14 +487,24 @@ function render() {
 }
 
 // Handle mobile touch
-function handleTouchStart(){
-	giveUsASpin();
+function handleTouchStart(event){
+	if(config.restrictMobile){
+		giveUsASpin();
+	} else {
+		console.log(event.touches[0]);
+		var rect = renderer.domElement.getBoundingClientRect();
+		mouse.x = ( (event.touches[0].pageX - rect.left) / renderer.domElement.scrollWidth ) * 2 - 1;
+		mouse.y = - ( (event.touches[0].pageY - rect.top) / renderer.domElement.scrollHeight ) * 2 + 1;
+		
+		console.log(mouse);
+		handleClick();
+	}
 }
 
 // Add event listeners
 function addEvents() {
 	window.addEventListener('resize', onResize, false);
-	if (hasHover || !config.restrictMobile){
+	if (hasHover){
 		renderer.domElement.addEventListener( 'mousemove', onMouseMove, false );
 		renderer.domElement.addEventListener( 'mousedown', handleClick, false );
 	} else {
