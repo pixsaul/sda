@@ -153,7 +153,12 @@ header a:hover, header .filter:hover {
 }
 header .homeLink {
   text-align: left;
-  margin-left: 30px;
+  margin-left: 10px;
+}
+@media (min-width: 1200px) {
+  header .homeLink {
+    margin-left: 70px;
+  }
 }
 header .home:hover {
   letter-spacing: 0 !important;
@@ -168,7 +173,7 @@ header .filter {
 }
 @media (min-width: 1200px) {
   header .filter {
-    margin-left: 30px;
+    margin-left: 70px;
   }
 }
 header .filter option {
@@ -181,7 +186,7 @@ header .info {
 }
 @media (min-width: 1200px) {
   header .info {
-    margin-right: 30px;
+    margin-right: 70px;
   }
 }
 
@@ -244,8 +249,13 @@ footer a:hover {
 }
 
 .closeLink {
-  margin-right: 30px;
+  margin-right: 10px;
   text-align: right;
+}
+@media (min-width: 1200px) {
+  .closeLink {
+    margin-right: 70px;
+  }
 }
 
 .grid-item {
@@ -261,7 +271,7 @@ footer a:hover {
   }
 }
 .grid-item span {
-  font-family: "Metaballs";
+  font-family: "Selecta";
   text-decoration: none;
   color: black;
   position: absolute;
@@ -271,7 +281,6 @@ footer a:hover {
   text-align: center;
   width: 100%;
   font-size: 30px;
-  text-transform: uppercase;
   pointer-events: none;
 }
 .grid-item img.spacer {
@@ -293,6 +302,10 @@ footer a:hover {
 }
 
 .grid-item:hover .seq::after {
+  opacity: 0;
+}
+
+.grid-item.animating .seq::after {
   opacity: 0;
 }
 
@@ -374,17 +387,18 @@ canvas {
 #loaderText {
   font-size: 1.2rem;
   letter-spacing: 3px;
+  display: none;
 }
 
 #loaderImg {
   display: inline-block;
   width: 80px;
-  height: 80px;
-  margin-bottom: 2rem;
+  height: 20px;
+  animation: lds-dual-ring 1.2s ease infinite;
 }
 
 #loaderImg:after {
-  content: " ";
+  content: none;
   display: block;
   width: 64px;
   height: 64px;
@@ -403,11 +417,15 @@ canvas {
   }
 }
 #minimapContainer {
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: 3rem;
+  right: 3rem;
   max-width: 98px;
   position: absolute;
   display: none;
+}
+
+body.cookieNotification #minimapContainer {
+  bottom: 6rem;
 }
 
 @media (min-width: 900px) {
@@ -654,23 +672,23 @@ label.filter::after {
 .project-text .projectCredits {
   text-align: center;
 }
-.project-text p {
+.project-text p, .project-text ul, .project-text ol {
   font-size: 16px;
   line-height: 26px;
 }
 @media (min-width: 1200px) {
-  .project-text p {
+  .project-text p, .project-text ul, .project-text ol {
     font-size: 20px;
     line-height: 32px;
   }
 }
 @media (min-width: 1800px) {
-  .project-text p {
+  .project-text p, .project-text ul, .project-text ol {
     font-size: 35px;
     line-height: 50px;
   }
 }
-.project-text p a {
+.project-text p a, .project-text ul a, .project-text ol a {
   text-decoration: none;
   color: black;
 }
@@ -690,8 +708,8 @@ label.filter::after {
 }
 @media (min-width: 1200px) {
   .project-text.project-text--info p {
-    font-size: 25px;
-    line-height: 35px;
+    font-size: 20px;
+    line-height: 32px;
   }
 }
 @media (min-width: 1800px) {
@@ -903,7 +921,7 @@ button, a.btn {
 .projectVideo .videoWrap video {
   max-width: 100%;
   cursor: pointer;
-  transform: scale(0.735) translateY(50px);
+  transform: scale(0.85) translateY(50px);
 }
 .projectVideo .videoOver {
   position: absolute;

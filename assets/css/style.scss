@@ -168,7 +168,10 @@ header {
   }
   .homeLink {
     text-align: left;
-    margin-left: 30px;
+    margin-left: 10px;
+    @include for-desktop-up {
+      margin-left: 70px;
+    }
   }
 
   .home {
@@ -185,7 +188,7 @@ header {
     text-align: left;
     margin-left: 10px;
     @include for-desktop-up {
-      margin-left: 30px;
+      margin-left: 70px;
     }
     option {
       font-family: sans-serif;
@@ -196,7 +199,7 @@ header {
     text-align: right;
     margin-right: 10px;
     @include for-desktop-up {
-      margin-right: 30px;
+      margin-right: 70px;
     }
   }
 }
@@ -252,8 +255,11 @@ footer {
 }
 
 .closeLink {
-  margin-right: 30px;
+  margin-right: 10px;
   text-align: right;
+  @include for-desktop-up {
+    margin-right: 70px;
+  }
 }
 
 //Home
@@ -269,7 +275,7 @@ footer {
   }
 
   span {
-    font-family: 'Metaballs';
+    font-family: 'Selecta';
     text-decoration: none;
     color: black;
     position: absolute;
@@ -279,7 +285,6 @@ footer {
     text-align: center;
     width: 100%;
     font-size: 30px;
-    text-transform: uppercase;
     pointer-events: none;
   }
 
@@ -305,6 +310,12 @@ footer {
 }
 
 .grid-item:hover .seq {
+  &::after {
+    opacity: 0;
+  }
+}
+
+.grid-item.animating .seq {
   &::after {
     opacity: 0;
   }
@@ -390,15 +401,16 @@ canvas {
 #loaderText{
   font-size: 1.2rem;
   letter-spacing: 3px;
+  display: none;
 }
 #loaderImg {
   display: inline-block;
   width: 80px;
-  height: 80px;
-  margin-bottom: 2rem;
+  height: 20px;
+  animation: lds-dual-ring 1.2s ease infinite;
 }
 #loaderImg:after {
-  content: " ";
+  content: none;
   display: block;
   width: 64px;
   height: 64px;
@@ -417,11 +429,15 @@ canvas {
 }
 
 #minimapContainer {
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: 3rem;
+  right: 3rem;
   max-width: 98px;
   position: absolute;
   display: none;
+}
+
+body.cookieNotification #minimapContainer {
+  bottom: 6rem;
 }
 
 @media (min-width: 900px) {
@@ -671,7 +687,7 @@ cursor: pointer;
     text-align: center;
   }
 
-  p {
+  p, ul, ol {
     font-size: 16px;
     line-height: 26px;
     @include for-desktop-up {
@@ -703,8 +719,8 @@ cursor: pointer;
       line-height: 26px;
       margin: 16px 0;
       @include for-desktop-up {
-        font-size: 25px;
-        line-height: 35px;
+        font-size: 20px;
+        line-height: 32px;
       }
       @include for-big-desktop-up {
         font-size: 35px;
@@ -901,7 +917,7 @@ button, a.btn {
     video {
       max-width: 100%;
       cursor: pointer;
-      transform: scale(0.735) translateY(50px);
+      transform: scale(0.85) translateY(50px);
     }
   }
 

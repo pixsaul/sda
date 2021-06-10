@@ -22,6 +22,13 @@ Their feeling for bold graphics and feminine silhouettes combined with Swiss-mad
 The collection found its inspiration in the increasing number of people working from home, as well as the constant urge to convey the impression of a work career akin to perfection.
 Homeoffice stands for an overly polished LinkedIn profile that could be updated while lingering in the warmth of the bed sheets in a hotel room or at home.
 
+- The collection found its inspiration in the increasing number of people working from home, as well as the constant urge to convey the impression of a work career akin to perfection.
+Homeoffice stands for an overly polished LinkedIn profile that could be updated while lingering in the warmth of the bed sheets in a hotel room or at home.
+- test 2
+
+1. test
+1. test 2
+
 The main silhouettes are influenced by business suits and outdoor jackets infused with a very casual and cosy attitude and a sporty leisurewear feeling.
 
 The collection focuses on contemporary and functional looks comprising pieces that make a statement yet are still wearable.
@@ -50,17 +57,13 @@ Credits:
 
 Matthias Fürst, born in 1983
 Karin Wüthrich, born in 1983
-(link: https://www.after-work-studio.com text: www.after-work-studio.com)
+(link: https://www.after-work-studio.com text: www.after-work-studio.com )
 (link: https://www.instagram.com/aws_afterworkstudio/ text: @aws_afterworkstudio)
 Also in 2016, 2018
 
 ----
 
 Video: https://player.vimeo.com/external/558090725.hd.mp4?s=53d68fce62b5285c52d2d58c7d042638f6832ebc&profile_id=175
-
-----
-
-Room: 
 
 ----
 
@@ -76,3 +79,7 @@ Cover:
 - home-after-work_8.jpg
 - home-after-work_9.jpg
 - home-after-work_10.jpg
+
+----
+
+Room: 

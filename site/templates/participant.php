@@ -26,7 +26,7 @@
   <article>
 		<div id="videoTextureContainer"></div>
 		<div id="loader">
-			<div id="loaderImg"></div>
+			<div id="loaderImg"><img src="/assets/images/loader.svg" /></div>
 			<div id="loaderText">loading</div>
 		</div>
 		<div id="canvasBg">
@@ -66,7 +66,7 @@
 				<?php
 				$images = $page->gallery()->toFiles();
 				foreach($images as $image): ?>
-					<img data-flickity-lazyload="<?= $image->url() ?>" alt="">
+					<img data-flickity-lazyload="<?= $image->url() ?>?width=600&quality=70" alt="">
 				<?php endforeach ?>
 			</div>
 			
@@ -79,7 +79,7 @@
 				<h3>Behind the scene</h3>
 				<div class="videoOverflow">
 					<div class="videoWrap">
-						<video id="video" onclick="this.paused?this.play():this.pause();">
+						<video id="video" autoplay loop onclick="this.paused?this.play():this.pause();">
 							<source src="<?= $page->video() ?>" type="video/mp4">
 							Sorry, your browser doesn't support embedded videos.
 						</video>
@@ -173,7 +173,7 @@ var flkty = new Flickity( elem, {
 	pageDots: false,
 	cellAlign: 'center',
 	wrapAround: true,
-	lazyLoad: 999
+	lazyLoad: 3
 });
 
 var $carousel = $('.projectGallery').flickity();

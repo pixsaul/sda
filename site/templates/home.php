@@ -2,13 +2,13 @@
 
 <?php if ($artistPage = page('participants')):
 
-$artistPage = $artistPage->children()->listed()->shuffle() ?>
+$artistPage = $artistPage->children()->listed() ?>
 
 <?php if($tag = param('filter')) {
 	$artistPage = $artistPage->filterBy('categories', $tag, ',');
 }
 
-$artistPage = $artistPage->paginate(12);
+$artistPage = $artistPage->paginate(12)->shuffle();
 
 ?>
 
