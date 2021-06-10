@@ -222,3 +222,27 @@ boxes.forEach(box => {
 });
 
 }
+
+//Intro video skip
+$(document).on('mousemove', function(e){
+  $('.skip').css({
+     left:  e.pageX,
+     top:   e.pageY
+  });
+});
+
+//landing fade in
+
+var yetVisited = sessionStorage['video'];
+
+if (!yetVisited) {
+  $(".introVideo").show();
+  sessionStorage['video'] = "yes";
+} else {
+  $("#page").animate({opacity: 1}, 500);
+}
+
+$( ".introVideo" ).click(function() {
+  $(this).fadeOut();
+  $("#page").animate({opacity: 1}, 500);
+});

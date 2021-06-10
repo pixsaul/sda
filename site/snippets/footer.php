@@ -46,6 +46,15 @@
     </div>
   </div>
   
+</div><!-- end #page -->
+  
+  <div class="introVideo">
+    <video autoplay muted loop>
+      <source src="https://player.vimeo.com/external/561221392.hd.mp4?s=407bc2241788c83c4cc437459283e61fbf305397&profile_id=174" type="video/mp4" />
+    </video>
+    <span class="skip">Skip</span>
+  </div>
+  
   <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
   
   <?= js([

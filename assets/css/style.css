@@ -1038,3 +1038,36 @@ body.cookieNotification .filterBar {
     display: block;
   }
 }
+
+.introVideo {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 12000;
+  right: 0;
+  bottom: 0;
+  display: none;
+  cursor: none;
+}
+@media (max-width: 599px) {
+  .introVideo {
+    display: none !important;
+  }
+}
+.introVideo .skip {
+  position: absolute;
+  font-family: "Metaballs";
+  font-size: 28px;
+}
+.introVideo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: none;
+}
+
+@media (min-width: 1200px) {
+  body.home #page {
+    opacity: 0;
+  }
+}

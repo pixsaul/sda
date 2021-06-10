@@ -4,7 +4,16 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+  <meta property="og:title" content="Swiss Design Awards">
+  <meta property="og:description" content="Switzerland's leading national design competition. Organised annually by the Federal Office of Culture since 1918. 20-26 September 2021, Basel">
+  <meta property="og:image" content="/ogimg.jpg">
+  <meta property="og:url" content="https://swissdesignawardsblog.ch">
+  <meta name="twitter:card" content="summary_large_image">
 
+
+  <link rel="icon" href="/favicon.ico">
+  
   <title><?= $site->title() ?> | <?= $page->title() ?></title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -28,9 +37,13 @@
   ?>
   <?php if ($page->template() == "participant"): ?>
     <body class="artist <?= $field ?>">
-    <?php else: ?>
+  <?php elseif ($page->template() == "home"): ?>
+    <body class="home <?= $field ?>">
+  <?php else: ?>
     <body class="<?= $field ?>">
   <?php endif; ?>
+  
+  <div id="page">
 
   <header class="header">
     <?php if ( ($page->is("info")) || ($page->isChildOf("participants")) ) : ?>
