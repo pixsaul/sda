@@ -140,9 +140,11 @@ header {
       }
     }
     &:hover {
-      letter-spacing: 0.3em;
-      h1 {
-        letter-spacing: 0;
+      @include for-desktop-up {
+        letter-spacing: 0.3em;
+        h1 {
+          letter-spacing: 0;
+        }
       }
     }
   }
@@ -157,7 +159,9 @@ header {
     cursor: pointer;
     transition: letter-spacing 500ms;
     &:hover {
-      letter-spacing: 0.3em;
+      @include for-desktop-up {
+        letter-spacing: 0.3em;
+      }
     }
     @include for-desktop-up {
       width: 155px;
@@ -240,7 +244,9 @@ footer {
     cursor: pointer;
     transition: letter-spacing 500ms;
     &:hover {
+      @include for-desktop-up {
       letter-spacing: 0.3em;
+      }
     }
     @include for-desktop-up {
       font-size: 30px;
