@@ -14,8 +14,8 @@ const config = {
 	blobFresnelAmount8: 0,
 	initialFov: 97,
 	cameraDist: 8.8,
-	selectedDist: 0.127,
-	selectedScale: 0.163,
+	selectedDist: 0.5,
+	selectedScale: 0.63,
 	showLightHelpers: false,
 	restrictMobile: false,
 	infiniteFloorSize: 100,
@@ -27,6 +27,14 @@ const hasHover = window.matchMedia("(hover: hover)").matches;
 const renderer = new THREE.WebGLRenderer({
 	alpha: true,
 	canvas: document.getElementById('threeCanvas'),
+	antialias: true,
+      // preserveDrawingBuffer: false,
+      // depth: true,
+      // stencil: true,
+      // canvas: document.querySelector('canvas'),
+      logarithmicDepthBuffer: false,
+      // powerPreference: 'high-performance',
+
 });
 const canvas = renderer.domElement;
 const cWidth = canvas.clientWidth;
@@ -324,7 +332,7 @@ function removeFadeFromAll(){
 	const opacityTween = new TWEEN.Tween(fadePlaneMesh.material)
 	.to({opacity: 0.0}, 500)
 	.easing(TWEEN.Easing.Quadratic.InOut)
-	// .delay(250);
+	// .delay(250)
 	.start();
 	// fadePlaneMesh.material.opacity = 0.0
 	// for (let mesh of objects){
@@ -373,7 +381,7 @@ function handleImgClicked(obj){
 // Put selected object back
 function putSelectedBack(){
 	group.attach(selectedObj);
-	selectedObj.putSelectedBack(400);
+	selectedObj.putSelectedBack(800);
 	removeFadeFromAll();
 	selectedObj = null;
 }
@@ -419,9 +427,9 @@ function animateSelectedObj(){
 	selectedObj.position.y += Math.sin(t) * 0.001* (Math.pow(config.selectedDist, 1));
 	selectedObj.rotation.x += Math.sin(t*1.2) * 0.0002;
 	selectedObj.rotation.y += Math.sin(t*0.7) * 0.0005;
-	fadePlaneMesh.position.y += Math.sin(t) * 0.001 * (Math.pow(config.selectedDist, 1));
-	fadePlaneMesh.rotation.x += Math.sin(t*1.2) * 0.0002;
-	fadePlaneMesh.rotation.y += Math.sin(t*0.7) * 0.0005;
+	// fadePlaneMesh.position.y += Math.sin(t) * 0.001 * (Math.pow(config.selectedDist, 1));
+	// fadePlaneMesh.rotation.x += Math.sin(t*1.2) * 0.0002;
+	// fadePlaneMesh.rotation.y += Math.sin(t*0.7) * 0.0005;
 }
 
 // Check if mouse is over the top of an object, then hover or unhover
@@ -588,7 +596,7 @@ function addImage(path, manipFunction){
 	try {
 		const frontMaterial = new THREE.MeshBasicMaterial({alphaTest: 0.5});
 		const texture = textureLoader.load(path);
-		texture.anisotrophy = 4;
+		texture.anisotrophy = 8;
 		frontMaterial.map = texture;
 		const sideMaterial = new THREE.MeshBasicMaterial({color: 0x000000, transparent: true, opacity: 0, depthWrite: false});
 		const materials = [sideMaterial, sideMaterial, sideMaterial, sideMaterial, frontMaterial, frontMaterial];
@@ -596,7 +604,7 @@ function addImage(path, manipFunction){
 		img.onload = () => {
 			const imgRatio = img.height / img.width
 			const cubeGeometry = new THREE.BoxGeometry(1, imgRatio * 1, 0.0001)
-			const cube = new ImageMesh(cubeGeometry, materials);
+			const cube = new ImageMesh(cubeGeometry, materials, imgRatio);
 			manipFunction(cube);
 		}
 		img.src = path
@@ -645,7 +653,7 @@ function addVideo(path, manipFunction){
 			const ratio = video.videoHeight / video.videoWidth;
 			console.log(ratio);
 			const cubeGeometry = new THREE.BoxGeometry(1, ratio * 1, 0.0001)
-			const cube = new ImageMesh(cubeGeometry, materials);
+			const cube = new ImageMesh(cubeGeometry, materials, ratio);
 			manipFunction(cube);
 		});
 		// }
@@ -874,9 +882,10 @@ function initGroup(){
 
 function initFadePlaneMesh(){
 	const geo = new THREE.PlaneGeometry(10, 10);
-	const material = new THREE.MeshBasicMaterial({color: 0xffffff, opacity: 0.0, transparent: true});
+	const material = new THREE.MeshBasicMaterial({color: 0xffffff, opacity: 0.0, transparent: true, depthWrite: false});
 	fadePlaneMesh = new THREE.Mesh(geo, material);
-	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist+0.001),  camera.position.z - (config.selectedDist+0.001));
+	fadePlaneMesh.renderOrder = 0;
+	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist),  camera.position.z - (config.selectedDist));
 	fadePlaneMesh.quaternion.copy(camera.quaternion);
 	scene.add(fadePlaneMesh);
 }

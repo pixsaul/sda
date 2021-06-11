@@ -98,6 +98,9 @@ class ImageMesh extends THREE.Mesh {
   // Put selected back when clicked off
   putSelectedBack(time = 800){
     this.tweening = true;
+	this.material[5].transparent = false;
+	this.renderOrder = 0;
+	this.material[5].depthTest = true;
     this.cancelTweens();
     const tweenPosition = new TWEEN.Tween(this.position)
     .to({x: this.position0.x, y: this.position0.y, z: this.position0.z}, time)
@@ -105,6 +108,7 @@ class ImageMesh extends THREE.Mesh {
     .onStart(() => {
       this.tweening = true;
     })
+	// .delay(100)
     .onComplete(() => {
       this.up = false;
       this.tweening = false;
@@ -139,6 +143,7 @@ class ImageMesh extends THREE.Mesh {
       // console.log(this.quaternion);
       // console.log(this.quaternion0);
     })
+	// .delay(100)
     .onUpdate(() => {
       this.quaternion.slerp(this.quaternion0, timeR.t);
     })
@@ -157,6 +162,7 @@ class ImageMesh extends THREE.Mesh {
     .onStart(() => {
       this.tweening = true;
     })
+	// .delay(100)
     .onComplete(() => {
       this.up = false;
       this.tweening = false;
@@ -167,6 +173,11 @@ class ImageMesh extends THREE.Mesh {
 
   // When image clicked, bring to front
   bringToFocus(camera, dist, scale){
+	  this.material[5].transparent = true;
+	  this.renderOrder = 1;
+	  this.material[5].depthTest = false;
+	  
+	  // console.log(this);
     this.cancelTweens();
     this.tweening = true;
     const tweenPosition = new TWEEN.Tween(this.position)
