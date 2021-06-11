@@ -747,15 +747,15 @@ function initGUI(){
 	viewContraintsGUI.add(controls.maxRotationAngles.x, 'from', Math.PI / 4, Math.PI, 0.01).name("Min Angle");
 	viewContraintsGUI.add(controls.maxRotationAngles.x, 'to', 0, Math.PI, 0.01).name("Max Angle");
 	controlsGUI.add(config, 'simulateMobileTap').onChange(giveUsASpin).name("Simulate Mobile Tap");
-	colourGUI.addColor(config, 'blobFresnelColour').onChange( handleBlobColourChange).name("Fresnel Colour");
-	colourGUI.add(config, 'blobFresnelAmount1', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 1");
-	colourGUI.add(config, 'blobFresnelAmount2', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 2");
-	colourGUI.add(config, 'blobFresnelAmount3', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 3");
-	colourGUI.add(config, 'blobFresnelAmount4', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 4");
-	colourGUI.add(config, 'blobFresnelAmount5', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 5");
-	colourGUI.add(config, 'blobFresnelAmount6', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 6");
-	colourGUI.add(config, 'blobFresnelAmount7', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 7");
-	colourGUI.add(config, 'blobFresnelAmount8', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 8");
+	// colourGUI.addColor(config, 'blobFresnelColour').onChange( handleBlobColourChange).name("Fresnel Colour");
+	// colourGUI.add(config, 'blobFresnelAmount1', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 1");
+	// colourGUI.add(config, 'blobFresnelAmount2', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 2");
+	// colourGUI.add(config, 'blobFresnelAmount3', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 3");
+	// colourGUI.add(config, 'blobFresnelAmount4', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 4");
+	// colourGUI.add(config, 'blobFresnelAmount5', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 5");
+	// colourGUI.add(config, 'blobFresnelAmount6', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 6");
+	// colourGUI.add(config, 'blobFresnelAmount7', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 7");
+	// colourGUI.add(config, 'blobFresnelAmount8', 0.0, 2.0, 0.01).onChange( handleBlobColourChange).name("Fresel Mod 8");
 	// colourGUI.add(infiniteFloorMaterial, 'opacity', 0.0, 1.0, 0.01).name("Infinite Floor Opacity");
 	cameraGUI.add(camera, 'fov', 0, 150, 1).onChange( handleUpdateCameraMatrix ).name("FOV");
 	cameraGUI.add(config, 'cameraDist', 1, 20, 0.1).onChange( handleUpdateCameraDist ).name("Camera Dist");
@@ -802,7 +802,41 @@ function initRoomFromConfig(){
 	}
 	for (let b of roomConfig.blobs){
 		addFbx(b.path, function(mesh){
-			mesh.material = blobMaterial;
+			let vertex = `
+			varying vec3 vPositionW;
+			varying vec3 vNormalW;
+			
+			void main() {
+				vPositionW = vec3( vec4( position, 1.0 ) * modelMatrix);
+				vNormalW = normalize( vec3( vec4( normal, 0.0 ) * modelMatrix ) );
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+			}`
+			
+			let fragment = `
+			varying vec3 vPositionW;
+			varying vec3 vNormalW;
+			uniform vec3 colorInside;
+			uniform vec3 colorFresnel;
+			uniform float treshold;
+			
+			void main() {
+				vec3 color = vec3(1., 1., 1.);
+				vec3 viewDirectionW = normalize(cameraPosition - vPositionW);
+				float fresnelTerm = dot(viewDirectionW, vNormalW);
+				fresnelTerm = clamp(1.0 - fresnelTerm, 0., treshold);
+				gl_FragColor = vec4( mix(colorInside,colorFresnel,fresnelTerm), 1.);
+			}
+			`
+			let material = new THREE.ShaderMaterial({
+				uniforms: {
+					treshold: { type: 'f', value: 1. },
+					colorInside: { type: 'c3', value: new THREE.Color(0xff3c1e) },
+					colorFresnel: { type: 'c3', value: new THREE.Color(0xf3b1ab) },
+				},
+				vertexShader: vertex,
+				fragmentShader: fragment,
+			})
+			mesh.material = material;
 			// mesh.geometry.computeVertexNormals();
 			mesh.scale.set(b.scale,b.scale,b.scale);
 			mesh.position.set(b.position.x, b.position.y, b.position.z);
