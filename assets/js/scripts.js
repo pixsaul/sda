@@ -131,6 +131,16 @@ $('select#filter').change(function(){
   window.location = url;
 });
 
+//Filter set
+url = window.location.href;
+if (url.indexOf("filter:") > -1) {
+  url = url.substr(url.indexOf("filter:") + 7);
+  if (url == "") {
+    $(".filterBar").hide();
+  }
+  $('select#filter').val(url);
+}
+
 //cookie code
 function createCookie(name,value,days) {
   if (days) {
