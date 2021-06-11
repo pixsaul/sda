@@ -2,46 +2,46 @@ var path = '/assets/scenes/chaumont-zaerpour/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Chaumont-Zaerpour_01.jpg',
-      scale: 2.3,
+      path: path+'3d_Chaumont-Zaerpour_01.jpeg',
+      scale: 2.9,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: -0.1,
+        y: -0.2,
+        z: -1.2,
       },
       rotation: {
         x: 0,
-        y: Math.PI/4,
+        y: 30*Math.PI/180,
         z: 0,
       }
     },
     {
-      path: path+'3d_Chaumont-Zaerpour_02.jpg',
-      scale: 2.3,
-      position: {
-        x: 0,
-        y: 0.2,
-        z: -2.7,
-      },
-      rotation: {
-        x: 0,
-        y: Math.PI/-1.1,
-        z: 0,
-      }
+      path: path+'3d_Chaumont-Zaerpour_02.jpeg',
+	  scale: 2.9,
+	  position: {
+		x: 1.5,
+		y: -0.2,
+		z: 0.4,
+	  },
+	  rotation: {
+		x: 0,
+		y: -80*Math.PI/180,
+		z: 0,
+	  }
     },
     {
-      path: path+'3d_Chaumont-Zaerpour_03.jpg',
-      scale: 1.6,
-      position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
-      },
-      rotation: {
-        x: 0,
-        y: Math.PI/3,
-        z: 0,
-      }
+      path: path+'3d_Chaumont-Zaerpour_03.jpeg',
+	  scale: 2.9,
+ 	 position: {
+ 	   x: -1.5,
+ 	   y: -0.2,
+ 	   z: 0.8,
+ 	 },
+ 	 rotation: {
+ 	   x: 0,
+ 	   y: -75*Math.PI/180,
+ 	   z: 0,
+ 	 }
     },
   ],
   blobs: [
