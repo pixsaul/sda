@@ -1,13 +1,69 @@
-var path = '/assets/scenes/weichi-he/'
+var path = '/assets/scenes/valentin-woeffray/'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Weichi-He_01.jpg',
-      scale: 3.8,
+      path: path+'3d_Valentin-Woeffray_01.jpg',
+      scale: 3.3,
+      position: {
+        x: 0,
+        y: -1.1,
+        z: -1,
+      },
+      rotation: {
+        x: 0,
+        y: Math.PI/4,
+        z: 0,
+      }
+    },
+    {
+      path: path+'3d_Valentin-Woeffray_02.jpg',
+      scale: 3.2,
+      position: {
+        x: 2,
+        y: 0.2,
+        z: -0.5,
+      },
+      rotation: {
+        x: 0,
+        y: 90*Math.PI/180,
+        z: 0,
+      }
+    },
+	{
+      path: path+'3d_Valentin-Woeffray_03.jpg',
+	  scale: 3.6,
+	  position: {
+		x: -1.7,
+		y: 0.6,
+		z: -0.7,
+	  },
+	  rotation: {
+		x: 0,
+		y: 90*Math.PI/180,
+		z: 0,
+	  }
+    },
+	{
+      path: path+'3d_Valentin-Woeffray_04.jpg',
+      scale: 3.4,
+      position: {
+        x: 0,
+        y: -1.05,
+        z: 1,
+      },
+      rotation: {
+        x: 0,
+        y: 90*Math.PI/180,
+        z: 0,
+      }
+    },
+	{
+      path: path+'3d_Valentin-Woeffray_05.jpg',
+      scale: 4,
       position: {
         x: 1,
-        y: -0.75,
-        z: 1.9,
+        y: -0.88,
+        z: -3,
       },
       rotation: {
         x: 0,
@@ -15,24 +71,38 @@ roomConfig = {
         z: 0,
       }
     },
-    {
-      path: path+'3d_Weichi-He_02.jpg',
-      scale: 3.4,
+	{
+      path: path+'3d_Valentin-Woeffray_06.jpg',
+      scale: 3.3,
       position: {
-        x: -2,
-        y: 0.2,
-        z: 1,
+        x: 1.5,
+        y: -1.05,
+        z: 2,
       },
       rotation: {
         x: 0,
-        y: 60*Math.PI/180,
+        y: 30*Math.PI/180,
         z: 0,
       }
+    },
+	{
+      path: path+'3d_Valentin-Woeffray_07.jpg',
+	  scale: 2.6,
+	  position: {
+		x: -2,
+		y: -1.2,
+		z: 2,
+	  },
+	  rotation: {
+		x: 0,
+		y: -45*Math.PI/180,
+		z: 0,
+	  }
     },
   ],
   blobs: [
     {
-      path: path+'Weichi-He.fbx',
+      path: path+'Valentin-Woeffray.fbx',
       scale: 0.25,
       position: {
         x: 0,
@@ -46,20 +116,4 @@ roomConfig = {
       }
     },
 ],
-videos: [
-	{
-  path: path+'3d_Weichi-He_03.mp4',
-  scale: 2.5,
-  position: {
-	x: 0.8,
-	y: 0.2,
-	z: -0.8,
-  },
-  rotation: {
-	x: 0,
-	y: -60*Math.PI/180,
-	z: 0,
-  }
-},
-]
 }
