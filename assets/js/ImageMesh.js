@@ -2,7 +2,7 @@
 // hover and select
 
 class ImageMesh extends THREE.Mesh {
-  constructor(geometry, materials){
+  constructor(geometry, materials, ratio=1){
     super(geometry, materials);
     this.hovered = false;
     this.selected = false;
@@ -13,6 +13,7 @@ class ImageMesh extends THREE.Mesh {
     this.quaternion0 = new THREE.Quaternion();
     this.scale0 = new THREE.Vector3();
     this.tweens = [];
+	this.ratio = ratio;
   }
 
   // Cancel all tweens
@@ -189,6 +190,11 @@ class ImageMesh extends THREE.Mesh {
     // 	this.rotation.x += 2*(Math.PI)
     // }
     // console.log(this.rotation.toVector3());
+	
+	if (this.ratio > 1){
+		scale /= this.ratio;
+	}
+	
     console.log(this.rotation.toVector3().angleTo(this.rotation0));
     if (this.quaternion.angleTo(this.quaternion0) >= Math.PI/2){
       this.rotateY(Math.PI);
