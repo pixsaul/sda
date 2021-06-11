@@ -1,9 +1,24 @@
 const minimapConfig = {
 	entrants: [
 		{
+			name: "AATB",
+			imgSrc: "/assets/scenes/aatb/3d_AATB_01.jpg",
+			path: "after-work-studio"
+		},
+		{
 			name: "After Work Studio",
 			imgSrc: "/assets/scenes/after-work-studio/3d_After-Work_01.jpg",
 			path: "after-work-studio"
+		},
+		{
+			name: "Alena Halmes",
+			imgSrc: "/assets/scenes/alena-halmes/3d_Alena-Halmes_01.jpg",
+			path: "alena-halmes"
+		},
+		{
+			name: "Alexandra Gerber",
+			imgSrc: "/assets/scenes/alexandra-gerber/3d_Alexandra-Gerber_01.jpg",
+			path: "alexandra-gerber"
 		},
 		{
 			name: "Alice Franchetti",
@@ -14,6 +29,11 @@ const minimapConfig = {
 			name: "Annina Arter",
 			imgSrc: "/assets/scenes/annina-arter/3d_Annina-Arter_01.jpg",
 			path: "annina-arter",
+		},
+		{
+			name: "Camille-Blin",
+			imgSrc: "/assets/scenes/camille-blin/3d_Camille-Blin_01.jpg",
+			path: "camille-blin",
 		},
 		{
 			name: "Chaumont Zaerpour",
@@ -31,8 +51,13 @@ const minimapConfig = {
 			path: "clio-hadjigeorgiou",
 		},
 		{
+			name: "Cristian Andersen",
+			imgSrc: "/assets/scenes/cristian-andersen/3d_Cristian-Andersen_01.jpg",
+			path: "cristian-andersen",
+		},
+		{
 			name: "Dafi Kühne",
-			imgSrc: "/assets/scenes/dafi-kuhne/3d_Dafi-Kühne_1.png",
+			imgSrc: "/assets/scenes/dafi-kuhne/3d_Dafi-Kuhne_1.png",
 			path: "dafi-kuhne",
 		},
 		{
@@ -49,6 +74,11 @@ const minimapConfig = {
 			name: "Eurostandard",
 			imgSrc: "/assets/scenes/eurostandard/3d_Eurostandard_01.jpg",
 			path: "eurostandard",
+		},
+		{
+			name: "Fabien Roy",
+			imgSrc: "/assets/scenes/fabien-roy/3d_Fabien-Roy_01.jpg",
+			path: "fabien-roy",
 		},
 		{
 			name: "Futuress",
@@ -81,6 +111,11 @@ const minimapConfig = {
 			path: "studio-krispin-hee",
 		},
 		{
+			name: "Ligia Dias",
+			imgSrc: "/assets/scenes/ligia-dias/3d_Ligia-Dias_01.jpg",
+			path: "ligia-dias",
+		},
+		{
 			name: "Lina Muller",
 			imgSrc: "/assets/scenes/lina-muller/3d_Lina-Muller_01.jpg",
 			path: "lina-muller",
@@ -96,9 +131,9 @@ const minimapConfig = {
 			path: "lou-rais",
 		},
 		{
-			name: "Lucas Schenardi",
-			imgSrc: "/assets/scenes/lucsa-schenardi/3d_Luca-Schenardi_01.jpg",
-			path: "lucas-schenardi",
+			name: "Luca Schenardi",
+			imgSrc: "/assets/scenes/luca-schenardi/3d_Luca-Schenardi_01.jpg",
+			path: "luca-schenardi",
 		},
 		{
 			name: "Marc Asekhame",
@@ -126,9 +161,19 @@ const minimapConfig = {
 			path: "maya-rochat",
 		},
 		{
+			name: "Michela Fluck",
+			imgSrc: "/assets/scenes/michela-fluck/3d_Michela-Fluck_01.jpg",
+			path: "michela-fluck",
+		},
+		{
 			name: "Niki Paltenghi",
 			imgSrc: "/assets/scenes/niki-paltenghi/3d_Niki-Paltenghi_01.jpg",
 			path: "niki-paltenghi",
+		},
+		{
+			name: "Noemi Niederhauser",
+			imgSrc: "/assets/scenes/noemi-niederhauser/3d_Noemi-Niederhauser_01.jpg",
+			path: "noemi-niederhauser",
 		},
 		{
 			name: "Olga Prader",
@@ -146,6 +191,16 @@ const minimapConfig = {
 			path: "ottolinger",
 		},
 		{
+			name: "Quentin Lacombe",
+			imgSrc: "/assets/scenes/quentin-lacombe/3d_Quentin-Lacombe_01.jpg",
+			path: "quentin-lacombe",
+		},
+		{
+			name: "Sabina Bosch",
+			imgSrc: "/assets/scenes/sabina-bosch/3d_Sabina-Bosch_01.jpg",
+			path: "sabina-bosch",
+		},
+		{
 			name: "Sebastian Gross",
 			imgSrc: "/assets/scenes/sebastian-gross/3d_Sebastian-Gross_01.jpg",
 			path: "sebastian-gross",
@@ -159,6 +214,21 @@ const minimapConfig = {
 			name: "Thomas Clement",
 			imgSrc: "/assets/scenes/thomas-clement/3d_Thomas-Clement_01.jpg",
 			path: "thomas-clement",
+		},
+		{
+			name: "Tonia Wynona",
+			imgSrc: "/assets/scenes/tonia-wynona/3d_Tonia-Wynona_01.jpg",
+			path: "tonia-wynona",
+		},
+		{
+			name: "Valentin Woeffray",
+			imgSrc: "/assets/scenes/valentin-woeffray/3d_Valentin-Woeffray_01.jpg",
+			path: "valentin-woeffray",
+		},
+		{
+			name: "Virage",
+			imgSrc: "/assets/scenes/virage/3d_Virage_01.jpg",
+			path: "virage",
 		},
 		{
 			name: "Virginie Jemmely",
@@ -227,7 +297,7 @@ function initMinimap(){
 	// Change this
 	let minimapArtistNames = document.getElementById("minimapArtistNames");
 	let minimapArtistImgs = document.getElementById("minimapArtistImgs");
-	for (let i = 0; i< 64; i++){
+	for (let i = 0; i< 48; i++){
 		let cell = document.createElement("a");
 
 		minimap.appendChild(cell);
