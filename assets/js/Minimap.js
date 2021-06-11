@@ -3,7 +3,7 @@ const minimapConfig = {
 		{
 			name: "AATB",
 			imgSrc: "/assets/scenes/aatb/3d_AATB_01.jpg",
-			path: "after-work-studio"
+			path: "aatb"
 		},
 		{
 			name: "After Work Studio",
