@@ -51,7 +51,7 @@
     <?php else: ?>
     <label class="filter">
     <select name="filter" id="filter">
-      <option selected disabled hidden value="">Filter</option>
+      <option selected value="">All</option>
       <option value="fashionandtextile">Fashion + Textile Design</option>
       <option value="product">Product Design</option>
       <option value="graphic">Graphic Design</option>
