@@ -3,71 +3,71 @@ roomConfig = {
   images: [
     {
       path: path+'3d_Shadow-Brand_01.jpg',
-      scale: 2.3,
+      scale: 2,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: 2,
+        y: -0.52,
+        z: -2.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/4,
+        y: 0,
         z: 0,
       }
     },
     {
       path: path+'3d_Shadow-Brand_02.jpg',
-      scale: 2.3,
+      scale: 2.0,
       position: {
         x: 0,
-        y: 0.2,
-        z: -2.7,
+        y: 0.3,
+        z: 0,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: 0,
         z: 0,
       }
     },
     {
       path: path+'3d_Shadow-Brand_03.jpg',
-      scale: 1.6,
+      scale: 3,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: 0.5,
+        y: -0.6,
+        z: -1,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: 0,
         z: 0,
       }
     },
 	{
       path: path+'3d_Shadow-Brand_04.png',
-      scale: 1.6,
-      position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
-      },
-      rotation: {
-        x: 0,
-        y: Math.PI/3,
-        z: 0,
-      }
+	  scale: 3,
+	  position: {
+		x: -0.5,
+		y: -0.6,
+		z: 1,
+	  },
+	  rotation: {
+		x: 0,
+		y: 0,
+		z: 0,
+	  }
     },
 	{
       path: path+'3d_Shadow-Brand_05.png',
-      scale: 1.6,
+	  scale: 2.0,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: -1.5,
+        y: -0.42,
+        z: 2.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: 0,
         z: 0,
       }
     },
