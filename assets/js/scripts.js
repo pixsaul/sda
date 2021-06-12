@@ -230,7 +230,22 @@ $('.home-grid').infiniteScroll({
 // jQuery
 $('.home-grid').on( 'append.infiniteScroll', function( event, body, path, items, response ) {
   $(".seq img:first-child").addClass('active');
+  if ($(window).width() < 600) {
+  const boxes = gsap.utils.toArray('.grid-item');
+  items.forEach(box => {
+    gsap.to(box, {
+      x: 0,
+      scrollTrigger: {
+        trigger: box,
+        scrub: true,
+        start: "bottom 98%",
+        onEnter: () => animateFwd(box),
+        onLeaveBack: () => animateBkd(box),
+      }
+    })
+  });
   ScrollTrigger.refresh();
+}
 });
 
 
