@@ -58,6 +58,7 @@
       <option value="mediation">Mediation</option>
       <option value="photography">Photography</option>
       <option value="scenography">Scenography</option>
+      <option value="a-z">A-Z</option>
       <!--<option value="awared">Awarded</option>-->
     </select>
     </label>

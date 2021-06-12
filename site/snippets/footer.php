@@ -27,7 +27,8 @@
             "mediation" => "Mediation",
             "photography" => "Photography",
             "scenography" => "Scenography",
-            "graphic" => "Graphic Design"
+            "graphic" => "Graphic Design",
+            "a-z" => "A-Z"
           );
           if (array_key_exists($field, $fields)) { 
             echo $fields[$field];

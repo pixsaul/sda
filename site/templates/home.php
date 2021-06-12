@@ -5,11 +5,19 @@
 $artistPage = $artistPage->children()->listed() ?>
 
 <?php if($tag = param('filter')) {
-	$artistPage = $artistPage->filterBy('categories', $tag, ',');
+	if(param('filter') === 'a-z') { 
+		$artistPage = $artistPage->sortBy('title', 'asc');
+	} else {
+		$artistPage = $artistPage->filterBy('categories', $tag, ',');
+	}
 }
+?>
 
-$artistPage = $artistPage->paginate(12)->shuffle();
-
+<?php if(param('filter') === 'a-z') {
+	$artistPage = $artistPage->paginate(12);
+} else {
+	$artistPage = $artistPage->paginate(12)->shuffle();
+}
 ?>
 
   <div class="home-grid">
