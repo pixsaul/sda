@@ -21,6 +21,12 @@ $artistPage = $artistPage->children()->listed() ?>
 ?>
 
   <div class="home-grid">
+	  <div id="grid-filler-container">
+  		<img src="/assets/images/redsquare.png"></img>
+  		<img src="/assets/images/redsquare.png"></img>
+  		<img src="/assets/images/redsquare.png"></img>
+  		<img id="fourthFiller" src="/assets/images/redsquare.png"></img>
+  	</div>
 	<?php foreach ($artistPage as $artist): ?>
 	  <a class="grid-item" href="<?= $artist->url() ?>">
 			<div class="seq">
@@ -35,6 +41,7 @@ $artistPage = $artistPage->children()->listed() ?>
 			<span><?= $artist->title()->html() ?></span>
 	  </a>
 	<?php endforeach ?>
+	
   </div>
 <?php endif ?>
 

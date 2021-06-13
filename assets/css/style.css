@@ -255,6 +255,37 @@
 		 margin-right: 70px;
 	}
 }
+ #grid-filler-container {
+	 position: absolute;
+	 bottom: 0;
+	 right: 0;
+	 display: none;
+	 font-size: 0;
+	 height: 33.3333333vw;
+}
+ #grid-filler-container img {
+	 height: 100%;
+	 flex: 0 0 33.333333%;
+	 max-width: 100%;
+}
+ @media (min-width: 1800px) {
+	 #grid-filler-container img {
+		 flex: 0 0 25%;
+	}
+}
+ @media (min-width: 900px) {
+	 #grid-filler-container {
+		 display: block;
+	}
+}
+ #fourthFiller {
+	 display: none;
+}
+ @media (min-width: 1800px) {
+	 #fourthFiller {
+		 display: block;
+	}
+}
  .grid-item {
 	 text-decoration: none;
 	 position: relative;
@@ -325,6 +356,7 @@
 	 .home-grid {
 		 display: flex;
 		 flex-wrap: wrap;
+		 position: relative;
 	}
 }
  #canvasBg {
@@ -1031,12 +1063,14 @@
 	 pointer-events: none;
 	 height: 0;
 	 width: 0;
+	 overflow: hidden;
 }
  #videoTextureContainer * {
 	 opacity: 0;
 	 pointer-events: none;
 	 height: 0;
 	 width: 0;
+	 overflow: hidden;
 }
  .projectRelated .grid-item:nth-child(3) {
 	 display: none;
