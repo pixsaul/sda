@@ -278,6 +278,11 @@
 		 display: block;
 	}
 }
+ @media (min-width: 1800px) {
+	 #grid-filler-container {
+		 flex: 25vw;
+	}
+}
  #fourthFiller {
 	 display: none;
 }
@@ -302,6 +307,7 @@
  @media (min-width: 1800px) {
 	 .grid-item {
 		 flex: 0 0 25%;
+		 height: 25vw;
 	}
 }
  .grid-item span {

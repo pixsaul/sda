@@ -287,7 +287,9 @@ footer {
 		display: block;
   	  // height: 33.33333vw;
     }
-  
+	@include for-big-desktop-up {
+	  flex: 25vw;
+	}
 }
 
 #fourthFiller{
@@ -314,6 +316,7 @@ footer {
 
   @include for-big-desktop-up {
     flex: 0 0 25%;
+	height: 25vw;
 	
   }
 
