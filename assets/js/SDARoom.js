@@ -655,6 +655,7 @@ function addVideo(path, manipFunction){
 			const cubeGeometry = new THREE.BoxGeometry(1, ratio * 1, 0.0001)
 			const cube = new ImageMesh(cubeGeometry, materials, ratio);
 			manipFunction(cube);
+			video.play();
 		});
 		// }
 	} catch(e){
