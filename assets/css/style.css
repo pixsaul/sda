@@ -1112,9 +1112,7 @@
 	 object-fit: cover;
 	 cursor: none;
 }
- @media (min-width: 1200px) {
-	 body.home #page {
-		 opacity: 0;
-	}
+ body #page {
+	 opacity: 0;
 }
  

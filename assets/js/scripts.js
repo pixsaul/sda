@@ -261,11 +261,15 @@ $(document).on('mousemove', function(e){
 
 var yetVisited = sessionStorage['video'];
 
-if (!yetVisited) {
+const isMobile = window.matchMedia("(max-width: 599px)").matches;
+console.log(isMobile);
+
+if (!yetVisited && !isMobile) {
   $(".introVideo").show();
   sessionStorage['video'] = "yes";
 } else {
   $("#page").animate({opacity: 1}, 500);
+  console.log($("#page"));
 }
 
 $( ".introVideo" ).click(function() {
