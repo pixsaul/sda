@@ -3,11 +3,11 @@ roomConfig = {
   images: [
     {
       path: path+'3d_Clement-Lambelet_01.jpg',
-      scale: 2.3,
+      scale: 1.8,
       position: {
-        x: -2,
-        y: 1,
-        z: 0.01,
+        x: 2.1,
+        y: -0.9,
+        z: 2.1,
       },
       rotation: {
         x: 0,
@@ -17,73 +17,73 @@ roomConfig = {
     },
     {
       path: path+'3d_Clement-Lambelet_02.jpg',
-      scale: 2.3,
+	  scale: 2.7,
       position: {
-        x: 0,
-        y: 0.2,
-        z: -2.7,
+        x: 1.5,
+        y: -0.3,
+        z: 1.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/-1.1,
+        y: Math.PI/4,
         z: 0,
       }
     },
     {
       path: path+'3d_Clement-Lambelet_03.jpg',
-      scale: 1.6,
+	  scale: 2.0,
       position: {
-        x: 2.3,
-        y: -0.3,
-        z: -1.8,
+        x: 0.5,
+        y: -0.75,
+        z: -0.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/3,
+        y: -Math.PI/4,
         z: 0,
       }
     },
     {
       path: path+'3d_Clement-Lambelet_04.jpg',
-      scale: 2.3,
+	  scale: 2.0,
       position: {
-        x: 2.1,
-        y: -0.2,
-        z: 0,
+        x: -0.5,
+        y: -0.75,
+        z: 0.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/1.5,
+        y: -Math.PI/4,
         z: 0,
       }
     },
     {
       path: path+'3d_Clement-Lambelet_05.jpg',
-      scale: 1.6,
+	  scale: 2.7,
       position: {
-        x: 1.4,
+        x: -1.5,
         y: -0.3,
-        z: 2,
+        z: -1.5,
       },
       rotation: {
         x: 0,
-        y: Math.PI/4.2,
+        y: Math.PI/4,
         z: 0,
       }
     },
     {
       path: path+'3d_Clement-Lambelet_06.jpg',
-      scale: 2.3,
-      position: {
-        x: -1.6,
-        y: -0.3,
-        z: 2.3,
-      },
-      rotation: {
-        x: 0,
-        y: Math.PI/1.1,
-        z: 0,
-      }
+	  scale: 1.8,
+ 	 position: {
+ 	   x: -2.1,
+ 	   y: -0.9,
+ 	   z: -2.1,
+ 	 },
+ 	 rotation: {
+ 	   x: 0,
+ 	   y: Math.PI/4,
+ 	   z: 0,
+ 	 }
     }
   ],
   blobs: [
