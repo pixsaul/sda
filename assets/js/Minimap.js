@@ -17,8 +17,8 @@ const minimapConfig = {
 		},
 		{
 			name: "Alexandra Gerber",
-			imgSrc: "/assets/scenes/alexandra-gerber/3d_Alexandra-Gerber_01.jpg",
-			path: "alexandra-gerber"
+			imgSrc: "/assets/scenes/alexandra-gerber-studio/3d_Alexandra-Gerber_01.jpg",
+			path: "alexandra-gerber-studio"
 		},
 		{
 			name: "Alice Franchetti",
@@ -77,8 +77,8 @@ const minimapConfig = {
 		},
 		{
 			name: "Fabien Roy",
-			imgSrc: "/assets/scenes/fabien-roy/3d_Fabien-Roy_01.jpg",
-			path: "fabien-roy",
+			imgSrc: "/assets/scenes/fabien-roy-studio/3d_Fabien-Roy_01.jpg",
+			path: "fabien-roy-studio",
 		},
 		{
 			name: "Futuress",
