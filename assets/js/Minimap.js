@@ -41,9 +41,9 @@ const minimapConfig = {
 			path: "chaumont-zaerpour",
 		},
 		{
-			name: "Clement Lamblet",
+			name: "Clement Lambelet",
 			imgSrc: "/assets/scenes/clement-lambelet/3d_Clement-Lambelet_01.jpg",
-			path: "clement-lamblet",
+			path: "clement-lambelet",
 		},
 		{
 			name: "Clio Hadjigeorgiou",
