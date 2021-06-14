@@ -288,7 +288,9 @@ footer {
   	  // height: 33.33333vw;
     }
 	@include for-big-desktop-up {
-	  height: 25vw;
+	  flex: 25vw;
+    display: flex;
+    height: 25vw;
 	}
 }
 
@@ -300,6 +302,7 @@ footer {
 }
 
 
+
 //Home
 .grid-item {
   text-decoration: none;
@@ -307,9 +310,9 @@ footer {
   max-width: 100%;
   display: block;
   flex: 0 0 33.333333%;
-  
+
   height: 100vw;
-  
+
   @include for-tablet-landscape-up{
 	  height: 33.33333vw;
   }
@@ -317,7 +320,8 @@ footer {
   @include for-big-desktop-up {
     flex: 0 0 25%;
 	height: 25vw;
-	
+  display: flex;
+
   }
 
   span {
