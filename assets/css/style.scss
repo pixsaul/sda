@@ -940,10 +940,14 @@ button, a.btn {
   }
   img {
     margin-right: 10px;
-    max-height: 60vh;
-    max-width: 70vw;
+    height: auto;
+    width: auto;
+    max-width: calc(-60px + 100vw);
+    max-height: 70vh;
     @include for-desktop-up {
      margin-right: 20px;
+     height: 70vh;
+     max-height: none;
     }
     @include for-big-desktop-up {
       margin-right: 30px;

@@ -112,11 +112,11 @@
 								<?php
 								$images = $artist->cover()->toFiles();
 								foreach($images as $image): ?>
-									<img src="<?= $image->url() ?>?width=600&quality=70" alt="">
+									<img src="<?= $image->url() ?>?width=600&quality=40" alt="">
 								<?php endforeach ?>
 							</div>
 							<?php $firstImage = $artist->cover()->toFiles()->first(); ?>
-							<img class="spacer" src="<?= $firstImage->url(); ?>?width=600&quality=70" />
+							<img class="spacer" src="<?= $firstImage->url(); ?>?width=300&quality=10" />
 							<span><?= $artist->title()->html() ?></span>
 						</a>
 					<?php endforeach ?>

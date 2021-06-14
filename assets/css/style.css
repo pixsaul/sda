@@ -950,12 +950,16 @@ button, a.btn {
 }
 .flickity-slider img {
   margin-right: 10px;
-  max-height: 60vh;
-  max-width: 70vw;
+  height: auto;
+  width: auto;
+  max-width: calc(-60px + 100vw);
+  max-height: 70vh;
 }
 @media (min-width: 1200px) {
   .flickity-slider img {
     margin-right: 20px;
+    height: 70vh;
+    max-height: none;
   }
 }
 @media (min-width: 1800px) {
