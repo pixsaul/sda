@@ -49,8 +49,8 @@
   
 </div><!-- end #page -->
   
-  <div class="introVideo">
-    <video autoplay muted loop>
+  <div id="introVideo" class="introVideo">
+    <video autoplay muted>
       <source src="https://player.vimeo.com/external/561221392.hd.mp4?s=407bc2241788c83c4cc437459283e61fbf305397&profile_id=174" type="video/mp4" />
     </video>
     <span class="skip">Skip</span>

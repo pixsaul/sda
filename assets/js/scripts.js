@@ -269,11 +269,16 @@ if (!yetVisited && !isMobile) {
   sessionStorage['video'] = "yes";
 } else {
   $("#page").animate({opacity: 1}, 500);
-  console.log($("#page"));
+  //console.log($("#page"));
 }
 
 $( ".introVideo" ).click(function() {
   $(this).fadeOut();
+  $("#page").animate({opacity: 1}, 500);
+});
+
+document.querySelector('#introVideo video').addEventListener('ended', function () {
+  $(".introVideo").fadeOut();
   $("#page").animate({opacity: 1}, 500);
 });
 
