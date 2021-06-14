@@ -1,8 +1,10 @@
 var path = '/assets/scenes/shadow-brand/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/shadow-brand/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Shadow-Brand_01.jpg',
+      path: cdn+'3d_Shadow-Brand_01.jpg'+compression,
       scale: 2,
       position: {
         x: 2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Shadow-Brand_02.jpg',
+      path: cdn+'3d_Shadow-Brand_02.jpg'+compression,
       scale: 2.0,
       position: {
         x: 0,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Shadow-Brand_03.jpg',
+      path: cdn+'3d_Shadow-Brand_03.jpg'+compression,
       scale: 3,
       position: {
         x: 0.5,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Shadow-Brand_04.png',
+      path: cdn+'3d_Shadow-Brand_04.png'+compression,
 	  scale: 3,
 	  position: {
 		x: -0.5,
@@ -58,7 +60,7 @@ roomConfig = {
 	  }
     },
 	{
-      path: path+'3d_Shadow-Brand_05.png',
+      path: cdn+'3d_Shadow-Brand_05.png'+compression,
 	  scale: 2.0,
       position: {
         x: -1.5,

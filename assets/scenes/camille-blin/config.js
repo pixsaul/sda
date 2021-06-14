@@ -1,8 +1,10 @@
 var path = '/assets/scenes/camille-blin/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/camille-blin/'
+var compression = '?width=800&quality=70'
 roomConfig = {
 	images: [
 		{
-			path: path+'3d_Camille-Blin_01.jpg',
+			path: cdn+'3d_Camille-Blin_01.jpg'+compression,
 			scale: 3.2,
 			position: {
 				x: 1.0,
@@ -16,7 +18,7 @@ roomConfig = {
 			}
 		},
 		{
-			path: path+'3d_Camille-Blin_02.jpg',
+			path: cdn+'3d_Camille-Blin_02.jpg'+compression,
 			scale: 4,
 			position: {
 				x: 0,

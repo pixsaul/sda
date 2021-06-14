@@ -1,8 +1,10 @@
 var path = '/assets/scenes/julia-seemann/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/julia-seemann/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Julia-Seeman_05.jpg',
+      path: cdn+'3d_Julia-Seeman_05.jpg'+compression,
       scale: 2,
       position: {
         x: 0,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Julia-Seeman_07.jpg',
+      path: cdn+'3d_Julia-Seeman_07.jpg'+compression,
       scale: 1.2,
       position: {
         x: 0.6,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Julia-Seeman_08.jpg',
+      path: cdn+'3d_Julia-Seeman_08.jpg'+compression,
       scale: 2.3,
       position: {
         x: -1.1,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Julia-Seeman_01.jpg',
+      path: cdn+'3d_Julia-Seeman_01.jpg'+compression,
       scale: 1.6,
       position: {
         x: 1.5,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Julia-Seeman_02.jpg',
+      path: cdn+'3d_Julia-Seeman_02.jpg'+compression,
       scale: 1.6,
       position: {
         x: 1.4,
@@ -72,7 +74,7 @@ roomConfig = {
       }
     },
     {
-    path: path+'3d_Julia-Seeman_03.jpg',
+    path: cdn+'3d_Julia-Seeman_03.jpg'+compression,
     scale: 1.6,
     position: {
       x: -0.3,
@@ -86,7 +88,7 @@ roomConfig = {
     }
   },
   {
-    path: path+'3d_Julia-Seeman_04.jpg',
+    path: cdn+'3d_Julia-Seeman_04.jpg'+compression,
     scale: 1.6,
     position: {
       x: -1.6,
@@ -100,7 +102,7 @@ roomConfig = {
     }
   },
   {
-    path: path+'3d_Julia-Seeman_06.jpg',
+    path: cdn+'3d_Julia-Seeman_06.jpg'+compression,
     scale: 1.2,
     position: {
       x: 0.6,

@@ -1,8 +1,10 @@
 var path = '/assets/scenes/data-orbit/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/data-orbit/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Data-Orbit_1.jpg',
+      path: cdn+'3d_Data-Orbit_1.jpg'+compression,
       scale: 3.2,
       position: {
         x: 2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Data-Orbit_2.jpg',
+      path: cdn+'3d_Data-Orbit_2.jpg'+compression,
       scale: 3.2,
       position: {
 		  x: -1.5,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Data-Orbit_3.jpg',
+      path: cdn+'3d_Data-Orbit_3.jpg'+compression,
       scale: 3.2,
       position: {
         x: -0.5,

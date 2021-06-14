@@ -1,8 +1,10 @@
 var path = '/assets/scenes/lou-rais/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/lou-rais/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Lou-Rais_01.jpg',
+      path: cdn+'3d_Lou-Rais_01.jpg'+compression,
       scale: 2.3,
       position: {
         x: 2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Lou-Rais_02.jpg',
+      path: cdn+'3d_Lou-Rais_02.jpg'+compression,
       scale: 5.3,
       position: {
         x: 0,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Lou-Rais_03.jpg',
+      path: cdn+'3d_Lou-Rais_03.jpg'+compression,
       scale: 3.0,
       position: {
         x: 1.5,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Lou-Rais_04.jpg',
+      path: cdn+'3d_Lou-Rais_04.jpg'+compression,
       scale: 2.6,
       position: {
         x: -2,

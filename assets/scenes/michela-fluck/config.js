@@ -1,8 +1,10 @@
 var path = '/assets/scenes/michela-fluck/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/michela-fluck/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Michela-Fluck_01.JPG',
+      path: cdn+'3d_Michela-Fluck_01.JPG'+compression,
       scale: 3,
       position: {
         x: -0.5,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Michela-Fluck_02.jpg',
+      path: cdn+'3d_Michela-Fluck_02.jpg'+compression,
       scale: 3,
       position: {
         x: 0.9,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Michela-Fluck_03.jpg',
+      path: cdn+'3d_Michela-Fluck_03.jpg'+compression,
       scale: 3,
       position: {
         x: -2.4,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Michela-Fluck_04.jpg',
+      path: cdn+'3d_Michela-Fluck_04.jpg'+compression,
       scale: 3,
 	  position: {
 		x: -2.7,
@@ -58,7 +60,7 @@ roomConfig = {
 	  }
     },
 	{
-      path: path+'3d_Michela-Fluck_05.JPG',
+      path: cdn+'3d_Michela-Fluck_05.JPG'+compression,
 	  scale: 3,
 	  position: {
 		x: 2.7,
@@ -72,7 +74,7 @@ roomConfig = {
 	  }
     },
 	{
-      path: path+'3d_Michela-Fluck_06.jpg',
+      path: cdn+'3d_Michela-Fluck_06.jpg'+compression,
       scale: 3,
       position: {
         x: 2.2,
@@ -86,7 +88,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Michela-Fluck_07.jpg',
+      path: cdn+'3d_Michela-Fluck_07.jpg'+compression,
       scale: 2.2,
       position: {
         x: -0.8,

@@ -1,8 +1,11 @@
 var path = '/assets/scenes/alexandra-gerber-studio/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/alexandra-gerber-studio/'
+var compression = '?width=800&quality=70'
+
 roomConfig = {
   images: [
     {
-      path: path+'3d_Alexandra-Gerber_01.jpg',
+      path: cdn+'3d_Alexandra-Gerber_01.jpg'+compression,
       scale: 2.3,
       position: {
         x: 1.5,
@@ -16,7 +19,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Alexandra-Gerber_02.jpg',
+      path: cdn+'3d_Alexandra-Gerber_02.jpg'+compression,
 	  scale: 2.3,
  	 position: {
  	   x: -1.5,
@@ -30,7 +33,7 @@ roomConfig = {
  	 }
     },
     {
-      path: path+'3d_Alexandra-Gerber_03.jpg',
+      path: cdn+'3d_Alexandra-Gerber_03.jpg'+compression,
 	  scale: 2.3,
  	 position: {
  	   x: -1.5,
@@ -44,7 +47,7 @@ roomConfig = {
  	 }
     },
     {
-      path: path+'3d_Alexandra-Gerber_04.jpg',
+      path: cdn+'3d_Alexandra-Gerber_04.jpg'+compression,
 	  scale: 2.3,
  	position: {
  	  x: 1.5,
@@ -58,7 +61,7 @@ roomConfig = {
  	}
     },
     {
-      path: path+'3d_Alexandra-Gerber_05.jpg',
+      path: cdn+'3d_Alexandra-Gerber_05.jpg'+compression,
 	  scale: 2.3,
 	position: {
 	  x: -1.5,
@@ -72,7 +75,7 @@ roomConfig = {
 	}
     },
     {
-      path: path+'3d_Alexandra-Gerber_06.jpg',
+      path: cdn+'3d_Alexandra-Gerber_06.jpg'+compression,
 	  scale: 2.3,
  	 position: {
  	   x: 1.5,
@@ -89,7 +92,7 @@ roomConfig = {
   ],
   blobs: [
     {
-      path: path+'Alexandra-Gerber-studio.fbx',
+      path: path+'Alexandra-Gerber.fbx',
       scale: 0.25,
       position: {
         x: 0,

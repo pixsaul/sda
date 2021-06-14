@@ -1,8 +1,10 @@
 var path = '/assets/scenes/hannes-gloor/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/hannes-gloor/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Hannes_Gloor_1.png',
+      path: cdn+'3d_Hannes_Gloor_1.png'+compression,
       scale: 2.8,
       position: {
         x: -0.9,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Hannes_Gloor_2.png',
+      path: cdn+'3d_Hannes_Gloor_2.png'+compression,
       scale: 2.5,
       position: {
         x: 1.4,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Hannes_Gloor_3.png',
+      path: cdn+'3d_Hannes_Gloor_3.png'+compression,
       scale: 3.2,
       position: {
         x: 1,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Hannes_Gloor_4.png',
+      path: cdn+'3d_Hannes_Gloor_4.png'+compression,
       scale: 2.8,
       position: {
         x: -1,

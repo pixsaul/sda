@@ -1,8 +1,10 @@
 var path = '/assets/scenes/clio-hadjigeorgiou/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/clio-hadjigeorgiou/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Clio-Hadjigeorgiou_1.png',
+      path: cdn+'3d_Clio-Hadjigeorgiou_1.png'+compression,
       scale: 2.7,
       position: {
         x: 1.7,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clio-Hadjigeorgiou_2.png',
+      path: cdn+'3d_Clio-Hadjigeorgiou_2.png'+compression,
 	  scale: 2.7,
       position: {
         x: -1.7,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clio-Hadjigeorgiou_3.png',
+      path: cdn+'3d_Clio-Hadjigeorgiou_3.png'+compression,
 	  scale: 2.7,
  	 position: {
  	   x: -1.7,
@@ -44,7 +46,7 @@ roomConfig = {
  	 }
     },
     {
-      path: path+'3d_Clio-Hadjigeorgiou_4.png',
+      path: cdn+'3d_Clio-Hadjigeorgiou_4.png'+compression,
 	  scale: 2.7,
       position: {
         x: 1.7,
@@ -60,7 +62,7 @@ roomConfig = {
   ],
   blobs: [
     {
-      path: path+'Clio-Hadjigeorgiou.fbx',
+      path: path+'Clio-Hadjigeorgiou.fbx'+compression,
       scale: 0.25,
       position: {
         x: 0,

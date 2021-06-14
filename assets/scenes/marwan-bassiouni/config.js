@@ -1,8 +1,10 @@
 var path = '/assets/scenes/marwan-bassiouni/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/marwan-bassiouni/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Marwan-Bassiouni_01.jpg',
+      path: cdn+'3d_Marwan-Bassiouni_01.jpg'+compression,
 	  scale: 3.1,
       position: {
         x: 0,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Marwan-Bassiouni_02.jpg',
+      path: cdn+'3d_Marwan-Bassiouni_02.jpg'+compression,
 	  scale: 3.1,
  	 position: {
  	   x: -2.5,
@@ -30,7 +32,7 @@ roomConfig = {
  	 }
     },
     {
-      path: path+'3d_Marwan-Bassiouni_03.jpg',
+      path: cdn+'3d_Marwan-Bassiouni_03.jpg'+compression,
 	 scale: 3.1,
 	position: {
 	  x: 2.5,
@@ -44,7 +46,7 @@ roomConfig = {
 	}
     },
 	{
-      path: path+'3d_Marwan-Bassiouni_04.jpg',
+      path: cdn+'3d_Marwan-Bassiouni_04.jpg'+compression,
       scale: 3.1,
       position: {
         x: 0,

@@ -1,8 +1,12 @@
 var path = '/assets/scenes/clement-lambelet/'
+var path = '/assets/scenes/clement-lambelet/'
+var path = '/assets/scenes/clement-lambelet/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/clement-lambelet/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Clement-Lambelet_01.jpg',
+      path: cdn+'3d_Clement-Lambelet_01.jpg'+compression,
       scale: 1.8,
       position: {
         x: 2.1,
@@ -16,7 +20,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clement-Lambelet_02.jpg',
+      path: cdn+'3d_Clement-Lambelet_02.jpg'+compression,
 	  scale: 2.7,
       position: {
         x: 1.5,
@@ -30,7 +34,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clement-Lambelet_03.jpg',
+      path: cdn+'3d_Clement-Lambelet_03.jpg'+compression,
 	  scale: 2.0,
       position: {
         x: 0.5,
@@ -44,7 +48,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clement-Lambelet_04.jpg',
+      path: cdn+'3d_Clement-Lambelet_04.jpg'+compression,
 	  scale: 2.0,
       position: {
         x: -0.5,
@@ -58,7 +62,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clement-Lambelet_05.jpg',
+      path: cdn+'3d_Clement-Lambelet_05.jpg'+compression,
 	  scale: 2.7,
       position: {
         x: -1.5,
@@ -72,7 +76,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Clement-Lambelet_06.jpg',
+      path: cdn+'3d_Clement-Lambelet_06.jpg'+compression,
 	  scale: 1.8,
  	 position: {
  	   x: -2.1,

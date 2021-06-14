@@ -1,8 +1,10 @@
 var path = '/assets/scenes/futuress/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/futuress/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Futuress_01.jpg',
+      path: cdn+'3d_Futuress_01.jpg'+compression,
       scale: 2.0,
       position: {
         x: 0,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Futuress_02.png',
+      path: cdn+'3d_Futuress_02.png'+compression,
       scale: 5.9,
       position: {
         x: 0,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Futuress_03.jpg',
+      path: cdn+'3d_Futuress_03.jpg'+compression,
       scale: 3.7,
       position: {
         x: 0.475,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Futuress_04.jpg',
+      path: cdn+'3d_Futuress_04.jpg'+compression,
 	  scale: 3.7,
       position: {
         x: -0.475,
@@ -59,7 +61,7 @@ roomConfig = {
       
     },
 	{
-      path: path+'3d_Futuress_05.jpg',
+      path: cdn+'3d_Futuress_05.jpg'+compression,
 	  scale: 3.0,
       position: {
         x: -2.8,
@@ -73,7 +75,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Futuress_06.jpg',
+      path: cdn+'3d_Futuress_06.jpg'+compression,
       scale: 2.6,
       position: {
         x: 2.8,

@@ -1,8 +1,10 @@
 var path = '/assets/scenes/eurostandard/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/eurostandard/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Eurostandard_01.jpg',
+      path: cdn+'3d_Eurostandard_01.jpg'+compression,
       scale: 1.8,
       position: {
         x: 0.9,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Eurostandard_02.jpg',
+      path: cdn+'3d_Eurostandard_02.jpg'+compression,
       scale: 1.8,
       position: {
         x: -0.5,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Eurostandard_03.jpg',
+      path: cdn+'3d_Eurostandard_03.jpg'+compression,
       scale: 1.8,
       position: {
         x: -1.15,

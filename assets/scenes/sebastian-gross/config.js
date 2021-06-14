@@ -1,8 +1,10 @@
 var path = '/assets/scenes/sebastian-gross/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/sebastian-gross/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Sebastian-Gross_01.jpg',
+      path: cdn+'3d_Sebastian-Gross_01.jpg'+compression,
       scale: 3.3,
       position: {
         x: -0.5,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Sebastian-Gross_02.jpg',
+      path: cdn+'3d_Sebastian-Gross_02.jpg'+compression,
       scale: 2.3,
       position: {
         x: -2,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Sebastian-Gross_03.jpg',
+      path: cdn+'3d_Sebastian-Gross_03.jpg'+compression,
       scale: 1.9,
       position: {
         x: 2,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Sebastian-Gross_04.jpg',
+      path: cdn+'3d_Sebastian-Gross_04.jpg'+compression,
       scale: 1.6,
       position: {
         x: -1,

@@ -1,8 +1,10 @@
 var path = '/assets/scenes/virginie-jemmely/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/virginie-jemmely/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Virginie-Jemmely_01.jpg',
+      path: cdn+'3d_Virginie-Jemmely_01.jpg'+compression,
       scale: 2.4,
       position: {
         x: 2.5,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Virginie-Jemmely_02.jpg',
+      path: cdn+'3d_Virginie-Jemmely_02.jpg'+compression,
       scale: 2.4,
       position: {
         x: 1.7,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Virginie-Jemmely_03.jpg',
+      path: cdn+'3d_Virginie-Jemmely_03.jpg'+compression,
       scale: 2.4,
       position: {
         x: 1.5,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Virginie-Jemmely_04.jpg',
+      path: cdn+'3d_Virginie-Jemmely_04.jpg'+compression,
       scale: 2.5,
       position: {
         x: -1.3,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Virginie-Jemmely_05.jpg',
+      path: cdn+'3d_Virginie-Jemmely_05.jpg'+compression,
       scale: 3.4,
       position: {
         x: -1.2,
@@ -72,7 +74,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Virginie-Jemmely_06.jpg',
+      path: cdn+'3d_Virginie-Jemmely_06.jpg'+compression,
       scale: 1.6,
       position: {
         x: 1,
@@ -86,7 +88,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Virginie-Jemmely_07.jpg',
+      path: cdn+'3d_Virginie-Jemmely_07.jpg'+compression,
       scale: 1.6,
       position: {
         x: -2.5,

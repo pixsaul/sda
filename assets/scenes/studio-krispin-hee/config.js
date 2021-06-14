@@ -1,8 +1,10 @@
 var path = '/assets/scenes/studio-krispin-hee/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/studio-krispin-hee/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Krispin-Hee_01.jpg',
+      path: cdn+'3d_Krispin-Hee_01.jpg'+compression,
       scale: 3.6,
       position: {
         x: 1.23,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Krispin-Hee_02.jpg',
+      path: cdn+'3d_Krispin-Hee_02.jpg'+compression,
       scale: 3.6,
       position: {
         x: -0.487,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Krispin-Hee_03.jpg',
+      path: cdn+'3d_Krispin-Hee_03.jpg'+compression,
       scale: 3.6,
       position: {
         x: -0.1,

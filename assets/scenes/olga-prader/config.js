@@ -1,8 +1,10 @@
 var path = '/assets/scenes/olga-prader/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/olga-prader/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Olga-Prader_01.jpg',
+      path: cdn+'3d_Olga-Prader_01.jpg'+compression,
       scale: 2.,
       position: {
         x: -2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Olga-Prader_02.jpg',
+      path: cdn+'3d_Olga-Prader_02.jpg'+compression,
 	  scale: 2.,
       position: {
         x: -2,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Olga-Prader_03.jpg',
+      path: cdn+'3d_Olga-Prader_03.jpg'+compression,
       scale: 2,
       position: {
         x: 0,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Olga-Prader_04.jpg',
+      path: cdn+'3d_Olga-Prader_04.jpg'+compression,
 	  scale: 2.,
       position: {
         x: 2,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Olga-Prader_05.jpg',
+      path: cdn+'3d_Olga-Prader_05.jpg'+compression,
 	  scale: 2.,
       position: {
         x: 2,

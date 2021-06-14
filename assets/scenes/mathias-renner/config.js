@@ -1,8 +1,10 @@
 var path = '/assets/scenes/mathias-renner/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/mathias-renner/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Mathias-Renner_01.jpg',
+      path: cdn+'3d_Mathias-Renner_01.jpg'+compression,
       scale: 3.75,
       position: {
         x: 0,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Mathias-Renner_02.jpg',
+      path: cdn+'3d_Mathias-Renner_02.jpg'+compression,
 	  scale: 3.75,
       position: {
         x: -2.50,

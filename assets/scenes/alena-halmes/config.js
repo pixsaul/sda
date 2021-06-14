@@ -1,8 +1,10 @@
 var path = '/assets/scenes/alena-halmes/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/alena-halmes/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Alena-Halmes_01.jpg',
+      path: cdn+'3d_Alena-Halmes_01.jpg'+compression,
       scale: 2.5,
       position: {
         x: 2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Alena-Halmes_02.jpg',
+      path: cdn+'3d_Alena-Halmes_02.jpg'+compression,
       scale: 2.5,
       position: {
         x: 1.7,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Alena-Halmes_03.jpg',
+      path: cdn+'3d_Alena-Halmes_03.jpg'+compression,
       scale: 2.2,
       position: {
         x: -0.5,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Alena-Halmes_04.jpg',
+      path: cdn+'3d_Alena-Halmes_04.jpg'+compression,
       scale: 2.2,
       position: {
         x: -2,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Alena-Halmes_05.jpg',
+      path: cdn+'3d_Alena-Halmes_05.jpg'+compression,
       scale: 2.2,
       position: {
         x: -1.5,
@@ -72,7 +74,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Alena-Halmes_06.jpg',
+      path: cdn+'3d_Alena-Halmes_06.jpg'+compression,
       scale: 2.9,
       position: {
         x: 0.3,
@@ -86,7 +88,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Alena-Halmes_07.jpg',
+      path: cdn+'3d_Alena-Halmes_07.jpg'+compression,
       scale: 2.4,
       position: {
         x: -0.5,
@@ -102,7 +104,7 @@ roomConfig = {
   ],
   blobs: [
     {
-      path: path+'Alena-Halmes.fbx',
+      path: cdn+'Alena-Halmes.fbx'+compression,
       scale: 0.25,
       position: {
         x: 0,

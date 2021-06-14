@@ -1,8 +1,10 @@
 var path = '/assets/scenes/mariel-manuel/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/mariel-manuel/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Mariel-Manuel_01.jpg',
+      path: cdn+'3d_Mariel-Manuel_01.jpg'+compression,
       scale: 2.3,
       position: {
         x: -2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Mariel-Manuel_02.jpg',
+      path: cdn+'3d_Mariel-Manuel_02.jpg'+compression,
       scale: 1.7,
       position: {
         x: 0,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Mariel-Manuel_03.jpg',
+      path: cdn+'3d_Mariel-Manuel_03.jpg'+compression,
       scale: 1.6,
       position: {
         x: 2.4,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Mariel-Manuel_04.jpg',
+      path: cdn+'3d_Mariel-Manuel_04.jpg'+compression,
       scale: 2.0,
       position: {
         x: -0.3,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Mariel-Manuel_05.jpg',
+      path: cdn+'3d_Mariel-Manuel_05.jpg'+compression,
       scale: 2.5,
       position: {
 		  x: -1.5,

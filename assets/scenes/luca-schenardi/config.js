@@ -1,8 +1,10 @@
 var path = '/assets/scenes/luca-schenardi/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/luca-schenardi/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Luca-Schenardi_01.jpg',
+      path: cdn+'3d_Luca-Schenardi_01.jpg'+compression,
       scale: 3.8,
       position: {
         x: -1.2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Luca-Schenardi_02.jpg',
+      path: cdn+'3d_Luca-Schenardi_02.jpg'+compression,
       scale: 2.2,
       position: {
         x: -2.7,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Luca-Schenardi_03.jpg',
+      path: cdn+'3d_Luca-Schenardi_03.jpg'+compression,
       scale: 1.6,
       position: {
         x: 2.1,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Luca-Schenardi_04.jpg',
+      path: cdn+'3d_Luca-Schenardi_04.jpg'+compression,
       scale: 3.0,
       position: {
         x: 1.8,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Luca-Schenardi_05.jpg',
+      path: cdn+'3d_Luca-Schenardi_05.jpg'+compression,
       scale: 2.4,
       position: {
         x: 0.25,

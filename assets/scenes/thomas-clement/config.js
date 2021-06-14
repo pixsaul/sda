@@ -1,8 +1,10 @@
 var path = '/assets/scenes/thomas-clement/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/thomas-clement/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Thomas-Clement_01.jpg',
+      path: cdn+'3d_Thomas-Clement_01.jpg'+compression,
       scale: 2.3,
       position: {
         x: 1.8,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Thomas-Clement_02.jpg',
+      path: cdn+'3d_Thomas-Clement_02.jpg'+compression,
 	  scale: 2.5,
 	  position: {
 		x: -0.5,
@@ -30,7 +32,7 @@ roomConfig = {
 	  }
     },
     {
-      path: path+'3d_Thomas-Clement_03.jpg',
+      path: cdn+'3d_Thomas-Clement_03.jpg'+compression,
 	  scale: 2.5,
 	  position: {
 		x: 1.2,
@@ -44,7 +46,7 @@ roomConfig = {
 	  }
     },
 	{
-      path: path+'3d_Thomas-Clement_04.jpg',
+      path: cdn+'3d_Thomas-Clement_04.jpg'+compression,
 	  scale: 2.5,
 	  position: {
 		x: 0.0,
@@ -58,7 +60,7 @@ roomConfig = {
 	  }
     },
 	{
-      path: path+'3d_Thomas-Clement_05.jpg',
+      path: cdn+'3d_Thomas-Clement_05.jpg'+compression,
 	  scale: 2.3,
 	  position: {
 		x: 0.7,
@@ -72,7 +74,7 @@ roomConfig = {
 	  }
     },
 	{
-      path: path+'3d_Thomas-Clement_06.jpg',
+      path: cdn+'3d_Thomas-Clement_06.jpg'+compression,
       scale: 2.3,
       position: {
         x: -2.0,

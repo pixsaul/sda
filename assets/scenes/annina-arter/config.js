@@ -1,8 +1,10 @@
 var path = '/assets/scenes/annina-arter/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/annina-arter/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Annina-Arter_01.jpg',
+      path: cdn+'3d_Annina-Arter_01.jpg'+compression,
       scale: 2.6,
       position: {
         x: 2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Annina-Arter_02.jpg',
+      path: cdn+'3d_Annina-Arter_02.jpg'+compression,
       scale: 1.6,
       position: {
         x: -1.6,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Annina-Arter_05.jpg',
+      path: cdn+'3d_Annina-Arter_05.jpg'+compression,
       scale: 2.3,
       position: {
         x: -0.7,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Annina-Arter_03.jpg',
+      path: cdn+'3d_Annina-Arter_03.jpg'+compression,
       scale: 2.3,
       position: {
         x: -1.4,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Annina-Arter_04.jpg',
+      path: cdn+'3d_Annina-Arter_04.jpg'+compression,
       scale: 3.2,
       position: {
         x: 1.4,

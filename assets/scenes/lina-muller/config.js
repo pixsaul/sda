@@ -1,8 +1,10 @@
 var path = '/assets/scenes/lina-muller/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/lina-muller/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Lina-Muller_01.jpg',
+      path: cdn+'3d_Lina-Muller_01.jpg'+compression,
       scale: 3.3,
       position: {
         x: 0.5,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Lina-Muller_02.jpg',
+      path: cdn+'3d_Lina-Muller_02.jpg'+compression,
       scale: 2.8,
       position: {
         x: 1.5,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Lina-Muller_03.jpg',
+      path: cdn+'3d_Lina-Muller_03.jpg'+compression,
       scale: 3.0,
       position: {
         x: 0.5,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Lina-Muller_04.jpg',
+      path: cdn+'3d_Lina-Muller_04.jpg'+compression,
       scale: 1.8,
       position: {
         x: -1,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Lina-Muller_05.jpg',
+      path: cdn+'3d_Lina-Muller_05.jpg'+compression,
       scale: 2.4,
       position: {
         x: -2,
@@ -72,7 +74,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Lina-Muller_06.jpg',
+      path: cdn+'3d_Lina-Muller_06.jpg'+compression,
       scale: 1.6,
       position: {
         x: -2,

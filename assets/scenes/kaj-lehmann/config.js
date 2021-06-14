@@ -1,8 +1,10 @@
 var path = '/assets/scenes/kaj-lehmann/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/kaj-lehmann/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Kaj-Lehmann_01.jpg',
+      path: cdn+'3d_Kaj-Lehmann_01.jpg'+compression,
       scale: 2.3,
       position: {
         x: 0,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Kaj-Lehmann_02.jpg',
+      path: cdn+'3d_Kaj-Lehmann_02.jpg'+compression,
       scale: 1.8,
       position: {
         x: -2,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Kaj-Lehmann_03.jpg',
+      path: cdn+'3d_Kaj-Lehmann_03.jpg'+compression,
       scale: 2.6,
       position: {
         x: 0,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Kaj-Lehmann_04.jpg',
+      path: cdn+'3d_Kaj-Lehmann_04.jpg'+compression,
       scale: 1.6,
       position: {
         x: -2,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Kaj-Lehmann_05.jpg',
+      path: cdn+'3d_Kaj-Lehmann_05.jpg'+compression,
       scale: 2.4,
       position: {
         x: -1.5,
@@ -72,7 +74,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Kaj-Lehmann_06.jpg',
+      path: cdn+'3d_Kaj-Lehmann_06.jpg'+compression,
       scale: 1.6,
       position: {
         x: 2.9,
@@ -86,7 +88,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Kaj-Lehmann_07.jpg',
+      path: cdn+'3d_Kaj-Lehmann_07.jpg'+compression,
       scale: 1.6,
       position: {
         x: 2.0,
@@ -100,7 +102,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Kaj-Lehmann_08.jpg',
+      path: cdn+'3d_Kaj-Lehmann_08.jpg'+compression,
       scale: 2.6,
       position: {
 		  x: 2,

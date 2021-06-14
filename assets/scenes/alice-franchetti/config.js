@@ -1,8 +1,10 @@
 var path = '/assets/scenes/alice-franchetti/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/alice-franchetti/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Alice-Franchetti_1.jpg',
+      path: cdn+'3d_Alice-Franchetti_1.jpg'+compression,
       scale: 2.6,
       position: {
         x: 1.2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Alice-Franchetti_2.jpg',
+      path: cdn+'3d_Alice-Franchetti_2.jpg'+compression,
       scale: 2.6,
       position: {
         x: -1.2,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Alice-Franchetti_5.jpg',
+      path: cdn+'3d_Alice-Franchetti_5.jpg'+compression,
       scale: 2.6,
       position: {
         x: -1,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Alice-Franchetti_6.jpg',
+      path: cdn+'3d_Alice-Franchetti_6.jpg'+compression,
       scale: 2.6,
       position: {
         x: 1,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Alice-Franchetti_7.jpg',
+      path: cdn+'3d_Alice-Franchetti_7.jpg'+compression,
       scale: 2.6,
       position: {
         x: 0,
@@ -72,7 +74,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Alice-Franchetti_8.jpg',
+      path: cdn+'3d_Alice-Franchetti_8.jpg'+compression,
       scale: 2.6,
       position: {
         x: 0,

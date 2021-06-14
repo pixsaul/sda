@@ -1,8 +1,10 @@
 var path = '/assets/scenes/noemi-niederhauser/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/noemi-niederhauser/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Noemi-Niederhauser_01.jpg',
+      path: cdn+'3d_Noemi-Niederhauser_01.jpg'+compression,
       scale: 2.9,
       position: {
         x: -2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Noemi-Niederhauser_02.jpg',
+      path: cdn+'3d_Noemi-Niederhauser_02.jpg'+compression,
 	  scale: 2.9,
 	  position: {
 		x: 2,
@@ -30,7 +32,7 @@ roomConfig = {
 	  }
     },
     {
-      path: path+'3d_Noemi-Niederhauser_03.jpg',
+      path: cdn+'3d_Noemi-Niederhauser_03.jpg'+compression,
 	  scale: 2.9,
 	  position: {
 		x: 2.5,
@@ -44,7 +46,7 @@ roomConfig = {
 	  }
     },
 	{
-      path: path+'3d_Noemi-Niederhauser_04.jpg',
+      path: cdn+'3d_Noemi-Niederhauser_04.jpg'+compression,
       scale: 2.0,
       position: {
         x: 0,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Noemi-Niederhauser_05.jpg',
+      path: cdn+'3d_Noemi-Niederhauser_05.jpg'+compression,
       scale: 3.0,
       position: {
         x: -1.7,

@@ -1,8 +1,10 @@
 var path = '/assets/scenes/after-work-studio/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/after-work-studio/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_After-Work_02.jpg',
+      path: cdn+'3d_After-Work_02.jpg'+compression,
       scale: 2.3,
       position: {
         x: -2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_After-Work_05.jpg',
+      path: cdn+'3d_After-Work_05.jpg'+compression,
       scale: 2.3,
       position: {
         x: 0,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_After-Work_06.jpg',
+      path: cdn+'3d_After-Work_06.jpg'+compression,
       scale: 1.6,
       position: {
         x: 2.3,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_After-Work_01.jpg',
+      path: cdn+'3d_After-Work_01.jpg'+compression,
       scale: 2.3,
       position: {
         x: 2.1,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_After-Work_04.jpg',
+      path: cdn+'3d_After-Work_04.jpg'+compression,
       scale: 1.6,
       position: {
         x: 1.4,
@@ -72,7 +74,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_After-Work_03.jpg',
+      path: cdn+'3d_After-Work_03.jpg'+compression,
       scale: 2.3,
       position: {
         x: -1.6,

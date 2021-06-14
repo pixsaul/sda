@@ -1,8 +1,10 @@
 var path = '/assets/scenes/weichi-he/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/weichi-he/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Weichi-He_01.jpg',
+      path: cdn+'3d_Weichi-He_01.jpg'+compression,
       scale: 3.8,
       position: {
         x: 1,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Weichi-He_02.jpg',
+      path: cdn+'3d_Weichi-He_02.jpg'+compression,
       scale: 3.4,
       position: {
         x: -2,
@@ -32,7 +34,7 @@ roomConfig = {
   ],
   blobs: [
     {
-      path: path+'Weichi-He.fbx',
+      path: cdn+'Weichi-He.fbx',
       scale: 0.25,
       position: {
         x: 0,

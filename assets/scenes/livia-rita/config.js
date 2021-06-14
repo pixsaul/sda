@@ -1,8 +1,10 @@
 var path = '/assets/scenes/livia-rita/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/livia-rita/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Livia-Rita_03.jpg',
+      path: cdn+'3d_Livia-Rita_03.jpg'+compression,
       scale: 2.3,
       position: {
         x: -2,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Livia-Rita_01.jpg',
+      path: cdn+'3d_Livia-Rita_01.jpg'+compression,
       scale: 2.3,
       position: {
         x: 1.4,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Livia-Rita_06.jpg',
+      path: cdn+'3d_Livia-Rita_06.jpg'+compression,
       scale: 1.4,
       position: {
         x: 2,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Livia-Rita_07.jpg',
+      path: cdn+'3d_Livia-Rita_07.jpg'+compression,
       scale: 2,
       position: {
         x: -0.6,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Livia-Rita_05.jpg',
+      path: cdn+'3d_Livia-Rita_05.jpg'+compression,
       scale: 1.7,
       position: {
         x: -2.2,
@@ -72,7 +74,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Livia-Rita_04.jpg',
+      path: cdn+'3d_Livia-Rita_04.jpg'+compression,
       scale: 2.3,
       position: {
         x: 0,
@@ -86,7 +88,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Livia-Rita_02.jpg',
+      path: cdn+'3d_Livia-Rita_02.jpg'+compression,
       scale: 1.1,
       position: {
         x: 1.4,

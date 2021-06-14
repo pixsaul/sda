@@ -1,8 +1,10 @@
 var path = '/assets/scenes/valentin-woeffray/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/valentin-woeffray/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Valentin-Woeffray_01.jpg',
+      path: cdn+'3d_Valentin-Woeffray_01.jpg'+compression,
       scale: 3.3,
       position: {
         x: 0,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Valentin-Woeffray_02.jpg',
+      path: cdn+'3d_Valentin-Woeffray_02.jpg'+compression,
       scale: 3.2,
       position: {
         x: 2,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Valentin-Woeffray_03.jpg',
+      path: cdn+'3d_Valentin-Woeffray_03.jpg'+compression,
 	  scale: 3.6,
 	  position: {
 		x: -1.7,
@@ -44,7 +46,7 @@ roomConfig = {
 	  }
     },
 	{
-      path: path+'3d_Valentin-Woeffray_04.jpg',
+      path: cdn+'3d_Valentin-Woeffray_04.jpg'+compression,
       scale: 3.4,
       position: {
         x: 0,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Valentin-Woeffray_05.jpg',
+      path: cdn+'3d_Valentin-Woeffray_05.jpg'+compression,
       scale: 4,
       position: {
         x: 1,
@@ -72,7 +74,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Valentin-Woeffray_06.jpg',
+      path: cdn+'3d_Valentin-Woeffray_06.jpg'+compression,
       scale: 3.3,
       position: {
         x: 1.5,
@@ -86,7 +88,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Valentin-Woeffray_07.jpg',
+      path: cdn+'3d_Valentin-Woeffray_07.jpg'+compression,
 	  scale: 2.6,
 	  position: {
 		x: -2,

@@ -1,8 +1,10 @@
 var path = '/assets/scenes/sabina-bosch/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/sabina-bosch/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Sabina-Bosch_01.jpg',
+      path: cdn+'3d_Sabina-Bosch_01.jpg'+compression,
       scale: 2.7,
       position: {
         x: 0.9,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Sabina-Bosch_02.jpg',
+      path: cdn+'3d_Sabina-Bosch_02.jpg'+compression,
 	  scale: 2.7,
       position: {
         x: -0.9,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Sabina-Bosch_03.jpg',
+      path: cdn+'3d_Sabina-Bosch_03.jpg'+compression,
 	  scale: 2.7,
       position: {
         x: -0.7,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Sabina-Bosch_04.jpg',
+      path: cdn+'3d_Sabina-Bosch_04.jpg'+compression,
       scale: 3.0,
       position: {
         x: 0.7,

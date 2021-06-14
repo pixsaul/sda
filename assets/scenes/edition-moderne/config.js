@@ -1,8 +1,10 @@
 var path = '/assets/scenes/edition-moderne/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/edition-moderne/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Edition-Moderne_01.jpg',
+      path: cdn+'3d_Edition-Moderne_01.jpg'+compression,
       scale: 2.3,
       position: {
         x: -3.7/4,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Edition-Moderne_02.jpg',
+      path: cdn+'3d_Edition-Moderne_02.jpg'+compression,
       scale: 3.3,
       position: {
         x: 6*0.25,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Edition-Moderne_03.jpg',
+      path: cdn+'3d_Edition-Moderne_03.jpg'+compression,
       scale: 2.2,
       position: {
         x: -1.7,

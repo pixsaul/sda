@@ -1,8 +1,10 @@
 var path = '/assets/scenes/maya-rochat/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/maya-rochat/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Maya-Rochat_01.jpg',
+      path: cdn+'3d_Maya-Rochat_01.jpg'+compression,
       scale: 1.9,
       position: {
         x: -1.7,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Maya-Rochat_02.jpg',
+      path: cdn+'3d_Maya-Rochat_02.jpg'+compression,
 	  scale: 1.87 ,
  	 position: {
  	   x: -2.64,
@@ -30,7 +32,7 @@ roomConfig = {
  	 }
     },
     {
-      path: path+'3d_Maya-Rochat_03.jpg',
+      path: cdn+'3d_Maya-Rochat_03.jpg'+compression,
       scale: 3.3,
       position: {
         x: -0.6,
@@ -44,7 +46,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Maya-Rochat_04.jpg',
+      path: cdn+'3d_Maya-Rochat_04.jpg'+compression,
 	  scale: 1.9,
       position: {
         x: 1.7,
@@ -58,7 +60,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Maya-Rochat_05.jpg',
+      path: cdn+'3d_Maya-Rochat_05.jpg'+compression,
 	  scale: 3.3,
       position: {
         x: 0.6,
@@ -72,7 +74,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Maya-Rochat_06.jpg',
+      path: cdn+'3d_Maya-Rochat_06.jpg'+compression,
 	  scale: 1.82 ,
  	position: {
  	  x: 2.64,

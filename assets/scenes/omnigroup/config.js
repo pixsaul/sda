@@ -1,8 +1,10 @@
 var path = '/assets/scenes/omnigroup/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/omnigroup/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Omnigroup_01.jpg',
+      path: cdn+'3d_Omnigroup_01.jpg'+compression,
       scale: 2.2,
       position: {
         x: 1.5,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Omnigroup_02.jpg',
+      path: cdn+'3d_Omnigroup_02.jpg'+compression,
       scale: 2.7,
       position: {
         x: 1.3,
@@ -30,7 +32,7 @@ roomConfig = {
       }
     },
 	{
-      path: path+'3d_Omnigroup_03.jpg',
+      path: cdn+'3d_Omnigroup_03.jpg'+compression,
 	  scale: 2.7,
  	 position: {
  	   x: -1.3,

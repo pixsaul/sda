@@ -1,8 +1,12 @@
 var path = '/assets/scenes/chaumont-zaerpour/'
+var path = '/assets/scenes/chaumont-zaerpour/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/chaumont-zaerpour/'
+var compression = '?width=800&quality=70'
+
 roomConfig = {
   images: [
     {
-      path: path+'3d_Chaumont-Zaerpour_01.jpeg',
+      path: cdn+'3d_Chaumont-Zaerpour_01.jpeg'+compression,
       scale: 2.9,
       position: {
         x: -0.1,
@@ -16,7 +20,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Chaumont-Zaerpour_02.jpeg',
+      path: cdn+'3d_Chaumont-Zaerpour_02.jpeg'+compression,
 	  scale: 2.9,
 	  position: {
 		x: 1.5,
@@ -30,7 +34,7 @@ roomConfig = {
 	  }
     },
     {
-      path: path+'3d_Chaumont-Zaerpour_03.jpeg',
+      path: cdn+'3d_Chaumont-Zaerpour_03.jpeg'+compression,
 	  scale: 2.9,
  	 position: {
  	   x: -1.5,

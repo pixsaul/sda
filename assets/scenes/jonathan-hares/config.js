@@ -1,8 +1,10 @@
 var path = '/assets/scenes/jonathan-hares/'
+var cdn = 'https://media-196c5.kxcdn.com/assets/scenes/jonathan-hares/'
+var compression = '?width=800&quality=70'
 roomConfig = {
   images: [
     {
-      path: path+'3d_Jonathan-Hares_1.png',
+      path: cdn+'3d_Jonathan-Hares_1.png'+compression,
       scale: 5.2,
       position: {
         x: 0,
@@ -16,7 +18,7 @@ roomConfig = {
       }
     },
     {
-      path: path+'3d_Jonathan-Hares_2.png',
+      path: cdn+'3d_Jonathan-Hares_2.png'+compression,
       scale: 5.2,
       position: {
         x: 0,
@@ -32,7 +34,7 @@ roomConfig = {
   ],
   blobs: [
     {
-      path: path+'jonathan-hares.fbx',
+      path: cdn+'jonathan-hares.fbx',
       scale: 0.25,
       position: {
         x: 0,
