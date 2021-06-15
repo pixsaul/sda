@@ -503,7 +503,7 @@ function handleTouchStart(event){
 		var rect = renderer.domElement.getBoundingClientRect();
 		mouse.x = ( (event.touches[0].pageX - rect.left) / renderer.domElement.scrollWidth ) * 2 - 1;
 		mouse.y = - ( (event.touches[0].pageY - rect.top) / renderer.domElement.scrollHeight ) * 2 + 1;
-		
+
 		console.log(mouse);
 		handleClick();
 	}
@@ -812,39 +812,46 @@ function initRoomFromConfig(){
 	for (let b of roomConfig.blobs){
 		addFbx(b.path, function(mesh){
 			let vertex = `
-			varying vec3 vPositionW;
-			varying vec3 vNormalW;
-			
-			void main() {
-				vPositionW = vec3( vec4( position, 1.0 ) * modelMatrix);
-				vNormalW = normalize( vec3( vec4( normal, 0.0 ) * modelMatrix ) );
-				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-			}`
-			
+      varying vec3 vPositionW;
+      varying vec3 vNormalW;
+
+      void main() {
+
+      vPositionW = vec3( vec4( position, 1.0 ) * modelViewMatrix );
+      vNormalW = normalize( mat3( modelMatrix[0].xyz, modelMatrix[1].xyz, modelMatrix[2].xyz ) * normal );
+      gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+    }`
+
 			let fragment = `
-			varying vec3 vPositionW;
-			varying vec3 vNormalW;
-			uniform vec3 colorInside;
-			uniform vec3 colorFresnel;
-			uniform float treshold;
-			
-			void main() {
-				vec3 color = vec3(1., 1., 1.);
-				vec3 viewDirectionW = normalize(cameraPosition - vPositionW);
-				float fresnelTerm = dot(viewDirectionW, vNormalW);
-				fresnelTerm = clamp(1.0 - fresnelTerm, 0., treshold);
-				gl_FragColor = vec4( mix(colorInside,colorFresnel,fresnelTerm), 1.);
-			}
-			`
+      varying vec3 vPositionW;
+      varying vec3 vNormalW;
+      uniform vec3 colorInside;
+      uniform vec3 colorFresnel;
+      uniform float fresnelFalloff;
+      uniform float fresnelIntensity;
+      uniform float treshold;
+
+      void main() {
+        vec3 color = vec3(1., 1., 1.);
+        vec3 viewDirectionW = normalize(cameraPosition - vPositionW);
+        float fresnelTerm = dot(viewDirectionW, vNormalW);
+        fresnelTerm = clamp(1.0 - fresnelTerm, 0., treshold);
+        gl_FragColor = vec4( mix(colorInside,colorFresnel*fresnelIntensity,pow(fresnelTerm,fresnelFalloff)), 1.);
+      }
+    `
 			let material = new THREE.ShaderMaterial({
 				uniforms: {
 					treshold: { type: 'f', value: 1. },
+          fresnelFalloff: { type: 'f', value: 1. },
+          fresnelIntensity: { type: 'f', value: 1.5 },
 					colorInside: { type: 'c3', value: new THREE.Color(0xff3c1e) },
 					colorFresnel: { type: 'c3', value: new THREE.Color(0xf3b1ab) },
 				},
 				vertexShader: vertex,
 				fragmentShader: fragment,
 			})
+      colourGUI.add(material.uniforms.fresnelFalloff, 'value', 0, 2).name('fresnelFalloff');
+      colourGUI.add(material.uniforms.fresnelIntensity, 'value', 0, 2).name('fresnelIntensity');
 			mesh.material = material;
 			// mesh.geometry.computeVertexNormals();
 			mesh.scale.set(b.scale,b.scale,b.scale);

@@ -176,12 +176,12 @@ class ImageMesh extends THREE.Mesh {
 	  this.material[5].transparent = true;
 	  this.renderOrder = 1;
 	  this.material[5].depthTest = false;
-	  
+
 	  // console.log(this);
     this.cancelTweens();
     this.tweening = true;
     const tweenPosition = new TWEEN.Tween(this.position)
-    .to({x: 0, y: camera.position.y - dist, z: camera.position.z - dist}, 500)
+    .to({x: 0, y: (camera.position.y - 0.09) - dist, z: (camera.position.z - 0.09) - dist}, 500)
     .easing(TWEEN.Easing.Quadratic.InOut)
     .onStart(() => {
       this.tweening = true;
@@ -201,11 +201,11 @@ class ImageMesh extends THREE.Mesh {
     // 	this.rotation.x += 2*(Math.PI)
     // }
     // console.log(this.rotation.toVector3());
-	
+
 	if (this.ratio > 1){
 		scale /= this.ratio;
 	}
-	
+
     console.log(this.rotation.toVector3().angleTo(this.rotation0));
     if (this.quaternion.angleTo(this.quaternion0) >= Math.PI/2){
       this.rotateY(Math.PI);

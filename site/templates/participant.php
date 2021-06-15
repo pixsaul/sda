@@ -79,8 +79,8 @@
 				<h3>Behind the scene</h3>
 				<div class="videoOverflow">
 					<div class="videoWrap">
-						<video id="video" autoplay loop onclick="this.paused?this.play():this.pause();">
-							<source src="<?= $page->video() ?>" type="video/mp4">
+						<video id="video" loop playsinline onclick="this.paused?this.play():this.pause();">
+							<source src="<?= $page->video() ?>#t=0.001" type="video/mp4">
 							Sorry, your browser doesn't support embedded videos.
 						</video>
 						<div class="videoOver">
