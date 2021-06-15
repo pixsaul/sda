@@ -20,29 +20,38 @@ $artistPage = $artistPage->children()->listed() ?>
 }
 ?>
 
-  <div class="home-grid">
-	  <div id="grid-filler-container">
-  		<img src="/assets/images/redsquare.png"></img>
-  		<img src="/assets/images/redsquare.png"></img>
-  		<img src="/assets/images/redsquare.png"></img>
-  		<img id="fourthFiller" src="/assets/images/redsquare.png"></img>
-  	</div>
+	<div class="home-grid">
+		<div id="grid-filler-container">
+			<img src="/assets/images/redsquare.png"></img>
+			<img src="/assets/images/redsquare.png"></img>
+			<img src="/assets/images/redsquare.png"></img>
+			<img id="fourthFiller" src="/assets/images/redsquare.png"></img>
+		</div>
 	<?php foreach ($artistPage as $artist): ?>
-	  <a class="grid-item" href="<?= $artist->url() ?>">
+		<a class="grid-item" href="<?= $artist->url() ?>">
 			<div class="seq">
 				<?php
 				$images = $artist->cover()->toFiles();
+				$i = 0;
+				$len = count($images);
 				foreach($images as $image): ?>
-					<img src="<?= $image->url() ?>?width=600&quality=70" alt="">
+				<?php
+					if ($i == 0) { ?>
+					<img src="<?= $image->url() ?>?width=601&quality=70" alt="">
+				<?php } else if ($i == $len - 1) { ?>
+					<img src="<?= $image->url() ?>?width=601&quality=70" alt="">
+				<?php } else { ?>
+					<img src="<?= $image->url() ?>?width=601&quality=30" alt="">
+				<?php } ?>
 				<?php endforeach ?>
 			</div>
 			<?php $firstImage = $artist->cover()->toFiles()->first(); ?>
-			<img class="spacer" src="<?= $firstImage->url(); ?>?width=600&quality=70" />
+			<img class="spacer" src="<?= $firstImage->url(); ?>?width=601&quality=1" />
 			<span><?= $artist->title()->html() ?></span>
-	  </a>
+		</a>
 	<?php endforeach ?>
 	
-  </div>
+	</div>
 <?php endif ?>
 
 <?php if ($artistPage->pagination()->hasPages()): ?>
@@ -62,5 +71,5 @@ $artistPage = $artistPage->children()->listed() ?>
 
 </nav>
 <?php endif ?>
-  
+	
 <?php snippet('footer') ?>
