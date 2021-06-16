@@ -123,6 +123,19 @@
       "oAP" : "\/assets\/fonts\/Selecta\/Selecta-Medium.woff",
       "oF" : 0
     },
+    "\/assets\/images\/cursor-cross.png" : {
+      "ft" : 32768,
+      "iS" : 1236,
+      "oA" : 0,
+      "oAP" : "\/assets\/images\/cursor-cross.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/assets\/images\/frame.png" : {
       "ft" : 32768,
       "iS" : 158690,
@@ -375,17 +388,6 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/js\/ObjectControls-min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/js\/ObjectControls.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/js\/ObjectControls-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0

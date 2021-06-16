@@ -66,7 +66,7 @@
 				<?php
 				$images = $page->gallery()->toFiles();
 				foreach($images as $image): ?>
-					<img data-flickity-lazyload="<?= $image->url() ?>?width=600&quality=70" alt="">
+					<img data-flickity-lazyload="<?= $image->url() ?>?width=800&quality=70" alt="">
 				<?php endforeach ?>
 			</div>
 			
