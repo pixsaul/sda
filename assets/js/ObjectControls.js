@@ -81,7 +81,7 @@ THREE.ObjectControls = function(objectToMove, domElement, hasHover, restrictMobi
 
   this.update = function(delta) {
     if (!isDragging){
-      // mesh.rotation.y += this.autoSpeed * delta;
+      mesh.rotation.y += this.autoSpeed * delta;
     }
   }
 
