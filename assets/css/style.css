@@ -37,6 +37,7 @@
 }
 body {
   font-family: "Selecta";
+  webkit-font-smoothing: antialiased;
 }
 
 main.main {
@@ -45,6 +46,11 @@ main.main {
 @media (min-width: 1200px) {
   main.main {
     padding-top: 70px;
+  }
+}
+@media (min-width: 1800px) {
+  main.main {
+    padding-top: 80px;
   }
 }
 
@@ -194,7 +200,7 @@ header .info {
 }
 
 body.cookieNotification, body.filtering {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 @media (min-width: 1200px) {
   body.cookieNotification, body.filtering {
@@ -203,7 +209,7 @@ body.cookieNotification, body.filtering {
 }
 
 body.cookieNotification.filtering {
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 }
 @media (min-width: 1200px) {
   body.cookieNotification.filtering {
@@ -269,16 +275,21 @@ footer a {
   right: 0;
   display: none;
   font-size: 0;
-  height: 33.3333333vw;
+  height: auto;
+  max-height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 33.333%;
 }
 #grid-filler-container img {
-  height: 100%;
+  height: auto;
   flex: 0 0 33.333333%;
-  max-width: 100%;
+  max-width: 33.33333%;
 }
 @media (min-width: 1800px) {
   #grid-filler-container img {
     flex: 0 0 25%;
+    max-width: 25%;
   }
 }
 @media (min-width: 900px) {
@@ -290,7 +301,7 @@ footer a {
   #grid-filler-container {
     flex: 25vw;
     display: flex;
-    height: 25vw;
+    max-height: 25vw;
   }
 }
 
@@ -310,16 +321,17 @@ footer a {
   display: block;
   flex: 0 0 33.333333%;
   height: 100vw;
+  align-items: flex-start;
 }
 @media (min-width: 900px) {
   .grid-item {
-    height: 33.33333vw;
+    height: 33.33333%;
   }
 }
 @media (min-width: 1800px) {
   .grid-item {
     flex: 0 0 25%;
-    height: 25vw;
+    height: 25%;
     display: flex;
   }
 }
@@ -392,6 +404,7 @@ footer a {
   top: 0;
   left: 0;
   width: 100vw;
+  max-width: 100%;
   height: 70vh;
   opacity: 1;
   background: #fff;
@@ -424,6 +437,7 @@ footer a {
 canvas {
   opacity: 0;
   width: 100vw;
+  max-width: 100%;
   height: 140vh;
   top: -35vh;
   transition: opacity 2s;
@@ -449,6 +463,7 @@ canvas {
   opacity: 1;
   height: 70vh;
   width: 100vw;
+  max-width: 100%;
   transition: opacity 1s;
   position: fixed;
   text-align: center;
@@ -494,7 +509,7 @@ canvas {
 #minimapContainer {
   bottom: 3rem;
   right: 3rem;
-  max-width: 98px;
+  max-width: 108px;
   position: absolute;
   display: none;
 }
@@ -510,7 +525,7 @@ body.cookieNotification #minimapContainer {
 }
 #minimapArtistNames {
   position: relative;
-  width: 6rem;
+  width: 108px;
   /* min-height: 1rem; */
   margin-bottom: 0.5rem;
   opacity: 0;
@@ -526,7 +541,7 @@ body.cookieNotification #minimapContainer {
   opacity: 0;
   width: 100%;
   /* transition: opacity 0.4s; */
-  bottom: 0rem;
+  bottom: 5px;
   /* min-height: 1rem; */
 }
 
@@ -540,19 +555,21 @@ body.cookieNotification #minimapContainer {
 }
 
 #minimapArtistImgs {
-  width: 6rem;
-  height: 6rem;
+  width: 108px;
+  height: 160px;
   margin-bottom: 0.5rem;
   opacity: 0;
   pointer-events: none;
 }
 
 #minimapArtistImgs > img {
-  width: 6rem;
-  height: 6rem;
+  width: 100%;
+  height: auto;
   position: absolute;
   opacity: 0;
   object-fit: cover;
+  position: absolute;
+  bottom: 151px;
   /* transition-delay: 0.2s; */
   /* right: -200%; */
   /* transition: all 0.4s; */
@@ -578,6 +595,7 @@ body.cookieNotification #minimapContainer {
   justify-content: space-between;
   align-items: flex-start;
   border: 1px solid #303030;
+  padding: 5px;
 }
 
 #minimap > a {
@@ -675,6 +693,7 @@ label.filter::after {
   height: 30px;
   font-family: sans-serif;
   outline: none;
+  opacity: 0;
 }
 
 .project-text {
@@ -709,11 +728,14 @@ label.filter::after {
   margin-top: 0;
   text-align: center;
   display: block;
+  font-family: "Selecta";
+  font-size: 15px;
 }
 @media (min-width: 1200px) {
   .project-text h2, .project-text .projectCat {
     font-size: 46px;
     line-height: 1.16;
+    font-family: "Metaballs";
   }
 }
 @media (min-width: 1800px) {
@@ -737,6 +759,8 @@ label.filter::after {
 }
 .project-text .projectCat {
   color: black;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 .project-text .projectCopy {
   padding: 0 10px;
@@ -750,6 +774,7 @@ label.filter::after {
 .project-text p, .project-text ul, .project-text ol {
   font-size: 16px;
   line-height: 26px;
+  hyphens: auto;
 }
 @media (min-width: 1200px) {
   .project-text p, .project-text ul, .project-text ol {
@@ -759,8 +784,8 @@ label.filter::after {
 }
 @media (min-width: 1800px) {
   .project-text p, .project-text ul, .project-text ol {
-    font-size: 35px;
-    line-height: 50px;
+    font-size: 20px;
+    line-height: 32px;
   }
 }
 .project-text p a, .project-text ul a, .project-text ol a {
@@ -1037,7 +1062,7 @@ button, a.btn {
 
 .cookies {
   text-align: center;
-  height: 60px;
+  height: 40px;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -1048,15 +1073,24 @@ button, a.btn {
   font-size: 15px;
   color: white;
   z-index: 9000;
+  font-size: 12px;
 }
 @media (min-width: 1200px) {
   .cookies {
     font-size: 20px;
     height: 70px;
+    font-family: "Metaballs";
+    text-transform: uppercase;
   }
 }
 .cookies a {
   color: white;
+}
+@media (min-width: 1200px) {
+  .cookies a {
+    color: #FF3C1E;
+    text-decoration: none;
+  }
 }
 
 .filterBar {
@@ -1064,7 +1098,7 @@ button, a.btn {
   width: 100%;
   background: #76BC21;
   bottom: 0px;
-  height: 60px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1091,7 +1125,7 @@ button, a.btn {
 }
 
 body.cookieNotification .filterBar {
-  bottom: 60px;
+  bottom: 40px;
 }
 
 @media (min-width: 1200px) {

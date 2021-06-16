@@ -36,8 +36,8 @@
 			</canvas>
 		</div>
 		<div id="minimapContainer">
-			<div id="minimapArtistNames"></div>
 			<div id="minimapArtistImgs"></div>
+			<div id="minimapArtistNames"></div>
 			<div id="minimap">
 			</div>
 		</div>
@@ -92,20 +92,24 @@
 			</div>
 			<?php endif; ?>
 			
-			<div class="projectRelated">
-				<h3>Related participants</h3>
-				<?php if ($artistPage = page('participants')):
-				
-				$artistPage = $artistPage->children()->listed()->shuffle();
+			<?php $thisPage = $page->id(); ?>
+			<?php if ($artistPage = page('participants')):
+				$artistPage = $artistPage->children()->listed()->shuffle()->filterBy('id', '!=', $thisPage);
 				$tag = $page->categories()->split(',');
-				
 				$artistPage = $artistPage->filterBy('categories', $tag[0], ',');
-				
 				$artistPage = $artistPage->paginate(4);
-				
-				?>
-				
+			?>
+			
+			<?php if ($artistPage->isEmpty() == false) : ?>
+				<div class="projectRelated">
+					<h3>Related participants</h3>
 					<div class="home-grid">
+						<div id="grid-filler-container">
+							<img src="/assets/images/redsquare.png"></img>
+							<img src="/assets/images/redsquare.png"></img>
+							<img src="/assets/images/redsquare.png"></img>
+							<img id="fourthFiller" src="/assets/images/redsquare.png"></img>
+						</div>
 					<?php foreach ($artistPage as $artist): ?>
 						<a class="grid-item" href="<?= $artist->url() ?>">
 							<div class="seq">
@@ -116,14 +120,15 @@
 								<?php endforeach ?>
 							</div>
 							<?php $firstImage = $artist->cover()->toFiles()->first(); ?>
-							<img class="spacer" src="<?= $firstImage->url(); ?>?width=300&quality=10" />
+							<img class="spacer" src="<?= $firstImage->url(); ?>?width=600&quality=1" />
 							<span><?= $artist->title()->html() ?></span>
 						</a>
 					<?php endforeach ?>
 					</div>
-				<?php endif ?>
-			</div>
-
+				</div>
+				<?php endif; ?>
+		<?php endif ?>
+		
   </article>
 </main>
 

@@ -283,7 +283,7 @@ document.querySelector('#introVideo video').addEventListener('ended', function (
 });
 
 //external links
-$('a').each(function() {
+$('a:not(.closeLink)').each(function() {
   if(this.host !== window.location.host) {
     $(this).attr('target', '_blank');
   }
