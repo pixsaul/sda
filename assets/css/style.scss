@@ -56,7 +56,13 @@
   src: url('../fonts/selecta/Selecta-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Selecta';
+  src: url('../fonts/selecta/Selecta-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
 }
 
 //Colors
@@ -69,7 +75,8 @@ $secondary: #76BC21;
 
 body {
   font-family: 'Selecta';
-  webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main.main {
@@ -118,7 +125,7 @@ header {
     }
 
     h1 {
-      font-size: 50px;
+      font-size: 46px;
       font-weight: normal;
       margin: 0;
       color: black;
@@ -145,7 +152,7 @@ header {
     }
     &:hover {
       @include for-desktop-up {
-        letter-spacing: 0.3em;
+        letter-spacing: 0.25em;
         h1 {
           letter-spacing: 0;
         }
@@ -282,7 +289,7 @@ footer {
    max-height: 100%;
    width: 100vw;
    max-width: 100%;
-   max-height: 33.333%;
+   max-height: 33.333vw;
 	img{
 		height: auto;
 		flex: 0 0 33.333333%;
@@ -293,7 +300,7 @@ footer {
 	    }
 	}
 	@include for-tablet-landscape-up{
-		display: block;
+		display: flex;
   	  // height: 33.33333vw;
     }
 	@include for-big-desktop-up {
@@ -301,6 +308,9 @@ footer {
     display: flex;
     max-height: 25vw;
 	}
+  &.grid-fill-2 {
+    bottom: 30px;
+  }
 }
 
 #fourthFiller{
@@ -460,19 +470,19 @@ canvas {
 }
 
 canvas.pointer{
-	cursor: pointer;
+  cursor: pointer;
 }
 
 canvas.cursorCross{
-	cursor: url('../images/cursor-cross.png'), pointer !important;
+  cursor: url('../images/cursor-cross.png'), pointer !important;
 }
 
 canvas.grab{
-	cursor: grab;
+  cursor: grab;
 }
 
 canvas.grabbing{
-	cursor: grabbing;
+  cursor: grabbing;
 }
 
 #loader{
@@ -524,13 +534,13 @@ canvas.grabbing{
 #minimapContainer {
   bottom: 3rem;
   right: 3rem;
-  max-width: 108px;
+  max-width: 128px;
   position: absolute;
   display: none;
 }
 
 body.cookieNotification #minimapContainer {
-  bottom: 6rem;
+  bottom: 7rem;
 }
 
 @media (min-width: 900px) {
@@ -540,7 +550,7 @@ body.cookieNotification #minimapContainer {
 }
 #minimapArtistNames {
   position: relative;
-  width: 108px;
+  width: 128px;
   /* min-height: 1rem; */
   margin-bottom: 0.5rem;
   opacity: 0;
@@ -550,7 +560,7 @@ body.cookieNotification #minimapContainer {
 }
 
 #minimapArtistNames > div {
-  text-align: right;
+  text-align: center;
   font-weight: bold;
   font-size: 0.9rem;
   position: absolute;
@@ -560,6 +570,9 @@ body.cookieNotification #minimapContainer {
   bottom: 5px;
   //transition: all 0.4s;
   /* min-height: 1rem; */
+  font-weight: 300;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 #minimapArtistNames > div.fadeIn {
@@ -572,7 +585,7 @@ body.cookieNotification #minimapContainer {
 }
 
 #minimapArtistImgs {
-  width: 108px;
+  width: 128px;
   height: 160px;
   margin-bottom: 0.5rem;
   opacity: 0;
@@ -588,7 +601,7 @@ body.cookieNotification #minimapContainer {
   //transition: opacity 1s;
   object-fit: cover;
   position: absolute;
-  bottom: 151px;
+  bottom: 170px;
   /* transition-delay: 0.2s; */
   /* right: -200%; */
   /* transition: all 0.4s; */
@@ -604,8 +617,8 @@ body.cookieNotification #minimapContainer {
 }
 
 #minimap {
-  width: 6rem;
-  height: 6rem;
+  width: 7rem;
+  height: 7rem;
   /* background-color: ; */
   display: flex;
   flex-direction: row;
@@ -614,12 +627,12 @@ body.cookieNotification #minimapContainer {
   justify-content: space-between;
   align-items: flex-start;
   border: 1px solid #303030;
-  padding: 5px;
+  padding: 7px;
 }
 
 #minimap > a {
-  height: 0.75rem;
-  width: 1rem;
+  height: 14px;
+  width: 17px;
   /* margin: 0.1rem; */
   /* background-color: black; */
   /* border-radius: 50%; */
@@ -633,14 +646,14 @@ body.cookieNotification #minimapContainer {
 }
 
 #minimap > a:not([href]) {
-opacity: 0.5;
+//opacity: 0.5;
 }
 
 #minimap > a > div {
-  height: 0.125rem;
-  width: 0.125rem;
+  height: 4px;
+  width: 4px;
   /* margin: 0.1rem; */
-  background-color: #303030;
+  background-color: black;
   border-radius: 50%;
   /* box-sizing: border-box; */
   transition: all 0.2s;
@@ -653,26 +666,47 @@ opacity: 0.5;
 }
 
 #minimap > a.active > div {
-  background-color: red;
+  background-color: $primary;
   height: 0.5rem;
   width: 0.5rem;
+  opacity: 1;
 }
 
 body.artist header {
   background: transparent;
-  position: fixed;
   width: 100%;
+  position: absolute;
+  width: 100vw;
+  max-width: 100%;
 
   h1, a, .filter,  {
     color: $primary;
+    /*
     text-shadow:
      -1px -1px 0 #000,
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
+       */
+  }
+
+  .info, .homeLink {
+    position: fixed;
+  }
+
+  .info {
+    right: 10px;
+    margin-right: 0;
+    @include for-desktop-up {
+      right: 70px;
+    }
+  }
+
+  .home {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-
 label.filter {
   font-size: 20px;
   position: relative;
@@ -1109,6 +1143,7 @@ button, a.btn {
   font-size: 15px;
   color: black;
   text-decoration: none;
+  text-transform: uppercase;
 
   &::after {
     content: "X";
@@ -1116,6 +1151,9 @@ button, a.btn {
     right: 10px;
     font-size: 20px;
     font-family: 'Metaballs';
+    @include for-desktop-up {
+      font-size: 30px;
+    }
   }
 
   @include for-desktop-up {
@@ -1123,6 +1161,7 @@ button, a.btn {
     height: 70px;
     font-size: 30px;
     font-family: 'Metaballs';
+    text-transform: none;
   }
 }
 
@@ -1166,7 +1205,7 @@ body.cookieNotification {
    overflow: hidden;
 }
 
-.projectRelated .grid-item:nth-child(3) {
+.projectRelated .grid-item:nth-child(4) {
   display: none;
   @include for-big-desktop-up {
     display: block;
