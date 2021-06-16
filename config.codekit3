@@ -107,6 +107,14 @@
       "oAP" : "\/assets\/fonts\/metaballs\/Metaballs-Thin.woff",
       "oF" : 0
     },
+    "\/assets\/fonts\/selecta\/Selecta-Light.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/selecta\/Selecta-Light.woff",
+      "oF" : 0
+    },
     "\/assets\/fonts\/Selecta\/Selecta-Medium.woff" : {
       "cB" : 0,
       "ft" : 8192,
