@@ -81,7 +81,7 @@ THREE.ObjectControls = function(objectToMove, domElement, hasHover, restrictMobi
 
   this.update = function(delta) {
     if (!isDragging){
-      mesh.rotation.y += this.autoSpeed * delta;
+      // mesh.rotation.y += this.autoSpeed * delta;
     }
   }
 
@@ -156,7 +156,7 @@ THREE.ObjectControls = function(objectToMove, domElement, hasHover, restrictMobi
     if (!scope.mouseBusy){
       isDragging = true;
       flag = mouseFlags.MOUSEDOWN;
-      domElement.style.cursor = 'grabbing';
+      domElement.classList.add('grabbing');
     }
   }
 
@@ -197,7 +197,8 @@ THREE.ObjectControls = function(objectToMove, domElement, hasHover, restrictMobi
   function mouseUp() {
     isDragging = false;
     resetMousePosition();
-    domElement.style.cursor = 'grab';
+	domElement.classList.remove('grabbing');
+    domElement.classList.add('grab');
   }
 
 
