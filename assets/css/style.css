@@ -674,7 +674,7 @@ body.artist header .info {
 }
 @media (min-width: 1200px) {
   body.artist header .info {
-    right: 30px;
+    right: 70px;
   }
 }
 body.artist header .home {
