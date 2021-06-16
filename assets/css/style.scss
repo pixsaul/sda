@@ -73,10 +73,21 @@ $secondary: #76BC21;
 
 //Global
 
+html {
+  min-height: 100%;
+}
+
 body {
   font-family: 'Selecta';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: white;
+}
+
+body.filtering {
+  min-height: 100%;
+  background: $primary;
+  padding-bottom: 0 !important;
 }
 
 main.main {
@@ -1060,7 +1071,7 @@ button, a.btn {
     video {
       max-width: 100%;
       cursor: pointer;
-      transform: scale(0.85) translateY(50px);
+      transform: scale(0.75) translateY(50px);
     }
   }
 
