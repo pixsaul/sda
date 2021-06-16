@@ -375,6 +375,8 @@ function handleImgClicked(obj){
 	fadePlaneMesh.position.set(0, camera.position.y - (config.selectedDist+0.01),  camera.position.z - (config.selectedDist+0.01));
 	fadePlaneMesh.quaternion.copy(camera.quaternion);
 	applyFadeToAllExcept(selectedObj);
+	renderer.domElement.classList.remove('pointer');
+	renderer.domElement.classList.add('cursorCross');
 
 }
 
@@ -384,6 +386,8 @@ function putSelectedBack(){
 	selectedObj.putSelectedBack(800);
 	removeFadeFromAll();
 	selectedObj = null;
+	renderer.domElement.classList.remove('cursorCross');
+	renderer.domElement.classList.add('pointer');
 }
 
 // Handle click, use delay to stop overclicking, if there is a selected obj,
@@ -440,7 +444,7 @@ function handleRaycast(){
 		if (clickables.length > 0){
 			const intersects = raycaster.intersectObjects( clickables );
 			if (intersects.length > 0){
-				renderer.domElement.style.cursor = 'pointer';
+				renderer.domElement.classList.add('pointer');
 				controls.mouseBusy = true;
 				for (let imageMesh of clickables){
 					if (intersects[0].object == imageMesh && !imageMesh.tweening && !imageMesh.selected ){
@@ -455,7 +459,7 @@ function handleRaycast(){
 				}
 			} else {
 				controls.mouseBusy = false;
-				renderer.domElement.style.cursor = 'grab';
+				renderer.domElement.classList.remove('pointer');
 				for (let imageMesh of clickables){
 					imageMesh.hovered = false;
 					if (imageMesh.up && !imageMesh.tweening && !imageMesh.selected){
