@@ -470,19 +470,19 @@ canvas {
 }
 
 canvas.pointer{
-	cursor: pointer;
+  cursor: pointer;
 }
 
 canvas.cursorCross{
-	cursor: url('../images/cursor-cross.png'), pointer !important;
+  cursor: url('../images/cursor-cross.png'), pointer !important;
 }
 
 canvas.grab{
-	cursor: grab;
+  cursor: grab;
 }
 
 canvas.grabbing{
-	cursor: grabbing;
+  cursor: grabbing;
 }
 
 #loader{

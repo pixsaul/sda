@@ -41,6 +41,32 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/assets\/css\/style.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/style-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/css\/style.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/style.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/fonts\/metaballs\/Metaballs-Bold.woff" : {
       "cB" : 0,
       "ft" : 8192,
@@ -353,6 +379,17 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/assets\/js\/ObjectControls.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/ObjectControls-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/js\/OBJLoader.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -393,6 +430,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/js\/SDARoom-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/SDARoom.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/SDARoom-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -54179,12 +54227,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/media\/pages\/participants\/marc-asekhame\/1f8b774b83-1623257991\/3d_marc-asekhame_03.jpg" : {
+    "\/media\/pages\/participants\/marc-asekhame\/1f8b774b83-1623326525\/3d_marc-asekhame_03.jpg" : {
       "ft" : 16384,
       "iS" : 2240481,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/1f8b774b83-1623257991\/3d_marc-asekhame_03.jpg",
+      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/1f8b774b83-1623326525\/3d_marc-asekhame_03.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -54296,19 +54344,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/media\/pages\/participants\/marc-asekhame\/5250a9487a-1623257991\/3d_marc-asekhame_01.jpg" : {
-      "ft" : 16384,
-      "iS" : 1724832,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/5250a9487a-1623257991\/3d_marc-asekhame_01.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/media\/pages\/participants\/marc-asekhame\/5250a9487a-1623326525\/.jobs\/3d-marc-asekhame-01-38x38.jpg.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -54340,6 +54375,19 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
+    },
+    "\/media\/pages\/participants\/marc-asekhame\/5250a9487a-1623326525\/3d_marc-asekhame_01.jpg" : {
+      "ft" : 16384,
+      "iS" : 1724832,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/5250a9487a-1623326525\/3d_marc-asekhame_01.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/media\/pages\/participants\/marc-asekhame\/5250a9487a-1623326525\/3d-marc-asekhame-01-1408x.jpg" : {
       "ft" : 16384,
@@ -54380,12 +54428,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/media\/pages\/participants\/marc-asekhame\/bdab15490b-1623257143\/marc-asekhame_08.jpg" : {
+    "\/media\/pages\/participants\/marc-asekhame\/bdab15490b-1623326525\/marc-asekhame_08.jpg" : {
       "ft" : 16384,
       "iS" : 1683434,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/bdab15490b-1623257143\/marc-asekhame_08.jpg",
+      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/bdab15490b-1623326525\/marc-asekhame_08.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -54393,12 +54441,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/media\/pages\/participants\/marc-asekhame\/cf2c6903f7-1623257991\/3d_marc-asekhame_02.jpg" : {
+    "\/media\/pages\/participants\/marc-asekhame\/cf2c6903f7-1623326525\/3d_marc-asekhame_02.jpg" : {
       "ft" : 16384,
       "iS" : 771265,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/cf2c6903f7-1623257991\/3d_marc-asekhame_02.jpg",
+      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/cf2c6903f7-1623326525\/3d_marc-asekhame_02.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -54406,12 +54454,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/media\/pages\/participants\/marc-asekhame\/d5a15b8a8d-1623257991\/marc-asekhame_04.jpg" : {
+    "\/media\/pages\/participants\/marc-asekhame\/d5a15b8a8d-1623326525\/marc-asekhame_04.jpg" : {
       "ft" : 16384,
       "iS" : 1486086,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/d5a15b8a8d-1623257991\/marc-asekhame_04.jpg",
+      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/d5a15b8a8d-1623326525\/marc-asekhame_04.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -54419,12 +54467,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/media\/pages\/participants\/marc-asekhame\/d98f2ce41a-1623257991\/marc-asekhame_09.jpg" : {
+    "\/media\/pages\/participants\/marc-asekhame\/d98f2ce41a-1623326525\/marc-asekhame_09.jpg" : {
       "ft" : 16384,
       "iS" : 1933265,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/d98f2ce41a-1623257991\/marc-asekhame_09.jpg",
+      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/d98f2ce41a-1623326525\/marc-asekhame_09.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -54445,12 +54493,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/media\/pages\/participants\/marc-asekhame\/fe78fcff8a-1623257143\/marc-asekhame_07.jpg" : {
+    "\/media\/pages\/participants\/marc-asekhame\/fe78fcff8a-1623326525\/marc-asekhame_07.jpg" : {
       "ft" : 16384,
       "iS" : 744256,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/fe78fcff8a-1623257143\/marc-asekhame_07.jpg",
+      "oAP" : "\/media\/pages\/participants\/marc-asekhame\/fe78fcff8a-1623326525\/marc-asekhame_07.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,

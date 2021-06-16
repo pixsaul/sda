@@ -464,6 +464,22 @@ canvas {
   }
 }
 
+canvas.pointer {
+  cursor: pointer;
+}
+
+canvas.cursorCross {
+  cursor: url("../images/cursor-cross.png"), pointer !important;
+}
+
+canvas.grab {
+  cursor: grab;
+}
+
+canvas.grabbing {
+  cursor: grabbing;
+}
+
 #loader {
   display: flex;
   flex-direction: column;
